@@ -1,0 +1,3 @@
+﻿network,n_nodes,n_edges,density,mean_degree,max_degree,n_components,n_isolated,same_industry_edge_ratio,industry_assortativity
+Pearson threshold,15,17,0.1619047619047619,2.2666666666666666,7,6,5,0.5882352941176471,0.3407202216066482
+Partial correlation,15,9,0.08571428571428572,1.2,3,7,3,0.8888888888888888,0.8378378378378378
