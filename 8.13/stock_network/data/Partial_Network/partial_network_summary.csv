@@ -1,0 +1,2 @@
+﻿network,threshold,n_nodes,n_edges,density,n_components,n_isolated
+partial_correlation,0.2,15,9,0.08571428571428572,7,3
