@@ -1,0 +1,4 @@
+﻿comparison,edges_A,edges_B,common_edges,A_only,B_only,union_edges,jaccard,A_edge_retention,B_edge_supported_by_A
+Partial vs GLasso_1SE,9,50,9,0,41,50,0.18,1.0,0.18
+Partial vs GLasso_CV,9,69,9,0,60,69,0.13043478260869565,1.0,0.13043478260869565
+GLasso_CV vs GLasso_1SE,69,50,48,21,2,71,0.676056338028169,0.6956521739130435,0.96
