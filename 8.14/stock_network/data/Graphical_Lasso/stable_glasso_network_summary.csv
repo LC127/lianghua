@@ -1,0 +1,2 @@
+﻿alpha_fixed,n_resamples_requested,n_valid_resamples,subsample_ratio,block_length,stable_threshold,core_threshold,n_nodes,n_edges,density,mean_degree,max_degree,n_components,n_isolated,same_industry_edges,same_industry_edge_ratio
+0.2169100494343441,200,200,0.8,20,0.8,0.9,15,41,0.3904761904761905,5.466666666666667,8,1,0,18,0.43902439024390244
