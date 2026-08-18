@@ -1,0 +1,3 @@
+﻿industry_relation,n_active_noncore_edges,mean_persistence,mean_n_episodes,mean_transition_rate,mean_longest_run_share,regime_dependent_edges,intermittent_edges,two_episode_edges,regime_dependent_rate,intermittent_rate,two_episode_rate
+Cross industry,33,0.34604105571847504,1.6363636363636365,0.09292929292929289,0.8622004971313272,16,3,14,0.48484848484848486,0.09090909090909091,0.42424242424242425
+Same industry,1,0.6451612903225806,2.0,0.1,0.95,0,0,1,0.0,0.0,1.0
