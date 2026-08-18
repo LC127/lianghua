@@ -1,0 +1,15 @@
+﻿evidence_group,window_size,criterion,support,same_value,cross_value
+Multi-scale persistence,126,Same mean persistence > Cross mean persistence,True,0.9444444444444443,0.3049095607235142
+Persistent-edge rate,126,Same persistent rate > Cross persistent rate,True,0.8947368421052632,0.12790697674418605
+State-change dynamics,126,Cross normalized change rate > Same normalized change rate,True,0.05263157894736842,0.09986320109439124
+Exit dynamics,126,Cross exit rate > Same exit rate,True,0.029508196721311476,0.18262806236080179
+Multi-scale persistence,252,Same mean persistence > Cross mean persistence,True,0.9912280701754386,0.34496124031007747
+Persistent-edge rate,252,Same persistent rate > Cross persistent rate,True,1.0,0.23255813953488372
+State-change dynamics,252,Cross normalized change rate > Same normalized change rate,True,0.015479876160990712,0.046511627906976744
+Exit dynamics,252,Cross exit rate > Same exit rate,True,0.009345794392523364,0.08203125
+Multi-scale persistence,504,Same mean persistence > Cross mean persistence,True,1.0,0.41537467700258396
+Persistent-edge rate,504,Same persistent rate > Cross persistent rate,True,1.0,0.37209302325581395
+State-change dynamics,504,Cross normalized change rate > Same normalized change rate,True,0.0,0.028727770177838577
+Exit dynamics,504,Cross exit rate > Same exit rate,True,0.0,0.04084967320261438
+True multi-scale core,All,Same multi-scale core rate > Cross multi-scale core rate,True,0.8947368421052632,0.12790697674418605
+Always multi-scale core,All,Same always-core rate > Cross always-core rate,True,0.6842105263157895,0.08139534883720931
