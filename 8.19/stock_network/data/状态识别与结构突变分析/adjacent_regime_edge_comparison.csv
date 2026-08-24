@@ -1,0 +1,5 @@
+﻿regime_before,regime_after,n_core_before,n_core_after,common_core_edges,lost_core_edges,gained_core_edges,core_jaccard,lost_same_core,lost_cross_core,gained_same_core,gained_cross_core,mean_delta_persistence,mean_abs_delta_persistence,n_large_persistence_drop,n_large_persistence_gain
+1,2,44,51,38,6,13,0.6666666666666666,1,5,0,13,0.02421768707482994,0.18748299319727893,9,11
+2,3,51,52,47,4,5,0.8392857142857143,0,4,2,3,0.005714285714285711,0.1180952380952381,5,4
+3,4,52,36,36,16,0,0.6923076923076923,1,15,0,0,-0.12380952380952379,0.13904761904761903,16,1
+4,5,36,37,31,5,6,0.7380952380952381,0,5,1,5,0.0038095238095238095,0.1019047619047619,5,6

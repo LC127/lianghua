@@ -1,0 +1,2 @@
+﻿total_pairs,static_stable_edges,dynamic_persistent_edges,always_persistent_edges,common_edges,static_only_edges,dynamic_only_edges,union_edges,jaccard,static_temporal_retention,dynamic_supported_by_static,static_always_persistent_edges,static_always_persistent_ratio
+105,41,40,23,37,4,3,44,0.8409090909090909,0.9024390243902439,0.925,23,0.5609756097560976
