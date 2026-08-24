@@ -1,0 +1,5 @@
+﻿setting,method,window_size,E1_same_persistence_gt_cross,E2_same_persistent_rate_gt_cross,E3_cross_change_rate_gt_same,n_supported_structural_patterns,all_three_supported
+GLasso_W126,Graphical Lasso,126,True,True,True,3,True
+GLasso_W252,Graphical Lasso,252,True,True,True,3,True
+GLasso_W504,Graphical Lasso,504,True,True,True,3,True
+Partial_W252,Density-matched Partial,252,True,True,True,3,True
