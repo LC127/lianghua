@@ -1,0 +1,10 @@
+﻿description,x_variable,y_variable,n,spearman_rho
+Joint OOD vs SameRatio Model AE,joint_max_abs_z,same_ratio_absolute_error,16,0.5205882352941177
+Joint OOD vs SameRatio Excess AE,joint_max_abs_z,same_ratio_excess_absolute_error,16,0.15294117647058825
+Joint OOD vs SameRatio Excess SE,joint_max_abs_z,same_ratio_excess_squared_error,16,0.1176470588235294
+SameRatio OOD vs SameRatio Model AE,same_ratio_abs_z,same_ratio_absolute_error,16,0.6705882352941177
+SameRatio OOD vs SameRatio Excess SE,same_ratio_abs_z,same_ratio_excess_squared_error,16,0.06764705882352941
+Support Excursion vs SameRatio Excess SE,max_support_excursion_sd,same_ratio_excess_squared_error,16,0.058338335119694794
+Joint OOD vs EdgeCount Model AE,joint_max_abs_z,edge_count_absolute_error,16,0.3294117647058824
+Joint OOD vs EdgeCount Excess SE,joint_max_abs_z,edge_count_excess_squared_error,16,0.02058823529411765
+EdgeCount OOD vs EdgeCount Excess SE,edge_count_abs_z,edge_count_excess_squared_error,16,-0.05294117647058824
