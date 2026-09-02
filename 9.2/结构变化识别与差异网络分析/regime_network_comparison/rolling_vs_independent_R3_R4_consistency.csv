@@ -1,0 +1,6 @@
+﻿metric,rolling_R3,rolling_R4,rolling_delta,rolling_direction,independent_R3,independent_R4,independent_delta,independent_direction,same_direction
+edge_count,55.0,42.0,-13.0,decrease,42.0,35.0,-7.0,decrease,True
+same_edges,19.0,18.5,-0.5,decrease,18.0,15.0,-3.0,decrease,True
+cross_edges,36.0,23.5,-12.5,decrease,24.0,20.0,-4.0,decrease,True
+same_ratio,0.345612073112073,0.4409632034632034,0.09535113035113041,increase,0.42857142857142855,0.42857142857142855,0.0,stable,False
+mean_abs_partial,0.1154937242096745,0.1314041931627917,0.015910468953117193,increase,0.13282943104269207,0.1405916633609131,0.007762232318221041,increase,True
