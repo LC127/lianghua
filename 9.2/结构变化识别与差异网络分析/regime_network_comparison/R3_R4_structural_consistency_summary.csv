@@ -1,0 +1,6 @@
+﻿criterion,rolling_support,independent_support,both_support
+overall_network_contraction,True,True,True
+cross_industry_contraction,True,True,True
+cross_change_dominates_same,True,True,True
+same_industry_ratio_increases,True,False,False
+sparser_but_stronger,True,True,True
