@@ -1,0 +1,6 @@
+﻿structural_role,n_pairs,mean_abs_delta,total_squared_change
+Changing Cross-industry,22,0.05545216712796741,0.12784517945334695
+Changing Same-industry,3,0.14755296095915102,0.07756822825864029
+Inactive,54,0.0,0.0
+Persistent Cross-industry,11,0.07077152159651066,0.08574491760992957
+Persistent Same-industry,15,0.05555342365705778,0.10490733904996173
