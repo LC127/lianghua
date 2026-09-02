@@ -1,0 +1,2 @@
+﻿analysis,n_R3,n_R4,p,alpha,D_observed,critical_value_95,bootstrap_pvalue,plus_one_pvalue,reject_H0,null_edges,R3_edges_H1,R4_edges_H1,B_requested,B_valid,B_failed,convergence_warnings,bootstrap_mean,bootstrap_sd
+equal_length_R3late_vs_R4,61,61,15,0.04439426559183951,0.003917219648358443,0.005385826225762888,0.427,0.4275724275724276,False,67,62,75,1000,1000,0,0,0.0038323737450751943,0.0008421212339398169
