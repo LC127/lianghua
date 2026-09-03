@@ -1,0 +1,2 @@
+﻿top_k_drivers,top_edges_per_driver,n_subnetwork_nodes,n_subnetwork_edges,n_persistent,n_lost,n_gained,mean_abs_delta,max_abs_delta
+6,3,8,15,7,5,3,0.11652950882325351,0.2403438369602254
