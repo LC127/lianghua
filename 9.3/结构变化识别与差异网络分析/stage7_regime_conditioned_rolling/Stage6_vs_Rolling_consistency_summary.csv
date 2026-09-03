@@ -1,0 +1,3 @@
+﻿level,top_k,top_k_overlap,top_k_jaccard,rank_spearman
+Industry pair,5,2,0.25,0.34543475248423783
+Node driver,5,1,0.1111111111111111,-0.014285714285714285
