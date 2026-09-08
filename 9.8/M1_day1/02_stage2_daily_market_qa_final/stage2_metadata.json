@@ -1,0 +1,22 @@
+{
+  "research_start": "2015-01-05",
+  "research_end": "2026-09-03",
+  "trade_day_count": 2837,
+  "target_exchanges": [
+    "SSE",
+    "SZSE"
+  ],
+  "stock_master_path": "D:\\M1_day1\\01_stage1_final\\stock_master.parquet",
+  "stock_code_history_path": "D:\\M1_day1\\01_stage1_final\\stock_code_history.parquet",
+  "daily_temp3_dir": "D:\\lowfreq\\daily_temp3",
+  "processed_success_days": 2837,
+  "processed_failed_days": 0,
+  "revisions": [
+    "RAW_ONLY / DAILY_ONLY 通过 exchange + normalized historical ticker 执行 one-to-one identity reconciliation。",
+    "只有 mutual one-to-one 匹配才自动 reconcile；ambiguous identity mapping 不自动合并。",
+    "价格与 OHLC 异常只对 isOpen=1 的正常交易记录执行。",
+    "isOpen=0 的零价格占位仅作为 suspension diagnostic，不再判 HIGH。",
+    "新增 field_value_completeness_summary，分别报告全部、正常交易、停牌记录的值缺失率。",
+    "后续 Core QA 与 Value Completeness 只针对 exact matched + reconciled PIT records。"
+  ]
+}
