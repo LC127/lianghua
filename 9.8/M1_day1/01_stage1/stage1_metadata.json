@@ -1,0 +1,21 @@
+{
+  "research_start": "2015-01-05",
+  "research_end": "2026-09-03",
+  "include_sse": true,
+  "include_szse": true,
+  "include_bse": false,
+  "trade_day_count": 4260,
+  "security_count": 6905,
+  "raw_universe_rows": 17470960,
+  "column_mapping": {
+    "security_id": "secID",
+    "stock_code": "ticker",
+    "stock_name": "secShortName",
+    "exchange": "exchangeCD",
+    "list_date": "listDate",
+    "delist_date": "delistDate",
+    "security_type": null,
+    "list_status": "listStatusCD"
+  },
+  "important_note": "当前采用 list_date <= t < delist_date。请进一步确认供应商 delistDate 究竟表示最后交易日还是正式退市生效日。"
+}
