@@ -1,0 +1,9 @@
+﻿metric,value
+end_date,2026-09-03
+raw_universe_count,5215
+daily_temp3_target_exchange_count,5215
+daily_temp3_standard_a_code_count,3721
+daily_only_count,0
+raw_only_count,0
+daily_six_digit_but_unrecognized_count,0
+comparison_method,security_id
