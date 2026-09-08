@@ -1,0 +1,26 @@
+{
+  "research_start": "2015-01-05",
+  "research_end": "2026-09-03",
+  "trade_day_count": 2837,
+  "selected_chg_pct_scale": "decimal",
+  "vendor_scale_factor": 1.0,
+  "selected_adj_factor_mode": "multiply",
+  "network_return_definition": "log(adjusted_close_t / adjusted_close_t-1), only when both current and previous market-day observations have isOpen=1",
+  "last_trade_return_definition": "log(adjusted_close_t / adjusted_close_previous_actual_trade)",
+  "suspension_rule": "isOpen=0 observations remain in panel, but return_network is NA rather than zero.",
+  "reopen_rule": "first reopen-day return_network remains NA under the conservative network definition; return_last_trade_log preserves the cumulative price change since the previous actual trade.",
+  "return_diff_tolerance": 0.0005,
+  "panel_path": "D:\\M1_day1\\03_stage3_return_validation\\daily_return_panel.parquet",
+  "total_panel_rows": 11625293,
+  "total_network_return": 11324979,
+  "total_last_trade_return": 11337158,
+  "total_reopen": 12430,
+  "validation_metrics": {
+    "count": 11337158,
+    "mae": 3.6909906740932e-05,
+    "rmse": 0.0015741189920203075,
+    "corr": 0.998768557910687,
+    "max_abs": 0.36761397276494967
+  },
+  "anomaly_count": 5904
+}
