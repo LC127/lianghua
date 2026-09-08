@@ -1,0 +1,15 @@
+{
+  "research_start": "2015-01-05",
+  "research_end": "2026-09-03",
+  "trade_day_count": 2837,
+  "stock_master_path": "D:\\M1_day1\\01_stage1_final\\stock_master.parquet",
+  "daily_temp3_dir": "D:\\lowfreq\\daily_temp3",
+  "processed_success_days": 2837,
+  "processed_failed_days": 0,
+  "notes": [
+    "PIT expected universe 由 Step 1 stock_master 利用 list_date <= t < delist_date 逐日重新构造。",
+    "Universe coverage 使用稳定 secID 比较，不依赖 ticker。",
+    "停牌股票即使没有成交，只要 daily_temp3 中存在该证券记录，仍计入行情覆盖。",
+    "本阶段仅检查行情数据质量；收益率重新构造与 chgPct 验证留到后续 Return Validation Step。"
+  ]
+}
