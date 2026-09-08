@@ -1,0 +1,4 @@
+﻿trade_date,window,individual_min_valid_ratio,eligible_stock_count,sample_pair_draw_count,pair_common_ratio_mean,pair_common_ratio_min,pair_common_ratio_q01,pair_common_ratio_q05,pair_common_ratio_q10,pair_common_ratio_q25,pair_common_ratio_median,pair_common_ratio_q75,pair_common_ratio_q90,pair_common_ratio_q95,pair_common_ratio_q99,pair_common_ratio_max,share_pairs_common_ge_80pct,share_pairs_common_ge_90pct,share_pairs_common_ge_95pct
+2026-09-03,60,0.9,5176,50000,0.9979976666666667,0.8,0.9166666666666666,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.99988,0.9853
+2026-09-03,120,0.9,5170,50000,0.9964381666666668,0.8416666666666667,0.9166666666666666,0.9833333333333333,0.9833333333333333,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.9995,0.98352
+2026-09-03,252,0.9,5125,50000,0.9961434126984127,0.8611111111111112,0.9523809523809523,0.9682539682539683,0.9880952380952381,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.99986,0.99086
