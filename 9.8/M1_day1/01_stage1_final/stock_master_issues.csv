@@ -1,0 +1,27 @@
+﻿issue_type,severity,security_id,security_id_2,stock_code,stock_name,exchange,list_date,delist_date,note
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,302132.XSHE,,302132,中航成飞,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,601360.XSHG,,601360,三六零,SSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,601607.XSHG,,601607,上海医药,SSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,000991.XSHE,,000991,通海高科,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,001235.XSHE,,001235,里得电科,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,002257.XSHE,,002257,立立电子,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,002525.XSHE,,002525,胜景山河,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,002710.XSHE,,002710,慈铭体检,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,002720.XSHE,,002720,宏良股份,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,300060.XSHE,,300060,苏州恒久,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,300361.XSHE,,300361,奥赛康,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,300646.XSHE,,300646,侨源气体,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,300728.XSHE,,300728,天常股份,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,301686.XSHE,,301686,中塑股份,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,301689.XSHE,,301689,电科思仪,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,301699.XSHE,,301699,洛轴股份,SZSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,600349.XSHG,,600349,富通昭和,SSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,601091.XSHG,,601091,沈鼓集团,SSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,601206.XSHG,,601206,海尔施,SSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,603302.XSHG,,603302,鑫广绿环,SSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,603361.XSHG,,603361,浙江国祥,SSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,603448.XSHG,,603448,天博智能,SSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,688688.XSHG,,688688,蚂蚁集团,SSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,688801.XSHG,,688801,燧原科技,SSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+STANDARD_A_CODE_WITHOUT_LISTDATE,REVIEW,688837.XSHG,,688837,信诺维,SSE,,,标准沪深 A 股代码但缺 listDate；需与 daily_temp3 核查。
+HISTORICAL_CODE_REUSE,INFO,600018.XSHG,DY600018.XSHG,600018,上港集团 / 上港集箱,SSE,2006-10-26,,同一代码在不同历史阶段对应不同 secID，有效期不重叠，属于历史代码复用。
