@@ -1,0 +1,37 @@
+{
+  "research_start": "2015-01-05",
+  "research_end": "2026-09-03",
+  "trade_calendar_path": "D:\\lowfreq\\trade_calendar\\trade_date.csv",
+  "trade_calendar_rule": "isOpen == 1",
+  "trade_day_count": 2837,
+  "expected_trade_day_count": 2837,
+  "target_exchanges": [
+    "SSE",
+    "SZSE"
+  ],
+  "security_count": 5553,
+  "historically_delisted_count": 338,
+  "end_date_raw_universe_count": 5215,
+  "expected_end_universe_count": 5215,
+  "high_issue_rows": 0,
+  "review_issue_rows": 25,
+  "raw_universe_rows": 11628957,
+  "column_mapping": {
+    "security_id": "secID",
+    "stock_code": "ticker",
+    "stock_name": "secShortName",
+    "exchange": "exchangeCD",
+    "list_date": "listDate",
+    "delist_date": "delistDate",
+    "security_type": null,
+    "list_status": "listStatusCD"
+  },
+  "important_notes": [
+    "missing listDate 和 REVIEW 只针对当前 TARGET_EXCHANGES 统计。",
+    "同一代码多 secID 不再自动判 HIGH；只有有效期重叠才判 OVERLAPPING_CODE_REUSE / HIGH。",
+    "有效期不重叠的代码复用记为 HISTORICAL_CODE_REUSE / INFO。",
+    "A 股代码规则采用：SSE=60xxxx/68xxxx，SZSE=00xxxx/30xxxx。",
+    "程序会自动读取 END_DATE 的 daily_temp3，生成 daily_only 和 raw_only 差异表。",
+    "Raw Universe 当前仍采用 list_date <= t < delist_date。"
+  ]
+}
