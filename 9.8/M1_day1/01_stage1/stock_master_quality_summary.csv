@@ -1,0 +1,9 @@
+﻿metric,value
+unique_security_count,6905
+sse_count,3019
+szse_count,3886
+bse_count,0
+historically_delisted_count,338
+missing_list_date_count,1352
+multiple_code_security_count,2
+fallback_security_id_count,0
