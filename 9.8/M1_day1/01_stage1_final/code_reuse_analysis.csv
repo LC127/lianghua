@@ -1,0 +1,2 @@
+﻿exchange,stock_code,security_id_1,stock_name_1,list_date_1,delist_date_1,security_id_2,stock_name_2,list_date_2,delist_date_2,interval_overlap,issue_type,severity,note
+SSE,600018,600018.XSHG,上港集团,2006-10-26,,DY600018.XSHG,上港集箱,2000-07-19,2006-10-20,False,HISTORICAL_CODE_REUSE,INFO,同一代码在不同历史阶段对应不同 secID，有效期不重叠，属于历史代码复用。
