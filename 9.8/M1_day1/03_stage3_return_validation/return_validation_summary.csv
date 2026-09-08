@@ -1,0 +1,7 @@
+﻿metric,value
+validation_count,11337158.0
+mae,3.6909906740932e-05
+rmse,0.0015741189920203075
+correlation,0.998768557910687
+max_abs_diff,0.36761397276494967
+return_diff_tolerance,0.0005
