@@ -1,0 +1,14 @@
+﻿metric,value
+unique_listed_security_count,5553
+sse_count,2465
+szse_count,3088
+bse_count,0
+historically_delisted_count,338
+multiple_code_security_count,0
+missing_list_date_record_count_main_sample,13541
+missing_list_date_unique_security_count_main_sample,1355
+missing_list_date_standard_code_unique_security_count,25
+historical_code_reuse_pair_count,1
+overlapping_code_reuse_pair_count,0
+high_issue_rows,0
+review_issue_rows,25
