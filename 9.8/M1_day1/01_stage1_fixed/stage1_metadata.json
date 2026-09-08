@@ -1,0 +1,35 @@
+{
+  "research_start": "2015-01-05",
+  "research_end": "2026-09-03",
+  "trade_calendar_path": "D:\\lowfreq\\trade_calendar\\trade_date.csv",
+  "trade_calendar_rule": "isOpen == 1",
+  "trade_day_count": 2837,
+  "expected_trade_day_count": 2837,
+  "include_sse": true,
+  "include_szse": true,
+  "include_bse": false,
+  "security_count": 5551,
+  "historically_delisted_count": 338,
+  "missing_list_date_total_records": 16777,
+  "missing_list_date_standard_code_records": 1032,
+  "raw_universe_rows": 11624699,
+  "end_date_universe_count": 5213,
+  "column_mapping": {
+    "security_id": "secID",
+    "stock_code": "ticker",
+    "stock_name": "secShortName",
+    "exchange": "exchangeCD",
+    "list_date": "listDate",
+    "delist_date": "delistDate",
+    "security_type": null,
+    "list_status": "listStatusCD"
+  },
+  "important_notes": [
+    "交易日历严格使用 isOpen == 1。",
+    "缺少 listDate 的记录不再全部视为 HIGH。",
+    "非标准股票代码且缺 listDate 的记录主要视作 pre-listing / never-listed 记录，不进入正式 stock master。",
+    "标准 A 股代码但缺 listDate 的记录标记为 REVIEW，Stage 2 与 daily_temp3 核查。",
+    "正式 stock master 只包含：目标交易所 + 标准 A 股代码 + listDate 非空。",
+    "Raw Universe 当前采用 list_date <= t < delist_date；仍需确认供应商 delistDate 的业务定义。"
+  ]
+}
