@@ -1,0 +1,7 @@
+{
+  "selected_chg_pct_scale": "decimal",
+  "vendor_scale_factor": 1.0,
+  "selected_adj_factor_mode": "multiply",
+  "adj_mode_selection_sample": "factor_change",
+  "factor_change_pair_count": 33744
+}
