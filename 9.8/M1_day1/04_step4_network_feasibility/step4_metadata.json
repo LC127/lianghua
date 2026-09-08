@@ -1,0 +1,28 @@
+{
+  "research_start": "2015-01-05",
+  "research_end": "2026-09-03",
+  "return_panel": "D:\\M1_day1\\03_stage3_return_validation\\daily_return_panel.parquet",
+  "return_column": "return_network",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "min_valid_ratios": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "window_definition": "W consecutive market trading dates",
+  "eligible_stock_definition": "Stock must be present in the research panel at window end and have at least ceil(c*W) non-missing return_network observations during the rolling window.",
+  "p_over_w_definition": "eligible_stock_count / rolling_window_length",
+  "covariance_singularity_note": "For a demeaned W x p complete-data matrix, the sample covariance rank is at most W-1. Therefore p >= W implies dimensional singularity before considering additional missing-data complications.",
+  "pairwise_diagnostic": {
+    "enabled": true,
+    "date": "2026-09-03",
+    "individual_min_valid_ratio": 0.9,
+    "pair_sample_size": 50000,
+    "random_seed": 20260908
+  },
+  "important_note": "This step evaluates statistical/data feasibility only. It does not select the final network method and does not construct the formal Pearson, partial-correlation, Graphical Lasso, or factor-residual network."
+}
