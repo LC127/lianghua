@@ -1,0 +1,69 @@
+{
+  "project": "M1_A_share_full_market_association_network",
+  "research_day": "Day_2",
+  "step": "Step_1_freeze_baseline_design",
+  "created_at": "2026-09-10T09:30:31",
+  "research_period": {
+    "start": "2015-01-05",
+    "end": "2026-09-03",
+    "trade_day_count": 2837
+  },
+  "universe": {
+    "market": "SSE_SZSE_A_share",
+    "target_exchanges": [
+      "SSE",
+      "SZSE"
+    ],
+    "security_key": "security_id",
+    "definition": "Point-in-Time historical A-share universe constructed from stock_master; historically delisted securities retained.",
+    "historical_security_count": 5553
+  },
+  "return": {
+    "baseline_column": "return_network",
+    "robustness_column": "return_last_trade_log",
+    "adjusted_price_definition": "close_price * adj_factor",
+    "network_return_definition": "log(adjusted_close_t / adjusted_close_t-1), defined only for consecutive market dates with both observations tradable/open.",
+    "vendor_chg_pct_scale": "decimal",
+    "adj_factor_mode": "multiply"
+  },
+  "rolling_design": {
+    "windows": [
+      60,
+      120,
+      252
+    ],
+    "baseline_valid_ratio": 0.9,
+    "robust_valid_ratios": [
+      0.8,
+      0.95
+    ],
+    "pairwise_min_common_ratio": 0.9,
+    "stock_eligibility_definition": "At window end t, stock i must belong to the PIT research universe and have at least ceil(c*W) non-missing return_network observations during the W trading-day window.",
+    "pairwise_eligibility_definition": "A stock pair must have at least ceil(pairwise_min_common_ratio * W) jointly non-missing return observations when a pairwise association is estimated."
+  },
+  "analysis_schedule": {
+    "baseline_frequency": "month_end",
+    "definition": "Use the last actual trading day of each calendar month as the baseline structural diagnostic date.",
+    "total_window_date_rows": 402
+  },
+  "random_seed": 20260910,
+  "input_paths": {
+    "stock_master": "D:\\M1_StockNetwork\\output\\M1_day1\\01_stage1_final\\stock_master.parquet",
+    "trade_calendar": "D:\\M1_StockNetwork\\output\\M1_day1\\01_stage1_final\\trade_calendar_used.csv",
+    "daily_return_panel": "D:\\M1_StockNetwork\\output\\M1_day1\\03_stage3_return_validation\\daily_return_panel.parquet",
+    "day1_feasibility_summary": "D:\\M1_StockNetwork\\output\\M1_day1\\04_step4_network_feasibility\\network_feasibility_summary.csv"
+  },
+  "return_panel": {
+    "row_count": 11625293,
+    "baseline_return_column_found": true,
+    "robust_return_column_found": true
+  },
+  "methodological_notes": [
+    "c=0.90 is a stock-level data availability threshold, not a correlation threshold and not an edge sparsification threshold.",
+    "W=60,120,252 are all retained at this stage. Step 1 does not select the final network window.",
+    "Month-end sampling is used for structural diagnostics to control computation. It is not yet the final portfolio rebalancing frequency.",
+    "Raw Pearson, residual correlation, PCA, Same/Cross Industry and other Day 2 analyses should use the same baseline universe rules and analysis dates wherever possible.",
+    "ST and external suspension validation are not part of the current network estimation universe. They will be incorporated later when constructing the tradable Alpha universe.",
+    "Historical industry validation must be completed before formal Same/Cross Industry analysis."
+  ]
+}
