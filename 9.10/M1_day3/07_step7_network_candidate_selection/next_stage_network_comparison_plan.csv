@@ -1,0 +1,5 @@
+﻿priority,method,purpose,required_validation
+1,Market-Residual Pearson + Global Top-q%,Primary interpretable network candidate.,"Network stability, turnover, industry/community structure, Alpha IC/backtest, risk linkage."
+2,Market-Residual Pearson + Per-node Top-k,Check whether conclusions depend on global density control.,"Node coverage, degree concentration, edge stability, Alpha/risk robustness."
+3,Sparse Conditional Association on Market Residuals,Formal challenger that targets conditional rather than marginal association.,"Regularization path, sparsity, stability, computational scalability, comparison with residual Pearson edges."
+4,Raw Pearson + matched density,Unconditional baseline for all downstream comparisons.,Keep identical density and evaluation periods when comparing with residual networks.
