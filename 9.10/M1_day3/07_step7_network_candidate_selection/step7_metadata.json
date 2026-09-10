@@ -1,0 +1,19 @@
+{
+  "step": "Day2_Step7_Network_Candidate_Evidence_Matrix",
+  "main_industry_level": "industry_id1",
+  "primary_data_sources": {
+    "step3": "D:\\M1_StockNetwork\\output\\M1_day2\\03_step3_common_factor\\common_factor_summary.csv",
+    "step6_summary": "D:\\M1_StockNetwork\\output\\M1_day2\\06_step6_market_residual\\market_residual_summary.csv",
+    "step6_window": "D:\\M1_StockNetwork\\output\\M1_day2\\06_step6_market_residual\\market_residual_window_comparison.csv"
+  },
+  "important_design_choice": "Step 7 preferentially uses the corrected raw correlation diagnostics recomputed inside Step 6 with uniform unordered-pair sampling.",
+  "selection_philosophy": "Evidence gates and explicit method roles are used instead of an arbitrary weighted numerical score.",
+  "current_primary_candidate": "PIT EW market-residual Pearson association with density-controlled sparsification.",
+  "baseline": "Raw Pearson correlation network with matched density.",
+  "formal_next_stage_challenger": "Sparse conditional association estimated on market-residual returns using a high-dimensional precision/conditional-regression method.",
+  "important_limitations": [
+    "Step 7 is a method-selection diagnostic, not evidence that one network is universally optimal.",
+    "Market-residual correlation remains a marginal pairwise association and does not establish conditional independence.",
+    "Final network selection must incorporate downstream stability, turnover, Alpha-factor performance, risk information, and computational scalability."
+  ]
+}
