@@ -1,0 +1,23 @@
+{
+  "step": "Day2_Step6_Market_Residual_Correlation",
+  "return_column": "return_network",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "stock_valid_ratio": 0.9,
+  "pair_valid_ratio": 0.9,
+  "main_industry_level": "industry_id1",
+  "market_factor": "Daily equal-weighted market return constructed from the contemporaneous PIT universe and valid network returns.",
+  "stock_regression_factor": "Leave-one-out version of the daily PIT equal-weighted market factor.",
+  "residual_model": "r_i,s = alpha_i,t,W + beta_i,t,W F_{-i,s} + epsilon_i,s",
+  "residual_correlation": "Pairwise-complete Pearson correlation between rolling market-factor residuals.",
+  "pair_sampling": "Uniform sampling without replacement from integer ranks of all eligible unordered pairs.",
+  "important_notes": [
+    "The pair sampler differs from the earlier legacy Step 2/5 implementation because the old np.unique(... )[:target] truncation can induce index-order bias.",
+    "Raw and residual correlations inside Step 6 are computed on exactly the same corrected pair sample, so their comparison is valid.",
+    "Residual correlation is descriptive evidence of conditional dependence after removal of one broad market factor. It is not a causal measure and is not yet the final sparse network.",
+    "The Same/Cross classification uses the historically indexed industry label at the network endpoint."
+  ]
+}
