@@ -1,0 +1,9 @@
+﻿evidence_gate,passed,interpretation
+Strong market-wide first mode,True,PC1 is strongly aligned with the equal-weighted market factor.
+Raw correlation tracks market mode,True,Time variation in corrected Raw Mean Correlation closely tracks PC1 strength.
+Market removal materially reduces raw baseline,True,Removing the market factor eliminates a large fraction of the positive average cross-sectional correlation baseline.
+Residual average correlation is near zero,True,The broad positive market-wide baseline is largely absent in residual correlation.
+Industry structure survives market removal,True,Same-industry residual correlations remain systematically stronger than cross-industry residual correlations.
+Residual strongest edges remain industry enriched,True,Strong residual associations are over-represented within industries.
+Industry structure becomes clearer after removal,True,Top-tail industry enrichment is stronger in residual space than in raw-return space.
+Raw and residual topologies differ materially,True,Less than half of Raw Top-1% edges remain Top-1% after market-factor removal.
