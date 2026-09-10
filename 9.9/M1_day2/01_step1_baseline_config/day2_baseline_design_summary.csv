@@ -1,0 +1,4 @@
+﻿window,baseline_valid_ratio,required_valid_days,pairwise_min_common_ratio,required_pairwise_common_days,analysis_frequency,analysis_date_count,first_analysis_date,last_analysis_date,historical_median_p,historical_median_p_over_w,latest_eligible_stock_count,latest_p_over_w
+60,0.9,54,0.9,54,month_end,138,2015-04-30,2026-09-03,3965.0,66.08333333333334,5176,86.26666666666667
+120,0.9,108,0.9,108,month_end,135,2015-07-31,2026-09-03,3915.0,32.625,5170,43.083333333333336
+252,0.9,227,0.9,227,month_end,129,2016-01-29,2026-09-03,3810.0,15.11904761904762,5125,20.33730158730159
