@@ -1,0 +1,7 @@
+﻿input_name,path,exists
+stock_master,D:\M1_StockNetwork\output\M1_day1\01_stage1_final\stock_master.parquet,True
+trade_calendar,D:\M1_StockNetwork\output\M1_day1\01_stage1_final\trade_calendar_used.csv,True
+return_panel,D:\M1_StockNetwork\output\M1_day1\03_stage3_return_validation\daily_return_panel.parquet,True
+return_definition,D:\M1_StockNetwork\output\M1_day1\03_stage3_return_validation\return_definition.json,True
+feasibility_summary,D:\M1_StockNetwork\output\M1_day1\04_step4_network_feasibility\network_feasibility_summary.csv,True
+feasibility_latest,D:\M1_StockNetwork\output\M1_day1\04_step4_network_feasibility\network_feasibility_latest_snapshot.csv,True
