@@ -1,0 +1,39 @@
+{
+  "step": "Day2_Step4_Historical_Industry_Validation",
+  "research_period": {
+    "start": "2015-01-05",
+    "end": "2026-09-03"
+  },
+  "panel_source": "D:\\M1_StockNetwork\\output\\M1_day1\\03_stage3_return_validation\\daily_return_panel.parquet",
+  "external_industry_source": "D:\\lowfreq\\status\\ind.csv",
+  "external_file_detected_format": {
+    "format": "wide",
+    "date_column": "date",
+    "code_column": null,
+    "industry_column": null
+  },
+  "external_duplicate_key_count": 0,
+  "panel_industry_levels": [
+    "industry_id1",
+    "industry_id2"
+  ],
+  "merge_key": [
+    "trade_date",
+    "normalized 6-digit stock_code"
+  ],
+  "validation_components": [
+    "historical coverage",
+    "exact code agreement where meaningful",
+    "dominant classification mapping purity",
+    "industry change counts",
+    "potential current-label backfill flags",
+    "industry-class count stability"
+  ],
+  "important_limitations": [
+    "High agreement between historically indexed files does not by itself prove that the vendor classification was genuinely known in real time. The test validates historical indexing and cross-source consistency, not vendor publication timestamp semantics.",
+    "Exact agreement is only directly interpretable when external and panel files use the same industry coding system.",
+    "When code systems differ, dominant mapping purity is used as a structural crosswalk diagnostic rather than treating unequal numeric labels as classification disagreement.",
+    "Historical code changes can create unmatched records when the external file only contains ticker rather than a stable security identifier. Such unmatched observations should be reviewed rather than automatically mapped using broad heuristics.",
+    "Final choice between industry_id1 and industry_id2 must consider economic granularity in addition to statistical consistency."
+  ]
+}
