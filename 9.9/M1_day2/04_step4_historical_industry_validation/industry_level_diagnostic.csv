@@ -1,0 +1,3 @@
+﻿panel_industry_level,panel_nonmissing_ratio,external_common_ratio,weighted_mapping_purity,median_mapping_purity,high_purity_external_class_share,potential_backfill_stock_count,potential_backfill_stock_share,diagnostic_rank,important_note
+industry_id1,1.0,0.9998597884801699,1.0,1.0,1.0,0,0.0,1.0,Diagnostic rank only. Final Same/Cross industry level should also consider economic granularity and vendor classification meaning.
+industry_id2,1.0,0.9998597884801699,0.44310050971023507,0.4728948538879397,0.0625,0,0.0,2.0,Diagnostic rank only. Final Same/Cross industry level should also consider economic granularity and vendor classification meaning.
