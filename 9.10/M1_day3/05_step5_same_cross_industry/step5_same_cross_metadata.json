@@ -1,0 +1,30 @@
+{
+  "step": "Day2_Step5_Same_Cross_Industry_Association",
+  "output_dir": "D:\\M1_StockNetwork\\output\\M1_day2\\05_step5_same_cross_industry",
+  "return_column": "return_network",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "stock_valid_ratio": 0.9,
+  "pair_valid_ratio": 0.9,
+  "main_industry_level": "industry_id1",
+  "robustness_industry_level": "industry_id2",
+  "industry_classification_rule": "Same/Cross status is defined using the historically indexed industry label observed at the network analysis date (window endpoint).",
+  "correlation_method": "Pearson pairwise-complete raw return correlation",
+  "pair_sampling": {
+    "sample_size_per_window_date": 20000,
+    "sampling_rule": "Uniform random sampling among eligible undirected stock pairs using the same random seed rule as Day 2 Step 2."
+  },
+  "exact_baseline": "The unconditional Same-Industry pair share is computed exactly from eligible industry group sizes rather than estimated from the random pair sample.",
+  "top_edge_enrichment": "Same-industry share among the sampled top correlation tail divided by the exact same-industry share among all possible eligible pairs.",
+  "important_notes": [
+    "This step studies raw-return Same/Cross industry structure. It does not yet remove the market common factor.",
+    "Pair-level observations are dependent because different pairs can share stocks. The analysis is therefore descriptive; naive independent-pair t-tests are intentionally not reported.",
+    "industry_id1 is the primary classification because Step 4 showed essentially exact historical correspondence with the external historical industry file.",
+    "industry_id2 is retained as a finer-industry robustness analysis.",
+    "Concentrated historical industry reclassification dates can mechanically change Same/Cross labels. Window-level classification change diagnostics are therefore retained.",
+    "A positive Same-Cross gap does not yet imply stock-specific dependence because both Same and Cross correlations still contain the market-wide common component diagnosed in Step 3."
+  ]
+}
