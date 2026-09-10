@@ -1,0 +1,51 @@
+{
+  "analysis": "Supplementary Market-Industry Decomposition Robustness",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "main_industry_level": "industry_id1",
+  "pair_sample_size": 20000,
+  "sampler_robustness_date_mode": "all",
+  "specification_robustness_date_mode": "representative",
+  "robustness_configurations": [
+    {
+      "config_id": "BASE",
+      "return_column": "return_network",
+      "stock_valid_ratio": 0.9,
+      "pair_valid_ratio": 0.9,
+      "description": "Baseline specification"
+    },
+    {
+      "config_id": "RETURN",
+      "return_column": "return_last_trade_log",
+      "stock_valid_ratio": 0.9,
+      "pair_valid_ratio": 0.9,
+      "description": "Alternative last-trade return"
+    },
+    {
+      "config_id": "C80",
+      "return_column": "return_network",
+      "stock_valid_ratio": 0.8,
+      "pair_valid_ratio": 0.8,
+      "description": "Looser 80% valid-observation requirement"
+    },
+    {
+      "config_id": "C95",
+      "return_column": "return_network",
+      "stock_valid_ratio": 0.95,
+      "pair_valid_ratio": 0.95,
+      "description": "Stricter 95% valid-observation requirement"
+    }
+  ],
+  "sampler_test": "Legacy np.unique + first-target truncation versus direct uniform sampling without replacement from all unordered pair ranks.",
+  "main_quantities": [
+    "mean raw correlation",
+    "raw/residual Same-Cross industry gap",
+    "raw/residual Top-1% industry enrichment",
+    "raw-residual Top-1% edge overlap"
+  ],
+  "interpretation": "The robustness exercise is designed to test whether the main Market-Industry decomposition conclusions depend on pair-sampling implementation, return definition, or valid-observation thresholds.",
+  "important_note": "The 60-, 120-, and 252-day windows are retained because window-length robustness has already been examined throughout Steps 2-7."
+}
