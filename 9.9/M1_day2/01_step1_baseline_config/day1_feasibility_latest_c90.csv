@@ -1,0 +1,4 @@
+﻿trade_date,window,min_valid_ratio,required_valid_days,current_universe_count,eligible_stock_count,eligible_stock_ratio,p_over_w,possible_pair_count,dense_matrix_memory_mb_float64,covariance_dimensionally_singular,covariance_rank_upper_bound,minimum_rank_deficiency,eligible_jaccard_vs_previous_day,entered_count,exited_count
+2026-09-03,60,0.9,54,5215,5176,0.9925215723873442,86.26666666666667,13392900,204.39892578125,True,59,5117,1.0,0.0,0.0
+2026-09-03,120,0.9,108,5215,5170,0.9913710450623202,43.083333333333336,13361865,203.92532348632807,True,119,5051,1.0,0.0,0.0
+2026-09-03,252,0.9,227,5215,5125,0.9827420901246404,20.33730158730159,13130250,200.39081573486328,True,251,4874,1.0,0.0,0.0
