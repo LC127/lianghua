@@ -1,0 +1,5 @@
+﻿rule,example,density_control,node_coverage_control,cross_regime_comparability,interpretation,main_problem,recommended_role
+Fixed absolute correlation threshold,Edge if rho_ij > 0.5,NO,NO,WEAK,Simple absolute-strength criterion.,Network density can change mechanically when the overall correlation distribution moves across market regimes and window sizes.,ROBUSTNESS ONLY
+Global Top-q% / fixed density,"Keep strongest 1%, 2%, or 5% edges",YES,NO,STRONG,Retains the strongest relative associations under a fixed network density.,Some peripheral stocks may receive few or no edges.,PRIMARY SPARSIFICATION BASELINE
+Per-node Top-k,Each stock retains k strongest neighbors,APPROXIMATE,YES,STRONG,Maintains local strongest relationships for every stock.,Requires a symmetrization rule and can retain relatively weak edges for isolated nodes.,ROBUSTNESS / LOCAL NETWORK
+MST / filtered backbone,Minimum spanning tree or related filtered graph,YES,YES,STRONG,Produces a connected structural backbone.,Extremely sparse and may discard many economically meaningful associations.,VISUALIZATION / BACKBONE
