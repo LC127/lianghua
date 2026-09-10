@@ -1,0 +1,27 @@
+{
+  "step": "Day2_Step2_Raw_Correlation_Structure",
+  "output_dir": "D:\\M1_StockNetwork\\output\\M1_day2\\02_step2_raw_correlation",
+  "return_panel": "D:\\M1_StockNetwork\\output\\M1_day1\\03_stage3_return_validation\\daily_return_panel.parquet",
+  "return_column": "return_network",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "stock_min_valid_ratio": 0.9,
+  "pair_min_common_ratio": 0.9,
+  "analysis_frequency": "month_end",
+  "monthly_pair_sample_size": 20000,
+  "correlation_method": "Pearson",
+  "missing_data_rule": "Pairwise complete observations. No zero filling and no mean imputation.",
+  "pair_sampling_rule": "For every month-end and rolling window, randomly sample stock pairs from the full eligible PIT universe. Distributional statistics therefore represent Monte Carlo estimates of the full-market pair distribution.",
+  "analysis_date_count": 402,
+  "important_notes": [
+    "This step studies unconditional raw return correlation only.",
+    "No market-factor residualization is performed.",
+    "No industry adjustment is performed.",
+    "No correlation threshold is used to define network edges.",
+    "Sampled top pairs are top pairs only within the random sample and are not claimed to be the exact global strongest full-market pairs.",
+    "The purpose is to establish the raw association benchmark before common-factor, Same/Cross Industry and residual-network diagnostics."
+  ]
+}
