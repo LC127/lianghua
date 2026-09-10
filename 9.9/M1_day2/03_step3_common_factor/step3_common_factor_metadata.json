@@ -1,0 +1,25 @@
+{
+  "step": "Day2_Step3_Common_Factor_Diagnostics",
+  "output_dir": "D:\\M1_StockNetwork\\output\\M1_day2\\03_step3_common_factor",
+  "return_column": "return_network",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "stock_min_valid_ratio": 0.9,
+  "analysis_frequency": "month_end",
+  "market_factors": {
+    "equal_weighted": "Daily equal-weighted mean of valid return_network observations among the window-end eligible PIT universe.",
+    "value_weighted": "Daily value-weighted mean using previous market trading day's market_value."
+  },
+  "factor_regression": "r_i = alpha_i + beta_i * F + epsilon_i; OLS with intercept using valid stock-factor observations only.",
+  "pca_method": "Correlation-based PCA using stock-wise standardized returns. Missing observations are filled with zero only after demeaning and standardization, so zero represents the stock-specific sample mean in standardized space. Column norms are rescaled for small differences in observation counts. Top components are computed using randomized SVD.",
+  "pca_components": 5,
+  "important_notes": [
+    "This step diagnoses common market factors; it does not yet construct residual networks.",
+    "EW/VW market factors include each stock itself. With several thousand stocks, own-stock weight is small. Leave-one-out market factors may be used later as a robustness check.",
+    "PCA is used as a diagnostic of the broad correlation mode rather than as the final factor model.",
+    "A high Raw Correlation alone does not prove that the market factor causes stock dependence. Evidence should be based jointly on beta/R2, PC1 explained variance, PC1 market-factor alignment, and their co-movement with Raw Correlation."
+  ]
+}
