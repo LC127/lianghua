@@ -1,0 +1,24 @@
+{
+  "research_day": 4,
+  "step": "Step6_Sparsification_Robustness",
+  "global_density_grid": [
+    0.002,
+    0.005,
+    0.01,
+    0.02
+  ],
+  "primary_density": 0.01,
+  "per_node_topk_grid": [
+    10,
+    25,
+    50
+  ],
+  "main_principle": "Re-evaluate the substantive conclusions from Steps 2-5 across fixed global density levels without recomputing correlations.",
+  "important_notes": [
+    "Global Top-q robustness is exact because Step 2 stored the ranked maximum-density edge master.",
+    "Average degree is mechanically determined by q and is not treated as robustness evidence.",
+    "Per-node Top-k cannot in general be recovered from a truncated global Top-2% edge master.",
+    "The script therefore performs an exactness diagnostic and does not report approximate Top-k as formal robustness.",
+    "The PASS variables are descriptive research QA criteria, not statistical significance tests."
+  ]
+}
