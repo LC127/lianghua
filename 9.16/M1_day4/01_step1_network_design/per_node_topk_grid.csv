@@ -1,0 +1,4 @@
+﻿top_k,symmetrization,edge_rule,score,purpose
+10,OR,Edge exists if i selects j OR j selects i.,positive residual correlation,Local-neighborhood robustness
+25,OR,Edge exists if i selects j OR j selects i.,positive residual correlation,Local-neighborhood robustness
+50,OR,Edge exists if i selects j OR j selects i.,positive residual correlation,Local-neighborhood robustness
