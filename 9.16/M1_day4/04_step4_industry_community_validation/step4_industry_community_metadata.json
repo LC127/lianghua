@@ -1,0 +1,21 @@
+{
+  "research_day": 4,
+  "step": "Step4_Industry_Community_Validation",
+  "input_step": "D:\\M1_StockNetwork\\output\\M1_day4\\02_step2_matched_networks",
+  "output_directory": "D:\\M1_StockNetwork\\output\\M1_day4\\04_step4_industry_community_validation",
+  "density_fraction": 0.01,
+  "density_percent": 1.0,
+  "community_method": "Louvain",
+  "community_resolution": 1.0,
+  "community_seed": 20260916,
+  "main_industry_level": "industry_id1",
+  "robustness_industry_level": "industry_id2",
+  "important_notes": [
+    "Industry labels are never used for edge selection or community detection.",
+    "Industry_id1 enrichment uses the exact common-valid-pair denominator generated in Step 2.",
+    "Industry_id2 enrichment uses a node-pair approximation because Step 2 did not save an exact common-valid-pair industry_id2 denominator.",
+    "Community alignment excludes isolated nodes because isolates contain no edge-based community information.",
+    "NMI/ARI measure alignment rather than causal or statistical significance.",
+    "Density robustness remains a separate Step 6."
+  ]
+}
