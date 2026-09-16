@@ -1,0 +1,5 @@
+﻿density_fraction,density_percent,is_primary,selection_rule,tie_break,purpose
+0.002,0.2,False,K = floor(q * M_common_valid_pairs),score_desc_then_security_id_i_then_security_id_j,Density robustness
+0.005,0.5,False,K = floor(q * M_common_valid_pairs),score_desc_then_security_id_i_then_security_id_j,Density robustness
+0.01,1.0,True,K = floor(q * M_common_valid_pairs),score_desc_then_security_id_i_then_security_id_j,Primary
+0.02,2.0,False,K = floor(q * M_common_valid_pairs),score_desc_then_security_id_i_then_security_id_j,Density robustness
