@@ -1,0 +1,17 @@
+{
+  "research_day": 4,
+  "step": "Step5_Dynamic_Stability",
+  "density_fraction": 0.01,
+  "density_percent": 1.0,
+  "primary_edge_stability": "Adjacent-date edge Jaccard and retention after restricting both networks to the intersection of their node universes.",
+  "auxiliary_edge_stability": "Full edge-set Jaccard before common-node adjustment.",
+  "node_stability": "Adjacent-date Spearman stability of degree and strength on common nodes.",
+  "community_stability": "Adjacent-date NMI and ARI of Louvain community assignments on nodes active in both dates.",
+  "industry_stability": "Forward retention of same-industry versus cross-industry edges, with category defined using date-t historical industry labels.",
+  "important_notes": [
+    "Common-node-adjusted edge stability is the main measure because full-set changes mix true rewiring with node entry/exit.",
+    "The analysis is descriptive; Jaccard, retention, NMI and ARI are not significance tests.",
+    "Step 5 uses the frozen primary density only. Density robustness remains Step 6.",
+    "Same/cross persistence uses historical industry_id1 labels at the initial date."
+  ]
+}
