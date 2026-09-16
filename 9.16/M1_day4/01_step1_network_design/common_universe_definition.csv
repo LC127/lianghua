@@ -1,0 +1,8 @@
+﻿level,rule_id,rule,purpose
+Node,N1,Security is in the point-in-time SSE/SZSE listed universe at analysis date t.,Avoid look-ahead universe selection.
+Node,N2,Stock has at least ceil(0.90*W) valid return_network observations inside the rolling window.,Maintain sufficient information for rolling correlation estimation.
+Node,N3,Market-factor regression used for residualization is estimable and produces finite residuals.,Raw and Residual networks must be compared on the same node universe.
+Pair,P1,Both stocks belong to the common node universe.,Matched node support.
+Pair,P2,Raw correlation and residual correlation are both finite.,Avoid comparing networks over different candidate-pair sets.
+Pair,P3,The pair satisfies the minimum common-observation requirement ceil(0.90*W).,Common pairwise data quality rule.
+Industry,I1,Industry label is NOT required for inclusion in the network.,"Industry is an external structural validation label, not a graph construction filter."
