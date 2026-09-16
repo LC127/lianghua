@@ -1,0 +1,33 @@
+{
+  "research_day": 4,
+  "step": "Step2_Construct_Matched_Density_Raw_and_Market_Residual_Networks",
+  "output_directory": "D:\\M1_StockNetwork\\output\\M1_day4\\02_step2_matched_networks",
+  "return_column": "return_network",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "stock_valid_ratio": 0.9,
+  "pair_valid_ratio": 0.9,
+  "density_grid": [
+    0.002,
+    0.005,
+    0.01,
+    0.02
+  ],
+  "primary_density": 0.01,
+  "pairwise_correlation": "Exact pairwise-complete Pearson correlation calculated blockwise.",
+  "market_factor": "Daily PIT equal-weight market factor with stock-specific leave-one-out adjustment.",
+  "node_comparison": "Raw and Residual networks use the same common node universe.",
+  "pair_comparison": "Raw and Residual networks use the intersection of their valid pair universes.",
+  "edge_budget": "K=floor(q*M_common_valid_pairs)",
+  "primary_network_type": "Positive-correlation network.",
+  "storage_strategy": "Only the maximum requested density edge master is stored. Lower density networks are nested subsets selected by edge rank.",
+  "important_notes": [
+    "Industry labels are not used for edge selection.",
+    "Edge tables store compact integer master_index identifiers; stock metadata are stored separately in stock_master_mapping.parquet.",
+    "The script supports restart/resume through per-date completion markers.",
+    "For a first smoke test, set TEST_LATEST_ONLY=True. Formal results require TEST_LATEST_ONLY=False."
+  ]
+}
