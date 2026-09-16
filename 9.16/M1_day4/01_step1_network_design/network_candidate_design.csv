@@ -1,0 +1,6 @@
+﻿network_id,network_family,role,correlation_object,edge_score,edge_weight,edge_sign,sparsification,primary,interpretation
+B0_RAW_POSITIVE,Raw Pearson,Unconditional baseline,rho_raw,rho_raw,rho_raw,positive only,Global Top-q,False,Strongest unconditional positive co-movement relationships.
+M1_RESIDUAL_POSITIVE,Market-Residual Pearson,Primary association candidate,rho_residual,rho_residual,rho_residual,positive only,Global Top-q,True,Strongest positive associations after removing the broad market mode.
+R1_RAW_ABS_SIGNED,Raw Pearson,Signed-edge robustness,rho_raw,abs(rho_raw),rho_raw,retain original sign,Global Top-q by absolute correlation,False,Strongest raw associations regardless of direction.
+R2_RESIDUAL_ABS_SIGNED,Market-Residual Pearson,Signed-edge robustness,rho_residual,abs(rho_residual),rho_residual,retain original sign,Global Top-q by absolute correlation,False,Strongest market-adjusted associations including negative edges.
+R3_RESIDUAL_TOPK,Market-Residual Pearson,Local-neighborhood robustness,rho_residual,rho_residual,rho_residual,positive only,Per-node Top-k + OR symmetrization,False,Each stock retains its strongest local positive residual neighbors.
