@@ -1,0 +1,7 @@
+﻿check,actual,expected,passed,note
+Rolling windows,"[60, 120, 252]","[60, 120, 252]",TRUE,Day 4 should retain the same 60/120/252-day windows used in Day 2/3 diagnostics.
+Stock validity ratio,0.9,0.9,TRUE,Main network construction should use the same stock-coverage rule.
+Pair validity ratio,0.9,0.9,TRUE,Main Raw / Residual comparison should use the same pairwise common-observation rule.
+Baseline return definition,return_network,return_network,TRUE,Formal network should inherit the validated return_network baseline.
+Primary density belongs to grid,0.01,"[0.002, 0.005, 0.01, 0.02]",TRUE,Primary q must be one of the pre-specified robustness densities.
+Top-k symmetrization,OR,OR,TRUE,OR rule is frozen as the main per-node Top-k robustness design.
