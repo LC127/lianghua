@@ -1,0 +1,91 @@
+{
+  "project": "M1_Stock_Association_Network",
+  "stage": "Day3_Step1_Freeze_Formal_Network_Construction_Design",
+  "created_at": "2026-09-16T09:53:05",
+  "data_design": {
+    "return_column": "return_network",
+    "alternative_return_column": "return_last_trade_log",
+    "windows": [
+      60,
+      120,
+      252
+    ],
+    "stock_valid_ratio": 0.9,
+    "pair_valid_ratio": 0.9,
+    "analysis_frequency": "month_end_actual_trading_day",
+    "market_scope": "SSE_SZSE"
+  },
+  "comparison_principle": {
+    "same_date": true,
+    "same_window": true,
+    "same_node_universe": true,
+    "same_common_pair_universe": true,
+    "same_edge_budget": true,
+    "industry_used_for_edge_selection": false
+  },
+  "primary_network_comparison": {
+    "baseline": "B0_RAW_POSITIVE",
+    "candidate": "M1_RESIDUAL_POSITIVE",
+    "graph_type": "undirected_simple_weighted",
+    "edge_score": "positive correlation",
+    "primary_density": 0.01,
+    "primary_density_percent": 1.0,
+    "edge_budget": "K=floor(q*M_common_valid_pairs)",
+    "tie_break": "score_desc_then_security_id_i_then_security_id_j"
+  },
+  "density_robustness": {
+    "q_grid": [
+      0.002,
+      0.005,
+      0.01,
+      0.02
+    ],
+    "q_percent": [
+      0.2,
+      0.5,
+      1.0,
+      2.0
+    ]
+  },
+  "local_network_robustness": {
+    "top_k_grid": [
+      10,
+      25,
+      50
+    ],
+    "symmetrization": "OR"
+  },
+  "signed_network_robustness": {
+    "enabled": true,
+    "selection_score": "absolute_correlation",
+    "edge_weight": "signed_correlation"
+  },
+  "industry_validation": {
+    "main_level": "industry_id1",
+    "robustness_level": "industry_id2",
+    "industry_is_construction_input": false,
+    "industry_is_validation_target": true
+  },
+  "required_edge_output_columns": [
+    "analysis_date",
+    "window",
+    "density",
+    "network_id",
+    "security_id_i",
+    "security_id_j",
+    "correlation",
+    "edge_score",
+    "edge_weight",
+    "edge_sign",
+    "rank",
+    "same_industry"
+  ],
+  "important_notes": [
+    "Raw and Residual networks must be constructed on the identical common candidate-pair universe.",
+    "The primary network retains strong positive associations. Negative residual correlations are analyzed separately in signed robustness.",
+    "Fixed absolute correlation thresholds are not used as the primary sparsification rule because correlation distributions vary across market regimes.",
+    "Industry labels are used only for post-construction validation and never for selecting network edges.",
+    "Market-Residual Pearson is a primary candidate rather than a final winner; Day 3 network-level validation can still challenge this working choice."
+  ],
+  "analysis_date_count": 402
+}
