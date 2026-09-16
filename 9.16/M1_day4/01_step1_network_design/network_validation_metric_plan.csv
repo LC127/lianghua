@@ -1,0 +1,15 @@
+﻿future_step,metric_group,metric,main_question
+Day3-Step3,Basic topology,Node count N,Is node support comparable?
+Day3-Step3,Basic topology,Edge count E / Density,Is matched-density construction implemented correctly?
+Day3-Step3,Degree,Degree distribution,How heterogeneous are local network neighborhoods?
+Day3-Step3,Degree,Weighted degree / Strength,Which stocks have the strongest aggregate association exposure?
+Day3-Step3,Connectivity,Giant component share,Does sparsification fragment the market network?
+Day3-Step3,Concentration,Top 1% / 5% degree share,Is network connectivity dominated by a small set of hubs?
+Day3-Step4,Industry,Same-industry edge share,How much of the sparse network lies within industries?
+Day3-Step4,Industry,Industry enrichment,Are within-industry edges over-represented relative to the feasible-pair baseline?
+Day3-Step4,Industry,Industry assortativity,Does the graph exhibit attribute assortative mixing?
+Day3-Step4,Community,Modularity / NMI with industry,Do endogenous network communities align with economic industries?
+Day3-Step5,Dynamic stability,Adjacent edge Jaccard,How stable are exact edge sets across adjacent month-ends?
+Day3-Step5,Dynamic stability,Edge retention,What fraction of current edges survive to the next observation?
+Day3-Step5,Node stability,Degree rank Spearman,Are central stocks stable over time?
+Day3-Step5,Node stability,Strength rank Spearman,Are weighted network positions stable over time?
