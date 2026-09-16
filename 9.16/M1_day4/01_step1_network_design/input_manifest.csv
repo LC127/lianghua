@@ -1,0 +1,5 @@
+﻿input_name,path,exists,size_bytes
+Day2 baseline config,D:\M1_StockNetwork\output\M1_day2\01_step1_baseline_config\day2_analysis_config.json,True,3409
+Day2 analysis dates,D:\M1_StockNetwork\output\M1_day2\01_step1_baseline_config\analysis_dates_by_window.csv,True,27756
+Step6 residual summary,D:\M1_StockNetwork\output\M1_day3\06_step6_market_residual\market_residual_summary.csv,True,2069153
+Step6 window comparison,D:\M1_StockNetwork\output\M1_day3\06_step6_market_residual\market_residual_window_comparison.csv,True,3077
