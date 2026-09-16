@@ -1,0 +1,9 @@
+﻿rule_id,rule,reason
+E1,"Graph is undirected, simple, with no self-loops.",Pearson correlation is symmetric.
+E2,Raw and Residual networks use exactly the same common valid candidate-pair universe.,Prevent apparent topology differences from being caused by different missing-data support.
+E3,"At density q, both Raw and Residual networks retain exactly K=floor(q*M_common) edges.",Guarantee matched density and matched edge budget.
+E4,"Primary positive network ranks pairs by correlation itself, not absolute correlation.",Primary economic object is strong positive synchronization after market adjustment.
+E5,"If fewer than K positive candidate pairs are available, construction must fail with a diagnostic warning rather than fill the graph with negative edges.",Preserve the meaning of the positive-association network.
+E6,Signed robustness ranks by absolute correlation and retains the original sign as edge weight.,Separate magnitude-based signed association from the primary positive network.
+E7,"Ties are resolved deterministically by score descending, followed by security_id_i and security_id_j.",Ensure exact reproducibility of edge sets.
+E8,Industry labels are never used to select edges.,Industry is a validation target; using it during construction would make later enrichment analysis circular.
