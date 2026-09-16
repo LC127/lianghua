@@ -1,0 +1,29 @@
+{
+  "research_day": 4,
+  "step": "Step3_Structural_Diagnostics",
+  "input_step": "D:\\M1_StockNetwork\\output\\M1_day4\\02_step2_matched_networks",
+  "output_directory": "D:\\M1_StockNetwork\\output\\M1_day4\\03_step3_structural_diagnostics",
+  "density_fraction": 0.01,
+  "density_percent": 1.0,
+  "networks": {
+    "raw": "B0_RAW_POSITIVE",
+    "residual": "M1_RESIDUAL_POSITIVE"
+  },
+  "structural_metric_groups": [
+    "connectivity",
+    "degree distribution",
+    "strength distribution",
+    "degree/strength concentration",
+    "degree assortativity",
+    "clustering / transitivity",
+    "Raw-vs-Residual hub re-ranking"
+  ],
+  "important_notes": [
+    "Raw and Residual networks have matched node support and edge budgets by construction.",
+    "Mean degree is therefore largely mechanical and is not treated as a substantive Raw-versus-Residual result.",
+    "Step 3 formally studies the primary density only. Density robustness remains Step 6.",
+    "Industry/community validation is intentionally left to Step 4.",
+    "Adjacent-month temporal stability is intentionally left to Step 5."
+  ],
+  "exact_clustering": true
+}
