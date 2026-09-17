@@ -1,0 +1,51 @@
+{
+  "research_day": 5,
+  "step": "Step4_Dynamic_Network_Features",
+  "design_hash": "b2f66e9ac2c999e7ceeef0ed453b3bf500fa727eb9913cccfac0b77b8a9caa8e",
+  "input_panel": "D:\\M1_StockNetwork\\output\\M1_day5\\03_step3_industry_decomposition\\industry_decomposed_feature_panel.parquet",
+  "output_panel": "D:\\M1_StockNetwork\\output\\M1_day5\\04_step4_dynamic_features\\dynamic_network_feature_panel.parquet",
+  "primary_network": "M1_RESIDUAL_POSITIVE",
+  "primary_density": 0.01,
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "row_count": 1549521,
+  "time_definition": {
+    "1m": "One adjacent network-analysis interval; approximately monthly, not a fixed 30-calendar-day interval.",
+    "first_date_policy": "Dynamic features are NaN on the first network date within each window."
+  },
+  "main_neighbor_definition": {
+    "method": "common_node_conditioned",
+    "description": "For adjacent dates t-1 and t, both selected-edge networks are restricted to the intersection of their node universes. Existing selected edges are filtered only; no re-ranking or re-normalization is performed.",
+    "reason": "Reduce contamination of network rewiring measures by stock-universe entry and exit."
+  },
+  "core_factor_definitions": {
+    "delta_residual_degree_percentile_1m": "ResidualDegreePct_t - ResidualDegreePct_t-1",
+    "delta_residual_strength_percentile_1m": "ResidualStrengthPct_t - ResidualStrengthPct_t-1",
+    "neighbor_jaccard_1m": "|N_i,t ∩ N_i,t-1| / |N_i,t ∪ N_i,t-1| on common-node-conditioned networks",
+    "neighbor_retention_1m": "|N_i,t ∩ N_i,t-1| / |N_i,t-1| on common-node-conditioned networks"
+  },
+  "auxiliary_features": [
+    "delta_same_industry_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "delta_cross_industry_degree_ratio_1m",
+    "new_neighbor_count_1m",
+    "lost_neighbor_count_1m",
+    "neighbor_turnover_1m"
+  ],
+  "important_interpretation": [
+    "Positive delta centrality means a stock moves upward in the relevant cross-sectional network ranking.",
+    "Low neighbor_jaccard indicates substantial neighborhood reorganization; high values indicate persistent network relationships.",
+    "New/lost links are computed after common-node conditioning for the main dynamic measures.",
+    "Dynamic features use t and t-1 only. No t+1 return or risk outcome is used.",
+    "Higher stability for longer rolling windows may partly arise mechanically from greater overlap in the underlying return samples."
+  ],
+  "formal_qa": {
+    "job_count": 402,
+    "all_jobs_pass": true,
+    "failed_job_count": 0
+  },
+  "summary_row_count": 4422
+}
