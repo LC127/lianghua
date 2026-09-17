@@ -1,0 +1,5 @@
+﻿target_name,research_role,start_rule,end_rule,conceptual_formula,status,note
+next_period_return,alpha,first_trading_day_strictly_after_analysis_date,next_analysis_date,"product_{s in (t,t_next]} (1+r_i,s) - 1",planned_for_later_step,Predictive label only; detailed portfolio execution convention will be frozen before backtesting.
+next_period_realized_volatility,risk,first_trading_day_strictly_after_analysis_date,next_analysis_date,sqrt(sum future daily returns^2),planned_for_later_step,Primary future-risk candidate.
+next_period_downside_volatility,risk,first_trading_day_strictly_after_analysis_date,next_analysis_date,"sqrt(sum min(r_i,s,0)^2)",planned_for_later_step,Downside-risk candidate.
+next_period_max_drawdown,risk,first_trading_day_strictly_after_analysis_date,next_analysis_date,maximum peak-to-trough drawdown over next network period,planned_for_later_step,Tail/downside-risk candidate.
