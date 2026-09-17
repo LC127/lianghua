@@ -1,0 +1,72 @@
+{
+  "research_day": 5,
+  "step": "Step6_Factor_QA_and_Initial_Screening",
+  "design_hash": "b2f66e9ac2c999e7ceeef0ed453b3bf500fa727eb9913cccfac0b77b8a9caa8e",
+  "input_panel": "D:\\M1_StockNetwork\\output\\M1_day5\\05_step5_community_features\\community_bridge_feature_panel.parquet",
+  "output_directory": "D:\\M1_StockNetwork\\output\\M1_day5\\06_step6_factor_qa_screening",
+  "screening_is_preoutcome": true,
+  "future_return_used": false,
+  "future_risk_used": false,
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "candidate_factor_count": 29,
+  "candidate_factors": [
+    "residual_degree_percentile",
+    "residual_strength_percentile",
+    "delta_degree_percentile",
+    "delta_strength_percentile",
+    "same_industry_degree_percentile",
+    "same_industry_strength_percentile",
+    "cross_industry_degree_percentile",
+    "cross_industry_strength_percentile",
+    "cross_industry_degree_ratio",
+    "cross_industry_strength_ratio",
+    "delta_residual_degree_percentile_1m",
+    "delta_residual_strength_percentile_1m",
+    "delta_same_industry_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "delta_cross_industry_degree_ratio_1m",
+    "neighbor_jaccard_1m",
+    "neighbor_retention_1m",
+    "neighbor_turnover_1m",
+    "new_neighbor_count_1m",
+    "lost_neighbor_count_1m",
+    "within_community_degree_percentile",
+    "within_community_strength_percentile",
+    "outside_community_degree_percentile",
+    "outside_community_strength_percentile",
+    "outside_community_degree_ratio",
+    "participation_coefficient_percentile",
+    "weighted_participation_coefficient_percentile",
+    "external_community_count",
+    "community_diversity_count"
+  ],
+  "screening_thresholds": {
+    "minimum_eligible_nonmissing_share": 0.8,
+    "minimum_varying_job_share": 0.9,
+    "minimum_pair_observations": 100,
+    "minimum_temporal_observations": 100,
+    "redundancy_median_abs_spearman": 0.95,
+    "redundancy_month_abs_spearman": 0.9,
+    "redundancy_month_share": 0.8
+  },
+  "methodology": {
+    "distribution_qa": "Computed separately within each Date x Window cross-section.",
+    "pairwise_correlation": "Monthly cross-sectional Spearman correlations are computed first; they are not estimated by pooling all stock-month observations.",
+    "temporal_stability": "Adjacent-date Spearman correlation on common stocks within each window.",
+    "redundancy": "A pair is flagged only when the high-correlation condition holds robustly in at least two windows.",
+    "screening": "Screening uses only data quality, variation, persistence, redundancy, and predefined economic priority. No future return information is used."
+  },
+  "output_row_counts": {
+    "factor_monthly_qa": 11658,
+    "factor_qa_summary": 87,
+    "factor_temporal_stability": 87,
+    "factor_pair_monthly_spearman": 162507,
+    "factor_pair_correlation_summary": 1218,
+    "factor_redundancy_pairs": 17,
+    "factor_screening_decisions": 29
+  }
+}
