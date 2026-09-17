@@ -1,0 +1,50 @@
+{
+  "research_day": 5,
+  "step": "Step5_Community_Bridge_Features",
+  "design_hash": "b2f66e9ac2c999e7ceeef0ed453b3bf500fa727eb9913cccfac0b77b8a9caa8e",
+  "input_dynamic_panel": "D:\\M1_StockNetwork\\output\\M1_day5\\04_step4_dynamic_features\\dynamic_network_feature_panel.parquet",
+  "community_source": "D:\\M1_StockNetwork\\output\\M1_day4\\04_step4_industry_community_validation\\community_membership",
+  "residual_edge_source": "D:\\M1_StockNetwork\\output\\M1_day4\\02_step2_matched_networks\\edge_master\\M1_RESIDUAL_POSITIVE",
+  "output_panel": "D:\\M1_StockNetwork\\output\\M1_day5\\05_step5_community_features\\community_bridge_feature_panel.parquet",
+  "primary_network": "M1_RESIDUAL_POSITIVE",
+  "primary_density": 0.01,
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "row_count": 1549521,
+  "community_method": "Day-4 Step-4 weighted Louvain community assignment, resolution=1 with fixed seed.",
+  "core_factor_definitions": {
+    "community_size": "Number of active residual-network nodes assigned to stock i's contemporaneous Louvain community.",
+    "within_community_degree": "Number of residual-network neighbors inside stock i's own community.",
+    "outside_community_degree": "Number of residual-network neighbors outside stock i's own community.",
+    "participation_coefficient": "1 - sum_c (k_ic / k_i)^2."
+  },
+  "auxiliary_features": [
+    "within_community_strength",
+    "outside_community_strength",
+    "outside_community_degree_ratio",
+    "outside_community_strength_ratio",
+    "weighted_participation_coefficient",
+    "community_diversity_count",
+    "external_community_count",
+    "within_community_degree_percentile",
+    "outside_community_degree_percentile",
+    "participation_coefficient_percentile"
+  ],
+  "interpretation": [
+    "Within-community connectivity measures embeddedness in an endogenous network group.",
+    "Outside-community connectivity measures the number/intensity of links extending beyond the stock's own endogenous group.",
+    "Participation coefficient is high when a node's links are distributed across multiple communities rather than concentrated in one community.",
+    "A stock with high outside-community degree but low participation may connect strongly to only one other community; therefore outside degree and participation measure different bridge dimensions.",
+    "Community labels are contemporaneous and their numeric/string IDs are not assumed to be comparable across dates.",
+    "No future return or future-risk outcome is used in this step."
+  ],
+  "formal_qa": {
+    "job_count": 402,
+    "all_jobs_pass": true,
+    "failed_job_count": 0
+  },
+  "summary_row_count": 6432
+}
