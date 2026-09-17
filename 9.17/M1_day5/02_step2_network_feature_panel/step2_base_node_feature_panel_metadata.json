@@ -1,0 +1,45 @@
+{
+  "research_day": 5,
+  "step": "Step2_Build_Base_Node_Feature_Panel",
+  "design_hash": "b2f66e9ac2c999e7ceeef0ed453b3bf500fa727eb9913cccfac0b77b8a9caa8e",
+  "design_source": "D:\\M1_StockNetwork\\output\\M1_day5\\01_step1_factor_design\\factor_design_config.json",
+  "output_panel": "D:\\M1_StockNetwork\\output\\M1_day5\\02_step2_network_feature_panel\\base_node_feature_panel.parquet",
+  "panel_key": [
+    "analysis_date",
+    "window",
+    "master_index"
+  ],
+  "primary_network": "M1_RESIDUAL_POSITIVE",
+  "benchmark_network": "B0_RAW_POSITIVE",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "row_count": 1549521,
+  "percentile_definition": {
+    "degree_percentile_source": "Formal Step-3 degree percentile; strictly reconstructed from integer degree as QA.",
+    "strength_percentile_source": "Formal Step-3 strength percentile.",
+    "strength_percentile_reason": "Step 3 may have computed strength percentiles from float64 strength before storing strength itself as float32. Therefore re-ranking stored strength is diagnostic only.",
+    "percentile_tie_method": "average",
+    "percentile_scope": "Cross-sectional within each analysis_date x window."
+  },
+  "core_factor_definitions": {
+    "delta_degree_percentile": "Residual degree percentile - Raw degree percentile",
+    "delta_strength_percentile": "Residual strength percentile - Raw strength percentile"
+  },
+  "important_interpretation": [
+    "Raw and Residual degree levels are directly comparable because the two networks use the same node support and the same edge budget.",
+    "Raw and Residual strength absolute levels are not interpreted as perfectly comparable economic scales because residualization changes the correlation distribution.",
+    "Therefore percentile-based Raw-Residual re-ranking is the main differential-factor definition.",
+    "No future return, future volatility, or other forward outcome is used in Step 2.",
+    "Industry decomposition, dynamic network features, and community features are intentionally deferred to later steps."
+  ],
+  "formal_qa": {
+    "job_count": 402,
+    "all_jobs_pass": true,
+    "failed_job_count": 0,
+    "strength_float32_rank_difference_is_failure": false
+  },
+  "factor_summary_row_count": 4824
+}
