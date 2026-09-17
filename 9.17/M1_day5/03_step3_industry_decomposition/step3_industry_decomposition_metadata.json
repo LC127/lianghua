@@ -1,0 +1,45 @@
+{
+  "research_day": 5,
+  "step": "Step3_Industry_Backbone_Decomposition",
+  "design_hash": "b2f66e9ac2c999e7ceeef0ed453b3bf500fa727eb9913cccfac0b77b8a9caa8e",
+  "input_base_panel": "D:\\M1_StockNetwork\\output\\M1_day5\\02_step2_network_feature_panel\\base_node_feature_panel.parquet",
+  "input_residual_edge_root": "D:\\M1_StockNetwork\\output\\M1_day4\\02_step2_matched_networks\\edge_master\\M1_RESIDUAL_POSITIVE",
+  "output_panel": "D:\\M1_StockNetwork\\output\\M1_day5\\03_step3_industry_decomposition\\industry_decomposed_feature_panel.parquet",
+  "primary_network": "M1_RESIDUAL_POSITIVE",
+  "primary_density": 0.01,
+  "industry_definition": "industry_id1",
+  "panel_key": [
+    "analysis_date",
+    "window",
+    "master_index"
+  ],
+  "row_count": 1549521,
+  "decomposition_identity": {
+    "degree": "ResidualDegree = SameIndustryDegree + CrossIndustryDegree + UnknownIndustryDegree",
+    "strength": "ResidualStrength approximately equals SameIndustryStrength + CrossIndustryStrength + UnknownIndustryStrength"
+  },
+  "factor_definitions": {
+    "same_industry_degree": "Number of residual-network neighbors with the same historical industry_id1.",
+    "cross_industry_degree": "Number of residual-network neighbors with a different historical industry_id1.",
+    "cross_industry_degree_ratio": "CrossIndustryDegree / ResidualDegree for ResidualDegree > 0.",
+    "same_industry_strength": "Sum of residual edge correlations to same-industry neighbors.",
+    "cross_industry_strength": "Sum of residual edge correlations to cross-industry neighbors.",
+    "cross_industry_strength_ratio": "CrossIndustryStrength / ResidualStrength for ResidualStrength > 0."
+  },
+  "missing_industry_policy": "Any edge with at least one missing/invalid industry label is classified as Unknown. It is never silently treated as Cross.",
+  "ratio_policy": "Ratios are NaN when total residual degree or strength is zero. Original source denominators and computed ratios are retained without clipping. Strength ratio QA allows two float32 epsilons above one for storage rounding; degree-ratio bounds are unchanged.",
+  "strength_ratio_qa_atol": 2.384185791015625e-07,
+  "interpretation_notes": [
+    "Same-industry features characterize the industry backbone identified in Day 4.",
+    "Cross-industry features characterize residual associations that extend beyond conventional industry boundaries.",
+    "Cross-industry connectivity is not assumed to be Alpha-positive; its predictive sign will be evaluated only in later steps.",
+    "Industry labels are contemporaneous historically indexed labels already stored in the PIT node panel.",
+    "No future return or future-risk outcome is used in Step 3."
+  ],
+  "formal_qa": {
+    "job_count": 402,
+    "all_jobs_pass": true,
+    "failed_job_count": 0
+  },
+  "summary_row_count": 5628
+}
