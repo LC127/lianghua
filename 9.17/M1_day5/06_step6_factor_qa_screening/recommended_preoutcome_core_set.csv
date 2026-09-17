@@ -1,0 +1,10 @@
+﻿factor_name,family,tier,priority,in_frozen_factor_dictionary,min_window_mean_nonmissing,min_window_min_nonmissing,min_varying_job_share,max_range_violation_count,median_monthly_std,median_monthly_iqr,median_temporal_spearman,redundant_with,screening_status,screening_reason,economic_meaning
+residual_degree_percentile,centrality,core,10,True,1.0,1.0,1.0,0,0.2886136377417171,0.5004167556762695,0.8989885921800564,,KEEP_CORE,,Residual-network degree cross-sectional percentile.
+delta_degree_percentile,market_residualization,core,30,True,1.0,1.0,1.0,0,0.2887143387362012,0.33375612646341324,0.8241474944760121,,KEEP_CORE,,Residual minus Raw degree percentile.
+cross_industry_degree_percentile,industry,core,70,False,1.0,1.0,1.0,0,0.2885050750342451,0.4983164983164983,0.8708019649656913,,KEEP_CORE,,Cross-industry degree percentile.
+cross_industry_degree_ratio,industry,core,90,True,1.0,1.0,1.0,0,0.2745266495713111,0.39779874213836475,0.8251040828808911,,KEEP_CORE,,Fraction of residual degree going across industries.
+delta_residual_degree_percentile_1m,dynamic,core,110,True,1.0,1.0,1.0,0,0.12972707179108883,0.11793406773358583,-0.01119957610163158,,KEEP_CORE,,Adjacent-period change in residual degree percentile.
+delta_cross_industry_degree_percentile_1m,dynamic_industry,core,140,False,1.0,1.0,1.0,0,0.14663806887918807,0.13776837056376323,-0.06266544786714909,,KEEP_CORE,,Change in cross-industry degree percentile.
+neighbor_jaccard_1m,dynamic_neighbor,core,160,True,1.0,1.0,1.0,0,0.22950817555013514,0.33027389277389285,0.4554559990127281,,KEEP_CORE,,Common-node-conditioned adjacent-period neighbor Jaccard.
+neighbor_retention_1m,dynamic_neighbor,core,170,True,1.0,1.0,1.0,0,0.25451757233031647,0.4024778719441283,0.24959153580129614,,KEEP_CORE,,Fraction of previous neighbors retained.
+outside_community_degree_percentile,community,core,220,False,1.0,1.0,1.0,0,0.28743613989650635,0.49840950099552017,0.7074971219233603,,KEEP_CORE,,Outside-community degree percentile.
