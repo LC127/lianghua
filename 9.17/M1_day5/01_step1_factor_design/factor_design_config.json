@@ -1,0 +1,93 @@
+{
+  "research_day": 5,
+  "research_theme": "Network Feature Engineering and Factor Panel Construction",
+  "step": "Step1_Freeze_Factor_Design",
+  "created_at": "2026-09-17T09:39:07.459266+08:00",
+  "network_design": {
+    "primary_network": "M1_RESIDUAL_POSITIVE",
+    "benchmark_network": "B0_RAW_POSITIVE",
+    "primary_density": 0.01,
+    "robustness_densities": [
+      0.002,
+      0.005,
+      0.01,
+      0.02
+    ],
+    "windows": [
+      60,
+      120,
+      252
+    ],
+    "positive_edges_only": true,
+    "main_industry_level": "industry_id1",
+    "robustness_industry_level": "industry_id2"
+  },
+  "timing_design": {
+    "feature_frequency": "month_end_network_date",
+    "feature_information_cutoff": "analysis_date_close",
+    "outcome_start_rule": "first_trading_day_strictly_after_analysis_date",
+    "outcome_end_rule": "next_analysis_date",
+    "dynamic_first_date_policy": "missing_not_zero",
+    "future_outcome_filter_policy": "never_use_future_outcome_availability_to_define_feature_universe"
+  },
+  "panel_key": [
+    "analysis_date",
+    "window",
+    "master_index"
+  ],
+  "factor_families": [
+    "centrality",
+    "raw_residual_differential",
+    "industry_decomposition",
+    "dynamic",
+    "community"
+  ],
+  "preprocessing": {
+    "store_raw_values": true,
+    "store_cross_sectional_percentiles": true,
+    "fill_missing_dynamic_factor_with_zero": false,
+    "winsorization_at_panel_construction": false,
+    "industry_neutralization_at_panel_construction": false,
+    "size_neutralization_at_panel_construction": false,
+    "neutralization_stage": "later_factor_diagnostics_and_validation"
+  },
+  "lookahead_controls": {
+    "features_may_use_information_after_analysis_date": false,
+    "future_outcomes_may_define_current_universe": false,
+    "industry_definition": "historically_indexed_vendor_classification",
+    "current_network_universe_rule": "use contemporaneous Step2 node universe only"
+  },
+  "research_principles": {
+    "primary_goal": "measure whether validated network structure contains useful stock-level information",
+    "do_not_optimize_factor_sign_in_step1": true,
+    "do_not_select_best_window_in_step1": true,
+    "do_not_select_best_density_using_future_returns": true,
+    "raw_network_role": "benchmark_control",
+    "residual_network_role": "primary_information_network"
+  },
+  "date_coverage": {
+    "60": {
+      "first_date": "2015-04-30",
+      "last_date": "2026-09-03",
+      "network_date_count": 138
+    },
+    "120": {
+      "first_date": "2015-07-31",
+      "last_date": "2026-09-03",
+      "network_date_count": 135
+    },
+    "252": {
+      "first_date": "2016-01-29",
+      "last_date": "2026-09-03",
+      "network_date_count": 129
+    }
+  },
+  "source_directories": {
+    "step2": "D:\\M1_StockNetwork\\output\\M1_day4\\02_step2_matched_networks",
+    "step3": "D:\\M1_StockNetwork\\output\\M1_day4\\03_step3_structural_diagnostics",
+    "step4": "D:\\M1_StockNetwork\\output\\M1_day4\\04_step4_industry_community_validation",
+    "step5": "D:\\M1_StockNetwork\\output\\M1_day4\\05_step5_dynamic_stability"
+  },
+  "design_hash": "b2f66e9ac2c999e7ceeef0ed453b3bf500fa727eb9913cccfac0b77b8a9caa8e",
+  "design_status": "FROZEN"
+}
