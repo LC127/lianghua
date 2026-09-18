@@ -1,0 +1,56 @@
+{
+  "annualization_days": 252,
+  "coverage_rule": {
+    "minimum_return_coverage": 0.8,
+    "minimum_valid_return_days": 10,
+    "minimum_valid_risk_days": 10,
+    "require_no_unresolved_open_missing": true
+  },
+  "daily_return_source": "return_last_trade_simple",
+  "daily_return_source_type": "simple",
+  "day6_factor_design_hash": "4827056a4ed1f87f79d1db92444063ee8217824b7c176c4f32cf4f74cfd34fdd",
+  "factor_universe_source": "D:\\M1_StockNetwork\\output\\M1_day5\\05_step5_community_features\\community_bridge_feature_panel.parquet",
+  "formal_qa": {
+    "all_jobs_pass": true,
+    "failed_job_count": 0,
+    "job_count": 402,
+    "passed_job_count": 402
+  },
+  "formal_return_labels": [
+    "future_total_return",
+    "future_loo_market_return",
+    "future_excess_return",
+    "future_relative_return"
+  ],
+  "formal_risk_labels": [
+    "future_realized_vol_annualized",
+    "future_downside_vol_annualized",
+    "future_max_drawdown",
+    "future_idio_vol_annualized",
+    "future_worst_daily_return",
+    "future_var_5pct_daily"
+  ],
+  "forward_interval_rule": "(analysis_date, next_analysis_date]",
+  "holding_return_definition": {
+    "active_day": "holding_return = return_last_trade_simple when is_open == True and return_last_trade_simple is observed",
+    "active_missing": "holding_return = NA when is_open == True but return_last_trade_simple is missing",
+    "reopen_day": "use return_last_trade_simple; this preserves the cumulative adjusted-price change since the previous actual trading day",
+    "suspended_day": "holding_return = 0 when is_open == False"
+  },
+  "important_rules": [
+    "The contemporaneous factor universe is fixed before future outcomes are observed.",
+    "Explicit suspension days are assigned holding return zero.",
+    "Active trading days use return_last_trade_simple.",
+    "Reopen-day returns preserve the cumulative adjusted-price change since the previous actual trade.",
+    "is_open=True with missing return_last_trade_simple is never silently filled with zero.",
+    "Rows with unavailable future labels remain in the factor universe.",
+    "The last frozen analysis date has no forward label."
+  ],
+  "label_version": "holding_return_v2",
+  "market_benchmark": "Daily leave-one-out equal-weight full-market holding return; explicit suspension days enter the market with return zero.",
+  "output_row_count": 1549521,
+  "research_day": 6,
+  "return_panel_source": "D:\\M1_StockNetwork\\output\\M1_day1\\03_stage3_return_validation\\daily_return_panel.parquet",
+  "step": "Step2_Construct_Forward_Return_and_Risk_Labels",
+  "step2_label_design_hash": "5688c8977f07e20b862d99b35e36c164c58ed9e6f4e06435c6fc8ab1af730cc6"
+}
