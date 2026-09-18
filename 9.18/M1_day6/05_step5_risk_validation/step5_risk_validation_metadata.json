@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-09-18T15:05:55",
+  "factor_set": [
+    "residual_degree_percentile",
+    "delta_degree_percentile",
+    "cross_industry_degree_percentile",
+    "cross_industry_degree_ratio",
+    "delta_residual_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "neighbor_jaccard_1m",
+    "neighbor_retention_1m",
+    "outside_community_degree_percentile"
+  ],
+  "factor_sign_flip": false,
+  "formal_qa": {
+    "all_factor_orientation_original": true,
+    "all_formal_qa_pass": true,
+    "all_ic_in_unit_interval": true,
+    "combined_window_set": [
+      60,
+      120,
+      252
+    ],
+    "core_factor_count": 9,
+    "core_factor_count_ok": true,
+    "ic_status_counts": {
+      "INSUFFICIENT_OBS": 264,
+      "PASS": 14208
+    },
+    "monthly_ic_key_unique": true,
+    "monthly_ic_row_count": 14472,
+    "spread_key_unique": true,
+    "window_set_ok": true
+  },
+  "hac_inference": true,
+  "multiple_testing_adjustment": false,
+  "negative_ic_interpretation": "Higher factor value predicts lower future risk.",
+  "neutralization": false,
+  "outcome_based_window_selection": false,
+  "outputs": {
+    "monthly_risk_portfolios": "D:\\M1_StockNetwork\\output\\M1_day6\\05_step5_risk_validation\\monthly_risk_portfolios.csv",
+    "monthly_risk_quintile_spreads": "D:\\M1_StockNetwork\\output\\M1_day6\\05_step5_risk_validation\\monthly_risk_quintile_spreads.csv",
+    "monthly_risk_rank_ic": "D:\\M1_StockNetwork\\output\\M1_day6\\05_step5_risk_validation\\monthly_risk_rank_ic.csv",
+    "risk_cross_window_consistency": "D:\\M1_StockNetwork\\output\\M1_day6\\05_step5_risk_validation\\risk_cross_window_consistency.csv",
+    "risk_quintile_summary": "D:\\M1_StockNetwork\\output\\M1_day6\\05_step5_risk_validation\\risk_quintile_summary.csv",
+    "risk_rank_ic_summary": "D:\\M1_StockNetwork\\output\\M1_day6\\05_step5_risk_validation\\risk_rank_ic_summary.csv",
+    "risk_validation_combined_summary": "D:\\M1_StockNetwork\\output\\M1_day6\\05_step5_risk_validation\\risk_validation_combined_summary.csv"
+  },
+  "parent_factor_design_hash": "4827056a4ed1f87f79d1db92444063ee8217824b7c176c4f32cf4f74cfd34fdd",
+  "parent_label_design_hash": "5688c8977f07e20b862d99b35e36c164c58ed9e6f4e06435c6fc8ab1af730cc6",
+  "positive_ic_interpretation": "Higher factor value predicts higher future risk.",
+  "primary_method": "Monthly cross-sectional Spearman Rank IC.",
+  "quintile_orientation": "Q1=lowest factor values; Q5=highest factor values.",
+  "research_day": 6,
+  "risk_spread_definition": "Q5 future risk - Q1 future risk",
+  "risk_targets": [
+    {
+      "description": "Forward annualized realized volatility.",
+      "higher_value_means": "HIGHER_RISK",
+      "target_name": "future_realized_vol_annualized",
+      "target_role": "TOTAL_VOL"
+    },
+    {
+      "description": "Forward annualized downside volatility.",
+      "higher_value_means": "HIGHER_RISK",
+      "target_name": "future_downside_vol_annualized",
+      "target_role": "DOWNSIDE_VOL"
+    },
+    {
+      "description": "Forward maximum drawdown magnitude.",
+      "higher_value_means": "HIGHER_RISK",
+      "target_name": "future_max_drawdown",
+      "target_role": "MAX_DRAWDOWN"
+    },
+    {
+      "description": "Forward annualized volatility of stock holding return minus LOO equal-weight market holding return.",
+      "higher_value_means": "HIGHER_RISK",
+      "target_name": "future_idio_vol_annualized",
+      "target_role": "IDIOSYNCRATIC_VOL"
+    }
+  ],
+  "secondary_method": "Monthly factor quintile future-risk gradient.",
+  "step": "Step5_Risk_Validation",
+  "step5_design_hash": "2fab1f766e89013a10a74603c77110de8c872881b63db81fe85fe332cf13b487",
+  "windows": [
+    60,
+    120,
+    252
+  ]
+}
