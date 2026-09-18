@@ -1,1 +1,5 @@
 /9.8/M1_day1/03_stage3_return_validation/daily_return_panel.parquet
+
+# Generated forward-label data: retain locally, exclude from Git.
+/9.18/M1_day6/02_step2_forward_labels/forward_label_panel.parquet
+/9.18/M1_day6/02_step2_forward_labels/archive_before_holding_return_v2_20260918_133530/forward_label_panel.parquet
