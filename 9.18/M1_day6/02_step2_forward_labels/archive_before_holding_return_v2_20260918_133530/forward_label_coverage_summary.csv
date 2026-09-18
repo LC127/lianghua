@@ -1,0 +1,4 @@
+﻿window,job_count,forward_interval_count,qa_pass_share,mean_return_coverage,mean_return_label_valid_share,min_return_label_valid_share,mean_risk_label_valid_share,min_risk_label_valid_share,min_market_date_coverage,min_market_stock_count
+60,138,137,1.0,0.9891571458921383,0.9747816116696442,0.0,0.9747816116696442,0.0,1.0,1312
+120,135,134,1.0,0.9904618173276146,0.9780178873117708,0.0,0.9780178873117708,0.0,1.0,2254
+252,129,128,1.0,0.9903258561629453,0.9784288102422234,0.0,0.9784288102422234,0.0,1.0,2489
