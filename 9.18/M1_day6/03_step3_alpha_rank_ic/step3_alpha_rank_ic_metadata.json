@@ -1,0 +1,89 @@
+{
+  "created_at": "2026-09-18T14:19:42",
+  "cross_section_rule": "For each analysis_date x window, use pairwise complete observations among the frozen contemporaneous factor universe and valid Step-2 forward labels.",
+  "factor_orientation": "ORIGINAL",
+  "factor_set": [
+    "residual_degree_percentile",
+    "delta_degree_percentile",
+    "cross_industry_degree_percentile",
+    "cross_industry_degree_ratio",
+    "delta_residual_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "neighbor_jaccard_1m",
+    "neighbor_retention_1m",
+    "outside_community_degree_percentile"
+  ],
+  "formal_qa": {
+    "all_factor_orientation_original": true,
+    "all_formal_qa_pass": true,
+    "all_rank_ic_in_unit_interval": true,
+    "analysis_panel_key_unique": true,
+    "analysis_panel_row_count": 1549521,
+    "core_factor_count": 9,
+    "core_factor_count_ok": true,
+    "monthly_ic_key_unique": true,
+    "monthly_ic_nonpass_count": 132,
+    "monthly_ic_pass_count": 7104,
+    "monthly_ic_row_count": 7236,
+    "monthly_ic_status_counts": {
+      "INSUFFICIENT_OBS": 132,
+      "PASS": 7104
+    },
+    "observed_windows": [
+      60,
+      120,
+      252
+    ],
+    "window_set_ok": true
+  },
+  "hac_inference": true,
+  "hac_lag_rule": "floor(4 * (T/100)^(2/9))",
+  "important_interpretation_rule": "Step 3 is descriptive/preliminary Alpha screening. IC results do not change factor definitions, factor signs, or the frozen window design.",
+  "input_files": {
+    "factor_panel": "D:\\M1_StockNetwork\\output\\M1_day5\\05_step5_community_features\\community_bridge_feature_panel.parquet",
+    "forward_label_panel": "D:\\M1_StockNetwork\\output\\M1_day6\\02_step2_forward_labels\\forward_label_panel.parquet",
+    "frozen_core_factor_set": "D:\\M1_StockNetwork\\output\\M1_day6\\01_step1_freeze_reduced_factor_set\\frozen_core_factor_set.csv",
+    "step2_label_design": "D:\\M1_StockNetwork\\output\\M1_day6\\02_step2_forward_labels\\step2_label_design.json"
+  },
+  "input_sha256": {
+    "factor_panel": "59e94928b45419d0a9f99c298c87f9c05973b959e04e6bea5dea40e130225689",
+    "forward_label_panel": "744e335051e81e0d98f3787a142250a8b3cc445e8ff6fa75a2b39677a0f82129",
+    "frozen_core_factor_set": "0e1722fbc49dbe4f7df3fe0352b739edcae2e6762d5dbd74437a67dde906bf53",
+    "step2_label_design": "9e8e4ef37f3bb2b225a9c848092c410fddb45538f41ab2df861ff728a7e410bf"
+  },
+  "minimum_cross_section_observations": 100,
+  "neutralization": false,
+  "outcome_based_factor_sign_flip": false,
+  "outcome_based_window_selection": false,
+  "outputs": {
+    "monthly_rank_ic": "D:\\M1_StockNetwork\\output\\M1_day6\\03_step3_alpha_rank_ic\\monthly_rank_ic.csv",
+    "rank_ic_cross_window_consistency": "D:\\M1_StockNetwork\\output\\M1_day6\\03_step3_alpha_rank_ic\\rank_ic_cross_window_consistency.csv",
+    "rank_ic_summary": "D:\\M1_StockNetwork\\output\\M1_day6\\03_step3_alpha_rank_ic\\rank_ic_summary.csv"
+  },
+  "parent_factor_design_hash": "4827056a4ed1f87f79d1db92444063ee8217824b7c176c4f32cf4f74cfd34fdd",
+  "parent_label_design_hash": "5688c8977f07e20b862d99b35e36c164c58ed9e6f4e06435c6fc8ab1af730cc6",
+  "portfolio_sorting": false,
+  "primary_alpha_target": "future_excess_return",
+  "rank_ic_definition": "Monthly cross-sectional Spearman correlation between contemporaneous factor and strictly forward return.",
+  "research_day": 6,
+  "step": "Step3_Initial_Alpha_Screening_Rank_IC",
+  "step3_design_hash": "35d0e57faa2afba40bb1f06d9932bf06f72706526f2e71e5eb0c088550d0b146",
+  "targets": [
+    {
+      "description": "Future stock holding-period return minus future leave-one-out equal-weight market holding-period return.",
+      "target_name": "future_excess_return",
+      "target_role": "PRIMARY_ALPHA"
+    },
+    {
+      "description": "Future stock holding-period total return.",
+      "target_name": "future_total_return",
+      "target_role": "ROBUSTNESS_TOTAL_RETURN"
+    }
+  ],
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "winsorization": false
+}
