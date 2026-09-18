@@ -1,0 +1,50 @@
+{
+  "annualization_days": 252,
+  "calendar_source": "D:\\lowfreq\\trade_calendar\\trade_date.csv",
+  "coverage_rule": {
+    "minimum_return_coverage": 0.8,
+    "minimum_valid_return_days": 10,
+    "minimum_valid_risk_days": 10
+  },
+  "day6_design_hash": "4827056a4ed1f87f79d1db92444063ee8217824b7c176c4f32cf4f74cfd34fdd",
+  "factor_universe_source": "D:\\M1_StockNetwork\\output\\M1_day5\\05_step5_community_features\\community_bridge_feature_panel.parquet",
+  "formal_qa": {
+    "all_jobs_pass": true,
+    "failed_job_count": 0,
+    "job_count": 402
+  },
+  "formal_return_labels": [
+    "future_total_return",
+    "future_loo_market_return",
+    "future_excess_return",
+    "future_relative_return"
+  ],
+  "formal_risk_labels": [
+    "future_realized_vol_annualized",
+    "future_downside_vol_annualized",
+    "future_max_drawdown",
+    "future_idio_vol_annualized",
+    "future_worst_daily_return",
+    "future_var_5pct_daily"
+  ],
+  "forward_interval_rule": "(analysis_date, next_analysis_date], using trading days only.",
+  "important_rules": [
+    "Future outcome availability never defines the contemporaneous factor universe.",
+    "Rows are retained even when forward labels are unavailable.",
+    "No missing daily return is silently filled with zero.",
+    "The final frozen analysis date has no forward label.",
+    "Formal labels failing coverage rules are stored as NaN rather than used in downstream validation."
+  ],
+  "market_benchmark": "Daily leave-one-out equal-weight full-market return.",
+  "output_row_count": 1549521,
+  "research_day": 6,
+  "return_panel_source": "D:\\M1_StockNetwork\\output\\M1_day1\\03_stage3_return_validation\\daily_return_panel.parquet",
+  "return_source_columns": {
+    "date": "trade_date",
+    "return": "return_network",
+    "return_type": "log",
+    "security": "security_id"
+  },
+  "step": "Step2_Construct_Forward_Return_and_Risk_Labels",
+  "tail_quantile": 0.05
+}
