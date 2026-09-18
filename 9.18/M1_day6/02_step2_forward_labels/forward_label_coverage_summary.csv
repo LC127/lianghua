@@ -1,0 +1,4 @@
+﻿window,job_count,forward_interval_count,qa_pass_share,mean_return_coverage,min_return_coverage,mean_return_label_valid_share,min_return_label_valid_share,mean_risk_label_valid_share,min_risk_label_valid_share,total_suspension_zero_stock_days,total_reopen_stock_days,total_reopen_return_recovered_stock_days,total_unresolved_open_missing_stock_days,total_unresolved_reopen_missing_stock_days,min_market_date_coverage,min_market_stock_count
+60,138,137,1.0,0.9999940176274772,0.9998280217122588,0.9926879730609899,0.0,0.9926879730609899,0.0,71671,7013,7013,0,0,1.0,2689
+120,135,134,1.0,0.9999876498255271,0.9997853985149577,0.9925132817275145,0.0,0.9925132817275145,0.0,62363,5828,5828,0,0,1.0,2780
+252,129,128,1.0,0.9999343857516763,0.9984610649430593,0.9920770227243112,0.0,0.9920770227243112,0.0,58216,5078,5078,0,0,1.0,2810
