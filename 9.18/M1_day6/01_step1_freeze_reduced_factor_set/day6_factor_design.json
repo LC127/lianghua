@@ -1,0 +1,84 @@
+{
+  "day6_design_hash": "4827056a4ed1f87f79d1db92444063ee8217824b7c176c4f32cf4f74cfd34fdd",
+  "day6_rules": {
+    "auxiliary_use": "Robustness and interpretation only; must not replace a core factor because of observed future outcomes.",
+    "excluded_factor_use": "Excluded from primary Day-6 Alpha/Risk validation.",
+    "factor_definition_change_after_freeze": false,
+    "factor_selection_change_after_future_labels": false,
+    "factor_sign_selection_from_outcome": false,
+    "future_label_end_rule": "End at the next frozen analysis date or the explicitly frozen forward horizon.",
+    "future_label_start_rule": "First trading day strictly after analysis_date.",
+    "missing_future_outcome_policy": "Outcome missingness may remove an observation from a particular validation statistic, but must not redefine the factor universe or factor values.",
+    "primary_cross_section": "Current factor universe at analysis_date; must not be conditioned on future outcome availability.",
+    "primary_validation_factor_set": "CORE_ONLY",
+    "window_selection_from_outcome": false
+  },
+  "design_status": "FROZEN",
+  "factor_sets": {
+    "auxiliary_factor_count": 7,
+    "auxiliary_factors": [
+      "same_industry_degree_percentile",
+      "delta_same_industry_degree_percentile_1m",
+      "delta_cross_industry_degree_ratio_1m",
+      "new_neighbor_count_1m",
+      "lost_neighbor_count_1m",
+      "outside_community_degree_ratio",
+      "external_community_count"
+    ],
+    "core_factor_count": 9,
+    "core_factors": [
+      "residual_degree_percentile",
+      "delta_degree_percentile",
+      "cross_industry_degree_percentile",
+      "cross_industry_degree_ratio",
+      "delta_residual_degree_percentile_1m",
+      "delta_cross_industry_degree_percentile_1m",
+      "neighbor_jaccard_1m",
+      "neighbor_retention_1m",
+      "outside_community_degree_percentile"
+    ],
+    "excluded_factor_count": 13,
+    "excluded_factors": [
+      "residual_strength_percentile",
+      "delta_strength_percentile",
+      "same_industry_strength_percentile",
+      "cross_industry_strength_percentile",
+      "cross_industry_strength_ratio",
+      "delta_residual_strength_percentile_1m",
+      "within_community_degree_percentile",
+      "within_community_strength_percentile",
+      "outside_community_strength_percentile",
+      "participation_coefficient_percentile",
+      "weighted_participation_coefficient_percentile",
+      "community_diversity_count",
+      "neighbor_turnover_1m"
+    ]
+  },
+  "factor_source": {
+    "factor_panel": "D:\\M1_StockNetwork\\output\\M1_day5\\05_step5_community_features\\community_bridge_feature_panel.parquet",
+    "future_return_used": false,
+    "future_risk_used": false,
+    "screening_file": "D:\\M1_StockNetwork\\output\\M1_day5\\06_step6_factor_qa_screening\\factor_screening_decisions.csv",
+    "screening_is_preoutcome": true
+  },
+  "freeze_created_at": "2026-09-18T09:50:34",
+  "network_design": {
+    "benchmark_network": "B0_RAW_POSITIVE",
+    "main_industry_level": "industry_id1",
+    "primary_density": 0.01,
+    "primary_network": "M1_RESIDUAL_POSITIVE",
+    "windows": [
+      60,
+      120,
+      252
+    ]
+  },
+  "parent_day5_design_hash": "b2f66e9ac2c999e7ceeef0ed453b3bf500fa727eb9913cccfac0b77b8a9caa8e",
+  "research_day": 6,
+  "source_integrity": {
+    "recommended_core_file_sha256": "394af314ef90a11a4e2522244e442f8bdfbe1b7881d125444fef380891679e10",
+    "screening_file_sha256": "01db5ccfb639139d053f094d9f08e179169339d2a9034b8eb4b10f1d7b5f6dcb",
+    "step6_metadata_sha256": "f9bea15225645f11fcaad26b628b4a1f3e57d4accba77545000b091e2b5ffd60"
+  },
+  "step": "Step1_Freeze_Reduced_Factor_Set"
+}
