@@ -1,0 +1,4 @@
+﻿analysis_date,next_analysis_date,window,low_coverage_stock_count,total_missing_days,total_suspension_days,total_open_but_missing_days,total_no_raw_record_days,mean_raw_coverage,mean_suspension_adjusted_coverage,mean_suspension_share_of_missing,aggregate_suspension_share_of_missing
+2015-04-30,2015-05-29,60,225,2486,2405,81,0,0.4475555555555556,0.982,0.9518320123098245,0.9674175382139983
+2015-05-29,2015-06-30,60,279,3677,3565,112,0,0.3724185014507595,0.9808841099163681,0.9502206245760457,0.9695403861843894
+2015-06-30,2015-07-31,60,568,6058,5617,441,0,0.5362829148805879,0.9662431108389468,0.8886881974914647,0.9272036975899637
