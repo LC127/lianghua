@@ -1,0 +1,79 @@
+{
+  "classification_is_descriptive": true,
+  "created_at": "2026-09-18T15:39:18",
+  "factor_removal": false,
+  "factor_sign_flip": false,
+  "factors": [
+    "residual_degree_percentile",
+    "delta_degree_percentile",
+    "cross_industry_degree_percentile",
+    "cross_industry_degree_ratio",
+    "delta_residual_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "neighbor_jaccard_1m",
+    "neighbor_retention_1m",
+    "outside_community_degree_percentile"
+  ],
+  "formal_qa": {
+    "all_formal_qa_pass": true,
+    "alpha_key_unique": true,
+    "classification_factor_count": 9,
+    "classification_factor_count_ok": true,
+    "industry_neutral_orthogonality_ok": true,
+    "industry_size_neutral_orthogonality_ok": true,
+    "max_abs_industry_residual_mean": 1.5673736818237505e-16,
+    "max_abs_industry_size_logsize_corr": 4.335923570175165e-16,
+    "max_abs_industry_size_residual_mean": 7.048696181067958e-16,
+    "methods_ok": true,
+    "neutralization_methods": [
+      "INDUSTRY_NEUTRAL",
+      "INDUSTRY_SIZE_NEUTRAL",
+      "RAW"
+    ],
+    "risk_key_unique": true
+  },
+  "important_interpretation_rules": [
+    "Neutralization uses only contemporaneous PIT controls.",
+    "Future outcomes never enter neutralization.",
+    "Factor signs remain exactly as frozen before outcome validation.",
+    "No network window is selected using realized outcomes.",
+    "Initial classification is descriptive and does not alter the frozen factor set.",
+    "HAC statistics are nominal exploratory inference; no multiple-testing correction is applied at this stage."
+  ],
+  "industry_control": "industry_id1",
+  "industry_neutralization": "Within-industry cross-sectional demeaning at each analysis_date x window.",
+  "industry_size_neutralization": "Equal-weight cross-sectional OLS: factor ~ industry fixed effects + log market value; FWL residual used.",
+  "multiple_testing_adjustment": false,
+  "neutralization_methods": [
+    "RAW",
+    "INDUSTRY_NEUTRAL",
+    "INDUSTRY_SIZE_NEUTRAL"
+  ],
+  "outcome_based_window_selection": false,
+  "outputs": {
+    "alpha_portfolio_summary": "D:\\M1_StockNetwork\\output\\M1_day6\\06_step6_neutralization_and_classification\\neutralized_alpha_portfolio_summary.csv",
+    "alpha_summary": "D:\\M1_StockNetwork\\output\\M1_day6\\06_step6_neutralization_and_classification\\neutralized_alpha_rank_ic_summary.csv",
+    "initial_classification": "D:\\M1_StockNetwork\\output\\M1_day6\\06_step6_neutralization_and_classification\\initial_factor_classification.csv",
+    "neutralization_qa": "D:\\M1_StockNetwork\\output\\M1_day6\\06_step6_neutralization_and_classification\\neutralization_qa.csv",
+    "risk_summary": "D:\\M1_StockNetwork\\output\\M1_day6\\06_step6_neutralization_and_classification\\neutralized_risk_rank_ic_summary.csv",
+    "signal_retention": "D:\\M1_StockNetwork\\output\\M1_day6\\06_step6_neutralization_and_classification\\neutralization_signal_retention.csv"
+  },
+  "parent_factor_design_hash": "4827056a4ed1f87f79d1db92444063ee8217824b7c176c4f32cf4f74cfd34fdd",
+  "parent_label_design_hash": "5688c8977f07e20b862d99b35e36c164c58ed9e6f4e06435c6fc8ab1af730cc6",
+  "primary_alpha_target": "future_excess_return",
+  "research_day": 6,
+  "risk_targets": [
+    "future_realized_vol_annualized",
+    "future_downside_vol_annualized",
+    "future_max_drawdown",
+    "future_idio_vol_annualized"
+  ],
+  "size_control": "log(market_value)",
+  "step": "Step6_Neutralization_and_Initial_Factor_Classification",
+  "step6_design_hash": "c64178794075678c9e43713306a3ff58f2f77c265ba49da8640eb62f93dba1c1",
+  "windows": [
+    60,
+    120,
+    252
+  ]
+}
