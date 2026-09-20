@@ -1,0 +1,86 @@
+{
+  "canonical_spread": "Q5 - Q1",
+  "created_at": "2026-09-20T14:10:10",
+  "day7_step4_design_hash": "1b7ceb9108586627023a7e4bb0bb816d1faa09edd02740c147627ddf1a02e3b7",
+  "factor_sign_flip": false,
+  "factors": [
+    "residual_degree_percentile",
+    "delta_degree_percentile",
+    "cross_industry_degree_percentile",
+    "cross_industry_degree_ratio",
+    "delta_residual_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "neighbor_jaccard_1m",
+    "neighbor_retention_1m",
+    "outside_community_degree_percentile"
+  ],
+  "formal_qa": {
+    "all_cost_drag_nonnegative": true,
+    "all_formal_qa_pass": true,
+    "all_turnover_in_0_1": true,
+    "factor_sign_flip": false,
+    "future_return_used_to_form_portfolio": false,
+    "gross_spread_reproduction_ok": true,
+    "initial_formation_cost_included": false,
+    "max_abs_step2_spread_difference": 9.996344030316351e-17,
+    "net_equals_gross_minus_cost": true,
+    "terminal_liquidation_cost_included": false,
+    "turnover_status_counts": {
+      "NO_PREVIOUS_FORMATION": 136,
+      "PASS": 9380,
+      "Q1_INCOMPLETE_DRIFT_RETURN__Q5_INCOMPLETE_DRIFT_RETURN": 124,
+      "Q1_INCOMPLETE_DRIFT_RETURN__Q5_PASS": 454,
+      "Q1_PASS__Q5_INCOMPLETE_DRIFT_RETURN": 172,
+      "SORT_FAILURE": 588
+    },
+    "window_selection": false
+  },
+  "important_interpretation_rules": [
+    "Formal portfolio orientation remains Q5 minus Q1 for every factor.",
+    "Negative gross spread is not flipped into Q1 minus Q5 after observing outcomes.",
+    "Transaction costs are based on drift-adjusted turnover.",
+    "Target-to-target turnover is diagnostic only.",
+    "The first available formation is excluded from turnover-cost averaging because there is no prior portfolio.",
+    "No terminal liquidation cost is imposed.",
+    "Break-even cost is an ex-post magnitude diagnostic, not evidence of a pre-specified tradable strategy."
+  ],
+  "initial_formation_cost_included": false,
+  "methods": [
+    "RAW_COMMON",
+    "INDUSTRY_SIZE_COMMON",
+    "FULL_CHARACTERISTIC_NEUTRAL"
+  ],
+  "missing_drift_return_imputation": null,
+  "one_way_cost_scenarios_bps": [
+    5,
+    10,
+    20,
+    30
+  ],
+  "outcome_based_factor_selection": false,
+  "outcome_based_window_selection": false,
+  "outputs": {
+    "formal_qa": "D:\\M1_StockNetwork\\output\\M1_day7\\04_stage4_turnover_transaction_cost\\turnover_transaction_cost_qa.csv",
+    "monthly_cost_adjusted_spreads": "D:\\M1_StockNetwork\\output\\M1_day7\\04_stage4_turnover_transaction_cost\\monthly_cost_adjusted_spreads.csv",
+    "monthly_portfolio_turnover": "D:\\M1_StockNetwork\\output\\M1_day7\\04_stage4_turnover_transaction_cost\\monthly_portfolio_turnover.csv",
+    "transaction_cost_summary": "D:\\M1_StockNetwork\\output\\M1_day7\\04_stage4_turnover_transaction_cost\\transaction_cost_summary.csv",
+    "turnover_economic_summary": "D:\\M1_StockNetwork\\output\\M1_day7\\04_stage4_turnover_transaction_cost\\turnover_economic_summary.csv",
+    "turnover_summary": "D:\\M1_StockNetwork\\output\\M1_day7\\04_stage4_turnover_transaction_cost\\turnover_summary.csv"
+  },
+  "parent_day7_step2_design_hash": "e3df601638fa33b6ec673e2583dc2ad45bb134f984f453e4c40589b04b94359b",
+  "parent_day7_step3_design_hash": "f5d703b54f74dc04c721460565c384d985176d58d12274d97f05a02d5f1db9a0",
+  "portfolio_definition": "Q1 = lowest factor values; Q5 = highest factor values.",
+  "portfolio_weighting": "Equal weight",
+  "primary_return": "future_excess_return",
+  "research_day": 7,
+  "step": "Step4_Turnover_and_Transaction_Cost",
+  "terminal_liquidation_cost_included": false,
+  "transaction_cost_formula": "2 * one_way_cost * (Q5 half-L1 turnover + Q1 half-L1 turnover)",
+  "turnover_definition": "0.5 * sum absolute difference between current target weights and previous post-return pre-trade weights.",
+  "weight_drift_return": "future_total_return",
+  "windows": [
+    60,
+    120,
+    252
+  ]
+}
