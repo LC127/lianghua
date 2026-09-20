@@ -1,0 +1,93 @@
+{
+  "common_sample_across_models": true,
+  "control_transform": "1%/99% cross-sectional winsorization followed by z-standardization.",
+  "created_at": "2026-09-20T12:01:59",
+  "day7_step3_design_hash": "f5d703b54f74dc04c721460565c384d985176d58d12274d97f05a02d5f1db9a0",
+  "factor_selection_from_results": false,
+  "factor_set": [
+    "residual_degree_percentile",
+    "delta_degree_percentile",
+    "cross_industry_degree_percentile",
+    "cross_industry_degree_ratio",
+    "delta_residual_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "neighbor_jaccard_1m",
+    "neighbor_retention_1m",
+    "outside_community_degree_percentile"
+  ],
+  "factor_sign_flip": false,
+  "fmb_second_stage": "Equal-weight time-series average of monthly cross-sectional network coefficients.",
+  "formal_qa": {
+    "all_formal_qa_pass": true,
+    "factor_count": 9,
+    "factor_count_ok": true,
+    "factor_selection": false,
+    "factor_sign_flip": false,
+    "m2_control_rank_ok": true,
+    "m3_control_rank_ok": true,
+    "median_regression_n": 3779.0,
+    "minimum_regression_n": 0,
+    "model_set_ok": true,
+    "monthly_key_unique": true,
+    "observed_models": [
+      "M1_NETWORK_ONLY",
+      "M2_INDUSTRY_SIZE",
+      "M3_FULL_CONTROLS"
+    ],
+    "observed_targets": [
+      "future_excess_return",
+      "future_total_return"
+    ],
+    "observed_windows": [
+      60,
+      120,
+      252
+    ],
+    "predictor_preprocessing_uses_future_outcome": false,
+    "same_sample_across_models": true,
+    "status_counts": {
+      "INSUFFICIENT_OBS": 534,
+      "PASS": 21174
+    },
+    "target_set_ok": true,
+    "window_selection": false,
+    "window_set_ok": true
+  },
+  "industry_control": "industry_id1",
+  "inference": "Calendar-gap-aware Newey-West/HAC standard error for mean monthly beta.",
+  "interpretation": {
+    "m3_coefficient": "Conditional network-factor coefficient after industry, size, momentum, reversal, past volatility and turnover controls.",
+    "network_beta": "Future-return change associated with a one-standard-deviation increase in the contemporaneous network factor.",
+    "network_beta_bps": "Same coefficient expressed in basis points per forward holding interval.",
+    "partial_r2": "Incremental cross-sectional variation in future return explained by the network factor conditional on the model controls."
+  },
+  "models": {
+    "M1_NETWORK_ONLY": "future return ~ standardized network factor",
+    "M2_INDUSTRY_SIZE": "future return ~ network factor + industry fixed effects + log market value",
+    "M3_FULL_CONTROLS": "future return ~ network factor + industry fixed effects + size + momentum + reversal + past volatility + turnover"
+  },
+  "network_factor_transform": "Cross-sectional z-standardization only.",
+  "network_factor_winsorization": false,
+  "outputs": {
+    "fama_macbeth_summary": "D:\\M1_StockNetwork\\output\\M1_day7\\03_stage3_fama_macbeth_regression\\fama_macbeth_summary.csv",
+    "fmb_cross_section_qa": "D:\\M1_StockNetwork\\output\\M1_day7\\03_stage3_fama_macbeth_regression\\fmb_cross_section_qa.csv",
+    "fmb_cross_window_consistency": "D:\\M1_StockNetwork\\output\\M1_day7\\03_stage3_fama_macbeth_regression\\fmb_cross_window_consistency.csv",
+    "fmb_model_comparison": "D:\\M1_StockNetwork\\output\\M1_day7\\03_stage3_fama_macbeth_regression\\fmb_model_comparison.csv",
+    "monthly_fmb_coefficients": "D:\\M1_StockNetwork\\output\\M1_day7\\03_stage3_fama_macbeth_regression\\monthly_fmb_coefficients.csv"
+  },
+  "parent_day6_step6_design_hash": "c64178794075678c9e43713306a3ff58f2f77c265ba49da8640eb62f93dba1c1",
+  "parent_day7_step1_design_hash": "49061df48667ec5234776ca6b7ab553bb58ea4b913e73fa9713f6fe0fd2eb072",
+  "parent_day7_step2_design_hash": "e3df601638fa33b6ec673e2583dc2ad45bb134f984f453e4c40589b04b94359b",
+  "research_day": 7,
+  "step": "Step3_Fama_MacBeth_Regression",
+  "targets": {
+    "primary": "future_excess_return",
+    "robustness": "future_total_return"
+  },
+  "window_selection_from_results": false,
+  "windows": [
+    60,
+    120,
+    252
+  ]
+}
