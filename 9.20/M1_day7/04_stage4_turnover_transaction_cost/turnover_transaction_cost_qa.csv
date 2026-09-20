@@ -1,0 +1,13 @@
+﻿qa_name,qa_value
+turnover_status_counts,"{'PASS': 9380, 'SORT_FAILURE': 588, 'Q1_INCOMPLETE_DRIFT_RETURN__Q5_PASS': 454, 'Q1_PASS__Q5_INCOMPLETE_DRIFT_RETURN': 172, 'NO_PREVIOUS_FORMATION': 136, 'Q1_INCOMPLETE_DRIFT_RETURN__Q5_INCOMPLETE_DRIFT_RETURN': 124}"
+all_turnover_in_0_1,True
+all_cost_drag_nonnegative,True
+net_equals_gross_minus_cost,True
+gross_spread_reproduction_ok,True
+max_abs_step2_spread_difference,9.996344030316351e-17
+future_return_used_to_form_portfolio,False
+factor_sign_flip,False
+window_selection,False
+initial_formation_cost_included,False
+terminal_liquidation_cost_included,False
+all_formal_qa_pass,True
