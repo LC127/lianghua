@@ -1,0 +1,17 @@
+﻿qa_name,qa_value
+factor_count,9
+factor_count_ok,True
+factor_window_row_count,27
+factor_window_row_count_ok,True
+timeline_day_count,7
+timeline_complete_day1_day7,True
+factor_names_unique,True
+factor_window_keys_unique,True
+feature_family_complete,True
+all_parent_qa_pass,True
+step5_no_expost_selection_or_sign_flip,True
+step6_new_statistical_test_performed,False
+step6_factor_selection_performed,False
+step6_factor_sign_flip_performed,False
+step6_window_selection_performed,False
+all_formal_qa_pass,True
