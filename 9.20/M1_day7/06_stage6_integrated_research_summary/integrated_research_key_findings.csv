@@ -1,0 +1,6 @@
+﻿finding_id,topic,finding,interpretation
+KF01,Return consistency,9 of 9 factors have the same sign for full-control mean Rank IC and mean M3 Fama-MacBeth beta.,"Rank-based and conditional-linear return evidence can therefore be compared directly for most factors, while disagreements should be treated as mixed evidence."
+KF02,Risk robustness,3 factors preserve the same direction across W60/W120/W252 for all four future-risk targets.,Risk evidence is assessed separately from return evidence and is not reduced to a single Alpha criterion.
+KF03,Transaction-cost sensitivity,5 of 9 factors are classified as HIGH_COST_SENSITIVITY under the fixed Step-5 descriptive rule.,Statistical predictability and economic implementability are treated as separate dimensions.
+KF04,Structural vs dynamic features,Mean round-trip traded-notional ratio is 1.551 for level/structural variables and 2.958 for one-month dynamic variables.,Short-horizon network dynamics require more portfolio rebalancing on average.
+KF05,Evidence-role distribution,RETURN_AND_RISK_EVIDENCE=4; WEAK_OR_MIXED_EVIDENCE=4; RISK_DOMINANT_EVIDENCE=1,The final research output is a role-based evidence map rather than a best-to-worst factor ranking.
