@@ -1,0 +1,97 @@
+{
+  "classification_rules": {
+    "alpha_ic_reference": 0.005,
+    "nominal_t_reference": 1.96,
+    "purpose": "Descriptive evidence classification only; not factor selection.",
+    "risk_ic_reference": 0.01
+  },
+  "created_at": "2026-09-20T14:31:23",
+  "day7_step5_design_hash": "82949c34cdf98e1889f5de763d172123900e34f96522df1407593fa1d3766f6d",
+  "factor_count": 9,
+  "factor_ranking": false,
+  "factor_removal": false,
+  "factor_selection": false,
+  "factor_sign_flip": false,
+  "formal_qa": {
+    "actual_window_rows": 27,
+    "all_formal_qa_pass": true,
+    "all_parent_qa_pass": true,
+    "expected_window_rows": 27,
+    "factor_keys_unique": true,
+    "factor_removal_performed": false,
+    "factor_row_count": 9,
+    "factor_row_count_ok": true,
+    "factor_selection_performed": false,
+    "factor_window_keys_unique": true,
+    "max_abs_step2_alpha_ic_internal_difference": 0.0,
+    "missing_descriptive_break_even_one_way_cost_bps_count": 0,
+    "missing_full_control_alpha_ic_count": 0,
+    "missing_full_control_spread_bps_count": 0,
+    "missing_ivol_ic_count": 0,
+    "missing_m3_beta_bps_per_1sd_count": 0,
+    "missing_mean_roundtrip_traded_notional_ratio_count": 0,
+    "observed_windows": [
+      60,
+      120,
+      252
+    ],
+    "sign_flip_performed": false,
+    "step2_alpha_internal_consistency_ok": true,
+    "window_row_count_ok": true,
+    "window_selection_performed": false,
+    "window_set_ok": true
+  },
+  "important_caveats": [
+    "Nominal HAC |t| >= 1.96 markers are descriptive and are not adjusted for multiple testing.",
+    "The robustness matrix does not rank or select factors.",
+    "The matrix does not choose an optimal network window.",
+    "No factor direction is flipped after observing outcomes.",
+    "For negative Q5-Q1 factors, |gross spread| minus cost drag is only an economic-magnitude diagnostic and must not be interpreted as the realized return of an ex-ante Q1-Q5 strategy.",
+    "Step-1 regime robustness is based on Industry+Size neutralization, while Step-2/3/4 final conditional evidence uses the full traditional-control design."
+  ],
+  "interpretation_rules": {
+    "HIGH_COST_SENSITIVITY": "The gross economic magnitude is generally small relative to turnover-based cost drag.",
+    "LOWER_COST_SENSITIVITY": "Gross Q5-Q1 magnitude exceeds a 10bp one-way cost drag in all three windows and mean descriptive break-even cost is at least 20bp.",
+    "MODERATE_COST_SENSITIVITY": "At least one window retains gross magnitude beyond the 10bp cost burden and mean break-even cost is at least 10bp.",
+    "RETURN_AND_RISK_EVIDENCE": "Both conditional return evidence and future-IVOL evidence satisfy the pre-specified descriptive rules.",
+    "RETURN_DOMINANT_EVIDENCE": "Conditional return evidence is present while IVOL evidence is comparatively weak.",
+    "RISK_DOMINANT_EVIDENCE": "Future-IVOL evidence is stronger than conditional return evidence.",
+    "WEAK_OR_MIXED_EVIDENCE": "Evidence is weak, unstable, or mixed across the pre-specified dimensions."
+  },
+  "outputs": {
+    "factor_level_matrix": "D:\\M1_StockNetwork\\output\\M1_day7\\05_stage5_final_factor_robustness_matrix\\final_factor_robustness_matrix.csv",
+    "formal_qa": "D:\\M1_StockNetwork\\output\\M1_day7\\05_stage5_final_factor_robustness_matrix\\final_factor_robustness_qa.csv",
+    "role_summary": "D:\\M1_StockNetwork\\output\\M1_day7\\05_stage5_final_factor_robustness_matrix\\final_factor_role_summary.csv",
+    "window_level_matrix": "D:\\M1_StockNetwork\\output\\M1_day7\\05_stage5_final_factor_robustness_matrix\\final_factor_robustness_matrix_by_window.csv"
+  },
+  "parent_design_hashes": {
+    "step1": "49061df48667ec5234776ca6b7ab553bb58ea4b913e73fa9713f6fe0fd2eb072",
+    "step2": "e3df601638fa33b6ec673e2583dc2ad45bb134f984f453e4c40589b04b94359b",
+    "step3": "f5d703b54f74dc04c721460565c384d985176d58d12274d97f05a02d5f1db9a0",
+    "step4": "1b7ceb9108586627023a7e4bb0bb816d1faa09edd02740c147627ddf1a02e3b7"
+  },
+  "primary_alpha_target": "future_excess_return",
+  "reference_transaction_cost_bps": 10,
+  "regime_specification": "INDUSTRY_SIZE_NEUTRAL",
+  "research_day": 7,
+  "risk_targets": [
+    "future_realized_vol_annualized",
+    "future_downside_vol_annualized",
+    "future_max_drawdown",
+    "future_idio_vol_annualized"
+  ],
+  "step": "Step5_Final_Factor_Robustness_Matrix",
+  "traditional_control_specification": "FULL_CHARACTERISTIC_NEUTRAL",
+  "transaction_cost_scenarios_bps": [
+    5,
+    10,
+    20,
+    30
+  ],
+  "window_selection": false,
+  "windows": [
+    60,
+    120,
+    252
+  ]
+}
