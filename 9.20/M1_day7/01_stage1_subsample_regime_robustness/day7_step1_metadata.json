@@ -1,0 +1,97 @@
+{
+  "analysis_methods": [
+    "RAW",
+    "INDUSTRY_SIZE_NEUTRAL"
+  ],
+  "created_at": "2026-09-18T16:52:46",
+  "day7_step1_design_hash": "49061df48667ec5234776ca6b7ab553bb58ea4b913e73fa9713f6fe0fd2eb072",
+  "factor_selection_from_regime_results": false,
+  "factor_sign_flip": false,
+  "formal_qa": {
+    "all_analysis_dates_have_market_state_row": true,
+    "all_formal_qa_pass": true,
+    "analysis_date_count": 138,
+    "analysis_methods": [
+      "INDUSTRY_SIZE_NEUTRAL",
+      "RAW"
+    ],
+    "analysis_methods_ok": true,
+    "joint_regime_analysis_date_count": 132,
+    "market_daily_min_valid_stock_count": 253,
+    "market_daily_row_count": 2837,
+    "market_trend_analysis_date_count": 138,
+    "market_vol_analysis_date_count": 132,
+    "market_vol_threshold_is_shifted": true,
+    "no_future_market_information_used": true,
+    "observed_windows": [
+      60,
+      120,
+      252
+    ],
+    "regime_assignment_unique": true,
+    "window_set_ok": true
+  },
+  "future_outcome_used_for_regime_definition": false,
+  "holding_return_rule": {
+    "active": "return_last_trade_simple",
+    "suspension": 0.0,
+    "unresolved_active_missing": "NA"
+  },
+  "inference": "Calendar-gap-aware Newey-West/HAC for regime-specific monthly series.",
+  "input_files": {
+    "day1_return_panel": "D:\\M1_StockNetwork\\output\\M1_day1\\03_stage3_return_validation\\daily_return_panel.parquet",
+    "monthly_alpha_ic": "D:\\M1_StockNetwork\\output\\M1_day6\\06_step6_neutralization_and_classification\\monthly_neutralized_alpha_rank_ic.csv",
+    "monthly_alpha_spread": "D:\\M1_StockNetwork\\output\\M1_day6\\06_step6_neutralization_and_classification\\monthly_neutralized_alpha_portfolio_spreads.csv",
+    "monthly_risk_ic": "D:\\M1_StockNetwork\\output\\M1_day6\\06_step6_neutralization_and_classification\\monthly_neutralized_risk_rank_ic.csv",
+    "step6_metadata": "D:\\M1_StockNetwork\\output\\M1_day6\\06_step6_neutralization_and_classification\\step6_neutralization_metadata.json"
+  },
+  "input_sha256": {
+    "monthly_alpha_ic": "5af18f8083659e527dd7d101c333aa2a4dd305293b3168f4b3f9adf5b593cd52",
+    "monthly_alpha_spread": "cd2297320cfd7172aadf8ba7628c54725a33757f2a49f5e553ac17339fd571e3",
+    "monthly_risk_ic": "6d46647ee67c73f882a30d969c1857f09dcaaf87d59235f277e5050976d391c0",
+    "step6_metadata": "4f7177ec064613683aad61929e4beb0160171bb72c1508b83699a5146776beae"
+  },
+  "market_return_source": "Full-market equal-weight daily holding return reconstructed from Day-1 return panel.",
+  "market_trend_lookback": 60,
+  "market_vol_lookback": 60,
+  "minimum_regime_months": 18,
+  "outputs": {
+    "alpha_ic_by_subsample": "D:\\M1_StockNetwork\\output\\M1_day7\\01_stage1_subsample_regime_robustness\\alpha_ic_by_subsample.csv",
+    "market_daily_state": "D:\\M1_StockNetwork\\output\\M1_day7\\01_stage1_subsample_regime_robustness\\market_daily_state.csv",
+    "market_regime_labels": "D:\\M1_StockNetwork\\output\\M1_day7\\01_stage1_subsample_regime_robustness\\market_regime_labels.csv",
+    "portfolio_spread_by_subsample": "D:\\M1_StockNetwork\\output\\M1_day7\\01_stage1_subsample_regime_robustness\\portfolio_spread_by_subsample.csv",
+    "regime_assignment_long": "D:\\M1_StockNetwork\\output\\M1_day7\\01_stage1_subsample_regime_robustness\\regime_assignment_long.csv",
+    "regime_robustness_summary": "D:\\M1_StockNetwork\\output\\M1_day7\\01_stage1_subsample_regime_robustness\\regime_robustness_summary.csv",
+    "risk_ic_by_subsample": "D:\\M1_StockNetwork\\output\\M1_day7\\01_stage1_subsample_regime_robustness\\risk_ic_by_subsample.csv"
+  },
+  "parent_step6_design_hash": "c64178794075678c9e43713306a3ff58f2f77c265ba49da8640eb62f93dba1c1",
+  "research_day": 7,
+  "step": "Step1_Subsample_Market_Regime_Robustness",
+  "time_subsamples": [
+    {
+      "end": "2018-12-31",
+      "name": "P1_2015_2018",
+      "start": "2015-01-01"
+    },
+    {
+      "end": "2022-12-31",
+      "name": "P2_2019_2022",
+      "start": "2019-01-01"
+    },
+    {
+      "end": "2026-12-31",
+      "name": "P3_2023_2026",
+      "start": "2023-01-01"
+    }
+  ],
+  "trend_regime_rule": "BULL if trailing 60-trading-day market holding return >= 0; otherwise BEAR.",
+  "vol_threshold_lookback": 252,
+  "vol_threshold_min_history": 126,
+  "volatility_regime_rule": "HIGH_VOL if current trailing 60-day annualized market volatility exceeds the PIT median of prior market-volatility observations over a maximum 252-trading-day history; otherwise LOW_VOL.",
+  "window_selection_from_regime_results": false,
+  "windows": [
+    60,
+    120,
+    252
+  ]
+}
