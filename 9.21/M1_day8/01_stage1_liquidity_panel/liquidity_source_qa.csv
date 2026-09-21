@@ -1,0 +1,13 @@
+﻿qa_name,qa_value
+daily_row_count,11576466
+security_count,5441
+date_min,2015-01-29 00:00:00
+date_max,2026-09-03 00:00:00
+duplicate_stock_date_count,0
+negative_value_count,0
+open_missing_value_count,0
+closed_positive_value_count,0
+history_start_date,2015-01-29 00:00:00
+history_end_date,2026-09-03 00:00:00
+value_scale_to_cny,
+value_unit_confirmed,False
