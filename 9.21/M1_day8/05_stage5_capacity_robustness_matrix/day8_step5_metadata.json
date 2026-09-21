@@ -1,0 +1,96 @@
+{
+  "adv_winsorized": false,
+  "capacity_definition": "Supremum strategy NAV A such that the equal-rebalance mean executable trade-value share reaches the scenario-specific target under the scenario-specific ADV basis and name-level participation constraint.",
+  "created_at": "2026-09-21T13:12:57",
+  "design_hash": "86feda2bc133fb314135c1e16e3e09d63bded0a12a5705049dca50bd7aeea767",
+  "execution_horizon_note": "Execution horizon remains one day. No multi-day future reopening information or future volume is introduced.",
+  "factor_selection": false,
+  "factor_sign_flip": false,
+  "formal_qa": {
+    "adv_winsorized": false,
+    "all_formal_qa_pass": true,
+    "capacity_root_ok": true,
+    "duplicate_spec_scenario_count": 0,
+    "exactly_one_primary_scenario": true,
+    "expected_matrix_row_count": 1458,
+    "expected_scenario_count": 18,
+    "factor_selection": false,
+    "factor_sign_flip": false,
+    "future_liquidity_used": false,
+    "future_reopen_information_used": false,
+    "matrix_row_count": 1458,
+    "matrix_row_count_ok": true,
+    "max_capacity_root_error": 3.589351038613131e-13,
+    "max_participation_scaling_relative_error": 2.67490486163883e-16,
+    "max_primary_capacity_abs_difference_cny": 0.007846355438232422,
+    "max_primary_capacity_relative_difference": 9.046099270337566e-12,
+    "multi_day_future_execution_assumed": false,
+    "participation_monotonicity_ok": true,
+    "participation_monotonicity_violation_count": 0,
+    "participation_scaling_identity_ok": true,
+    "primary_crosscheck_missing_step4_count": 0,
+    "primary_scenario_count": 1,
+    "scenario_count": 18,
+    "scenario_count_ok": true,
+    "scenario_selected_from_results": false,
+    "short_borrowability_assumed": false,
+    "specification_count": 81,
+    "step3_formal_qa_pass": true,
+    "step4_bisection_fallback_count": 0,
+    "step4_formal_qa_pass": true,
+    "step4_primary_reproduced": true,
+    "target_stringency_monotonicity_ok": true,
+    "target_stringency_monotonicity_violation_count": 0,
+    "transaction_cost_used_to_define_capacity": false,
+    "unclassified_factor_row_count": 0,
+    "window_selection": false
+  },
+  "future_liquidity_used": false,
+  "future_reopen_information_used": false,
+  "input_step3_panel": "D:\\M1_StockNetwork\\output\\M1_day8\\03_stage3_participation_capacity\\stock_participation_base_panel.parquet",
+  "input_step3_qa": "D:\\M1_StockNetwork\\output\\M1_day8\\03_stage3_participation_capacity\\participation_capacity_qa.csv",
+  "input_step4_capacity": "D:\\M1_StockNetwork\\output\\M1_day8\\04_stage4_capacity_limits\\capacity_limit_factor_window.csv",
+  "input_step4_qa": "D:\\M1_StockNetwork\\output\\M1_day8\\04_stage4_capacity_limits\\capacity_limit_qa.csv",
+  "outputs": {
+    "family_summary": "D:\\M1_StockNetwork\\output\\M1_day8\\05_stage5_capacity_robustness_matrix\\capacity_robustness_family_summary.csv",
+    "formal_qa": "D:\\M1_StockNetwork\\output\\M1_day8\\05_stage5_capacity_robustness_matrix\\capacity_robustness_qa.csv",
+    "primary_crosscheck": "D:\\M1_StockNetwork\\output\\M1_day8\\05_stage5_capacity_robustness_matrix\\capacity_robustness_primary_crosscheck.csv",
+    "robustness_matrix": "D:\\M1_StockNetwork\\output\\M1_day8\\05_stage5_capacity_robustness_matrix\\capacity_robustness_matrix.csv",
+    "robustness_matrix_wide": "D:\\M1_StockNetwork\\output\\M1_day8\\05_stage5_capacity_robustness_matrix\\capacity_robustness_matrix_wide.csv",
+    "scenario_summary": "D:\\M1_StockNetwork\\output\\M1_day8\\05_stage5_capacity_robustness_matrix\\capacity_robustness_scenario_summary.csv",
+    "zero_capacity_detail": "D:\\M1_StockNetwork\\output\\M1_day8\\05_stage5_capacity_robustness_matrix\\capacity_robustness_zero_capacity_detail.csv"
+  },
+  "primary_definition": {
+    "execution_days": 1,
+    "liquidity_basis": "ADV20",
+    "participation_cap": 0.05,
+    "target_executable_share": 0.95
+  },
+  "research_day": 8,
+  "robustness_dimensions": {
+    "execution_days": [
+      1
+    ],
+    "liquidity_bases": [
+      "ADV20",
+      "ADV60"
+    ],
+    "participation_caps": [
+      0.01,
+      0.05,
+      0.1
+    ],
+    "target_executable_shares": [
+      0.9,
+      0.95,
+      0.975
+    ]
+  },
+  "scenario_count": 18,
+  "scenario_selection": "Full pre-specified factorial matrix. No scenario is selected from results.",
+  "short_borrowability_assumed": false,
+  "solver": "Exact piecewise capacity solution with frozen Step-4 bisection fallback and Step-4 primary-capacity cross-check.",
+  "step": "Step5_Capacity_Robustness_Matrix",
+  "transaction_cost_used_to_define_capacity": false,
+  "window_selection": false
+}
