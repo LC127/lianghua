@@ -1,0 +1,83 @@
+{
+  "adv_definition": "Arithmetic mean of capacity-oriented daily turnover value across exactly W market trading days ending at analysis_date.",
+  "created_at": "2026-09-20T16:05:42",
+  "current_universe_source": "D:\\M1_StockNetwork\\output\\M1_day5\\05_step5_community_features\\community_bridge_feature_panel.parquet",
+  "daily_source": "D:\\lowfreq\\daily_temp3",
+  "day8_step1_design_hash": "b191113a8bf0d7c8448d84fc2421432b04c176687f7d718a4023be1c7531135e",
+  "factor_selection": false,
+  "formal_adv_coverage": "Complete W/W market-day coverage required.",
+  "formal_qa": {
+    "adv20_matches_full_coverage_flag": true,
+    "adv20_nonnegative": true,
+    "adv60_matches_full_coverage_flag": true,
+    "adv60_nonnegative": true,
+    "all_formal_qa_pass": true,
+    "analysis_date_count": 138,
+    "coverage_20_within_0_1": true,
+    "coverage_60_within_0_1": true,
+    "current_closed_trade_value_zero": true,
+    "factor_selection_performed": false,
+    "future_information_used": false,
+    "outcome_used": false,
+    "panel_keys_unique": true,
+    "panel_row_count": 545488,
+    "raw_closed_positive_value_count": 0,
+    "raw_duplicate_stock_date_count": 0,
+    "raw_negative_value_count": 0,
+    "raw_open_missing_value_count": 0,
+    "row_count_matches_universe": true,
+    "security_count": 5441,
+    "trade_value_unit_confirmed_for_cny_capacity": false,
+    "universe_row_count": 545488,
+    "window_selection_performed": false
+  },
+  "future_information_used": false,
+  "future_outcome_used": false,
+  "important_notes": [
+    "ADV is based on market trading days, not the last W observed stock rows.",
+    "Suspension days contribute zero turnover rather than being removed from the denominator.",
+    "Formal ADV20/ADV60 require complete 20/60-day resolved histories.",
+    "The liquidity panel is constructed only from dates <= analysis_date.",
+    "Source turnover-value units must be confirmed before monetary AUM capacity is interpreted in RMB."
+  ],
+  "lookback_windows": [
+    20,
+    60
+  ],
+  "median_liquidity_robustness": true,
+  "open_valid_treatment": "isOpen == 1 and valid value -> daily trade value = source value.",
+  "outputs": {
+    "liquidity_coverage_qa": "D:\\M1_StockNetwork\\output\\M1_day8\\01_stage1_liquidity_panel\\liquidity_coverage_qa.csv",
+    "liquidity_distribution_summary": "D:\\M1_StockNetwork\\output\\M1_day8\\01_stage1_liquidity_panel\\liquidity_distribution_summary.csv",
+    "liquidity_source_qa": "D:\\M1_StockNetwork\\output\\M1_day8\\01_stage1_liquidity_panel\\liquidity_source_qa.csv",
+    "stock_liquidity_panel": "D:\\M1_StockNetwork\\output\\M1_day8\\01_stage1_liquidity_panel\\stock_liquidity_panel.parquet"
+  },
+  "research_day": 8,
+  "resolved_source_columns": {
+    "is_open": "isOpen",
+    "security_id": "secID",
+    "trade_date": "tradeDate",
+    "value": "turnoverValue"
+  },
+  "source_qa": {
+    "closed_positive_value_count": 0,
+    "daily_row_count": 11576466,
+    "date_max": "2026-09-03 00:00:00",
+    "date_min": "2015-01-29 00:00:00",
+    "duplicate_stock_date_count": 0,
+    "history_end_date": "2026-09-03 00:00:00",
+    "history_start_date": "2015-01-29 00:00:00",
+    "negative_value_count": 0,
+    "open_missing_value_count": 0,
+    "security_count": 5441,
+    "value_scale_to_cny": null,
+    "value_unit_confirmed": false
+  },
+  "step": "Step1_Liquidity_Data_Construction_and_QA",
+  "suspension_treatment": "isOpen == 0 -> daily trade value = 0.",
+  "trade_calendar": "D:\\lowfreq\\trade_calendar\\trade_date.csv",
+  "unresolved_missing_treatment": "Unresolved daily value remains NA.",
+  "value_scale_to_cny": null,
+  "value_unit_confirmed": false,
+  "window_selection": false
+}
