@@ -1,0 +1,10 @@
+﻿qa_name,qa_value
+daily_row_count,11240445
+security_count,5418
+date_min,2015-08-03 00:00:00
+date_max,2026-09-03 00:00:00
+duplicate_stock_date_count,0
+invalid_return_below_minus_one_count,0
+open_missing_last_trade_return_count,2655
+closed_day_count,227367
+resolved_holding_return_count,11237790
