@@ -3,3 +3,6 @@
 # Generated forward-label data: retain locally, exclude from Git.
 /9.18/M1_day6/02_step2_forward_labels/forward_label_panel.parquet
 /9.18/M1_day6/02_step2_forward_labels/archive_before_holding_return_v2_20260918_133530/forward_label_panel.parquet
+
+# Generated participation data: retain locally, exclude from Git.
+/9.21/M1_day8/03_stage3_participation_capacity/stock_participation_base_panel.parquet
