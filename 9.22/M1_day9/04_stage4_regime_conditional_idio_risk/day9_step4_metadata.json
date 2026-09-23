@@ -1,0 +1,37 @@
+{
+  "research_day": 9,
+  "step": "Step4_Regime_Conditional_Idiosyncratic_Risk_Validation",
+  "target": "future_idio_vol_annualized",
+  "regime_dimensions": {
+    "NETWORK": "network_stress_regime",
+    "RECONFIG": "network_reconfig_regime"
+  },
+  "primary_statistic": "HIGH_MINUS_LOW",
+  "hac_lags": 3,
+  "small_sample_threshold": 12,
+  "multiple_testing": "BH correction applied to HIGH-LOW contrasts within each regime_type x sample_scope x method.",
+  "sample_scopes": [
+    "NATIVE",
+    "COMMON_DATE"
+  ],
+  "important_note": "No risk model is re-estimated. Frozen Day-7 monthly IVOL IC is conditioned on frozen Day-9 PIT regimes.",
+  "formal_qa": {
+    "step2_formal_qa_pass": true,
+    "target": "future_idio_vol_annualized",
+    "frozen_factor_count": 9,
+    "expected_group_count": 81,
+    "actual_group_count": 81,
+    "duplicate_ic_key_count": 0,
+    "result_row_count": 1296,
+    "contrast_row_count": 324,
+    "small_sample_result_count": 0,
+    "minimum_component_n": 18,
+    "factor_sign_flipped": false,
+    "factor_selected_from_results": false,
+    "window_selected_from_results": false,
+    "regime_reestimated": false,
+    "risk_target_changed": false,
+    "future_information_used": false,
+    "all_formal_qa_pass": true
+  }
+}
