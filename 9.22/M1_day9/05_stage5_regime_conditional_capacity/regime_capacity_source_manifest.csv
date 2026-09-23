@@ -1,0 +1,3 @@
+﻿source,path,capacity_column,primary_definition
+Day8_Step4_frozen_pair_capacity,D:\M1_StockNetwork\output\M1_day8\04_stage4_capacity_limits\capacity_limit_rebalance_pair.csv,capacity_cny,ADV20 + 5% participation + 1-day + 95% mean executable
+Day9_Step2_frozen_PIT_regime,D:\M1_StockNetwork\output\M1_day9\02_stage2_pit_regime_classification\pit_regime_panel.parquet,,Frozen expanding-history PIT regimes
