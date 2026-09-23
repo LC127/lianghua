@@ -1,0 +1,53 @@
+{
+  "research_day": 9,
+  "step": "Step3_Conditional_Alpha_Validation",
+  "alpha_target": "future_excess_return",
+  "frozen_factors": [
+    "residual_degree_percentile",
+    "delta_degree_percentile",
+    "cross_industry_degree_percentile",
+    "cross_industry_degree_ratio",
+    "delta_residual_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "neighbor_jaccard_1m",
+    "neighbor_retention_1m",
+    "outside_community_degree_percentile"
+  ],
+  "frozen_methods": [
+    "RAW_COMMON",
+    "INDUSTRY_SIZE_COMMON",
+    "FULL_CHARACTERISTIC_NEUTRAL"
+  ],
+  "regime_dimensions": {
+    "MARKET": "market_stress_regime",
+    "NETWORK": "network_stress_regime",
+    "RECONFIG": "network_reconfig_regime"
+  },
+  "primary_comparison": "HIGH_MINUS_LOW",
+  "hac_lags": 3,
+  "sample_scopes": [
+    "NATIVE",
+    "COMMON_DATE"
+  ],
+  "important_note": "Step 3 conditions frozen Day-7 date-level Alpha IC and portfolio-spread statistics on frozen Day-9 Step-2 PIT regimes. No stock-level Alpha model is re-estimated.",
+  "formal_qa": {
+    "step2_formal_qa_pass": true,
+    "frozen_factor_count": 9,
+    "expected_groups_per_metric": 81,
+    "ic_group_count": 81,
+    "spread_group_count": 81,
+    "ic_duplicate_key_count": 0,
+    "spread_duplicate_key_count": 0,
+    "result_row_count": 3888,
+    "native_result_row_count": 1944,
+    "common_date_result_row_count": 1944,
+    "minimum_regime_date_n": 3,
+    "factor_sign_flipped": false,
+    "factor_selected_from_regime_results": false,
+    "window_selected_from_regime_results": false,
+    "regime_reestimated": false,
+    "future_information_used": false,
+    "alpha_definition_changed": false,
+    "all_formal_qa_pass": true
+  }
+}
