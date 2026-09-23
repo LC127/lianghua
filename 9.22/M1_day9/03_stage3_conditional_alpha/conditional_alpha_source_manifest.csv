@@ -1,0 +1,3 @@
+﻿metric,path,value_column,unit
+IC,D:\M1_StockNetwork\output\M1_day7\02_stage2_traditional_characteristic_controls\monthly_controlled_alpha_rank_ic.csv,alpha_rank_ic,source_native
+SPREAD,D:\M1_StockNetwork\output\M1_day7\02_stage2_traditional_characteristic_controls\monthly_controlled_alpha_portfolio_spreads.csv,q5_minus_q1,source_native
