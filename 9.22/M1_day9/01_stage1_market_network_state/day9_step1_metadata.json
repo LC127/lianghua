@@ -1,0 +1,31 @@
+{
+  "research_day": 9,
+  "step": "Step1_Market_Network_State_Panel",
+  "primary_density": 0.01,
+  "market_return_source": "return_network_simple; fallback exp(return_network)-1",
+  "market_windows": [
+    20,
+    60
+  ],
+  "market_state_definition": "Trailing PIT market statistics ending at the current analysis date.",
+  "network_state_definition": "Frozen Day-4 primary-density residual network summaries; density itself is not treated as a state variable because it is fixed by construction.",
+  "regime_classification": "NOT_PERFORMED_IN_STEP1",
+  "future_information_used": false,
+  "formal_qa": {
+    "primary_density": 0.01,
+    "panel_row_count": 402,
+    "network_row_count": 402,
+    "unique_analysis_dates": 138,
+    "window_count": 3,
+    "duplicate_date_window_count": 0,
+    "core_network_state_missing_row_count": 0,
+    "market_state_missing_row_count": 0,
+    "density_is_primary_for_all_rows": true,
+    "future_market_data_used": false,
+    "future_network_data_used": false,
+    "market_windows_end_at_analysis_date": true,
+    "regime_classification_performed": false,
+    "network_stress_score_constructed": false,
+    "all_formal_qa_pass": true
+  }
+}
