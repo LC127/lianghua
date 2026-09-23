@@ -1,0 +1,39 @@
+{
+  "research_day": 9,
+  "step": "Step5_Regime_Conditional_Capacity_Validation",
+  "capacity_source": "D:\\M1_StockNetwork\\output\\M1_day8\\04_stage4_capacity_limits\\capacity_limit_rebalance_pair.csv",
+  "capacity_reestimated": false,
+  "primary_capacity_definition": "Frozen Day-8 Step-4 pair capacity: ADV20, 5% participation, one-day execution, 95% mean executable share.",
+  "regime_dimensions": {
+    "NETWORK": "network_stress_regime",
+    "RECONFIG": "network_reconfig_regime"
+  },
+  "sample_scopes": [
+    "NATIVE",
+    "COMMON_DATE"
+  ],
+  "primary_comparison": "HIGH_MINUS_LOW",
+  "hac_lags": 3,
+  "formal_qa": {
+    "day8_step4_formal_qa_pass": true,
+    "day9_step2_formal_qa_pass": true,
+    "expected_specification_count": 27,
+    "actual_specification_count": 27,
+    "capacity_row_count": 3556,
+    "duplicate_capacity_key_count": 0,
+    "network_unclassified_row_count": 910,
+    "reconfig_unclassified_row_count": 937,
+    "summary_row_count": 324,
+    "contrast_row_count": 108,
+    "small_sample_contrast_count": 0,
+    "capacity_reestimated": false,
+    "capacity_definition_changed": false,
+    "adv_definition_changed": false,
+    "participation_threshold_changed": false,
+    "factor_selected_from_results": false,
+    "window_selected_from_results": false,
+    "regime_reestimated": false,
+    "future_information_used": false,
+    "all_formal_qa_pass": true
+  }
+}
