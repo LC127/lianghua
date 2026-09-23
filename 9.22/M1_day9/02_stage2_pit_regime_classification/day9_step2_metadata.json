@@ -1,0 +1,53 @@
+{
+  "research_day": 9,
+  "step": "Step2_PIT_Regime_Classification",
+  "min_z_history": 24,
+  "min_score_history": 12,
+  "regime_quantiles": [
+    0.3333333333333333,
+    0.6666666666666666
+  ],
+  "market_components": {
+    "market_vol_20d_ann": 1,
+    "market_dispersion_20d": 1,
+    "market_return_20d": -1,
+    "market_breadth_20d": -1
+  },
+  "network_components": {
+    "market_r2_mean": 1,
+    "residual_edge_threshold": 1,
+    "residual_cross_industry_edge_share": 1,
+    "raw_residual_overlap_fraction": -1
+  },
+  "reconfiguration_components": {
+    "abs_delta_market_r2_mean_1m": 1,
+    "abs_delta_residual_edge_threshold_1m": 1,
+    "abs_delta_residual_cross_industry_edge_share_1m": 1,
+    "abs_delta_raw_residual_overlap_fraction_1m": 1
+  },
+  "market_regime_scope": "One regime per analysis date; independent of network window.",
+  "network_regime_scope": "Standardization and PIT thresholds estimated separately within each network window.",
+  "standardization": "Current value standardized using mean and standard deviation of strictly prior observations only.",
+  "classification": "LOW/MEDIUM/HIGH based on expanding 33.3%/66.7% quantiles of strictly prior valid scores.",
+  "future_information_used": false,
+  "outcome_information_used": false,
+  "formal_qa": {
+    "input_row_count": 402,
+    "output_row_count": 402,
+    "row_count_preserved": true,
+    "duplicate_date_window_count": 0,
+    "invalid_regime_label_count": 0,
+    "classification_before_min_history_count": 0,
+    "threshold_order_violation_count": 0,
+    "market_regime_window_mismatch_date_count": 0,
+    "market_classified_row_count": 306,
+    "network_classified_row_count": 294,
+    "reconfiguration_classified_row_count": 291,
+    "future_information_used": false,
+    "full_sample_quantiles_used": false,
+    "current_observation_used_in_threshold": false,
+    "outcome_data_used": false,
+    "factor_performance_used": false,
+    "all_formal_qa_pass": true
+  }
+}
