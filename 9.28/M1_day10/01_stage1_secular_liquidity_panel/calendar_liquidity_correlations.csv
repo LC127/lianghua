@@ -1,0 +1,16 @@
+﻿window,x,y,n,pearson_corr
+60,network_stress_score,time_index,114,0.2536892245482254
+60,network_stress_score,market_adv20_total_yi,114,0.066975769554981
+60,median_pair_capacity_yi,time_index,134,0.69048775704778
+60,median_pair_capacity_yi,market_adv20_total_yi,134,0.876721911343959
+60,network_stress_score,median_pair_capacity_yi,114,0.24182785387294345
+120,network_stress_score,time_index,111,0.4169748896448512
+120,network_stress_score,market_adv20_total_yi,111,0.120117820684473
+120,median_pair_capacity_yi,time_index,134,0.7372048213518726
+120,median_pair_capacity_yi,market_adv20_total_yi,134,0.8843250638532563
+120,network_stress_score,median_pair_capacity_yi,111,0.321982460184895
+252,network_stress_score,time_index,105,0.5541874368746952
+252,network_stress_score,market_adv20_total_yi,105,0.2538575205949749
+252,median_pair_capacity_yi,time_index,128,0.8051290879847615
+252,median_pair_capacity_yi,market_adv20_total_yi,128,0.9012269744992335
+252,network_stress_score,median_pair_capacity_yi,105,0.5000919901914764
