@@ -1,0 +1,54 @@
+{
+  "research_day": 10,
+  "step": "Step5_Frozen_9Factor_Temporal_Stability",
+  "source": "D:\\M1_StockNetwork\\output\\M1_day7\\02_stage2_traditional_characteristic_controls\\monthly_controlled_risk_rank_ic.csv",
+  "target": "future_idio_vol_annualized",
+  "method": "FULL_CHARACTERISTIC_NEUTRAL",
+  "frozen_factors": [
+    "residual_degree_percentile",
+    "delta_degree_percentile",
+    "cross_industry_degree_percentile",
+    "cross_industry_degree_ratio",
+    "delta_residual_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "neighbor_jaccard_1m",
+    "neighbor_retention_1m",
+    "outside_community_degree_percentile"
+  ],
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "sample_scopes": [
+    "NATIVE",
+    "COMMON_DATE"
+  ],
+  "matrix_metric": "same_sign_year_share",
+  "matrix_metric_definition": "Share of calendar years whose annual mean IC has the same sign as that factor-window's full-sample monthly mean IC.",
+  "important_note": "The sign is not flipped and the metric is descriptive only; it is not used for factor or window selection.",
+  "formal_significance_test": false,
+  "formal_qa": {
+    "source_exists": true,
+    "frozen_factor_count": 9,
+    "expected_factor_count": 9,
+    "window_count": 3,
+    "expected_window_count": 3,
+    "native_row_count": 3529,
+    "common_date_count": 126,
+    "common_row_count": 3402,
+    "duplicate_date_window_factor_count": 0,
+    "summary_row_count": 54,
+    "expected_summary_row_count": 54,
+    "matrix_row_count": 18,
+    "expected_matrix_row_count": 18,
+    "risk_ic_reestimated": false,
+    "factor_reestimated": false,
+    "factor_sign_flipped": false,
+    "factor_selected_from_results": false,
+    "window_selected_from_results": false,
+    "year_selected_from_results": false,
+    "future_information_used": false,
+    "all_formal_qa_pass": true
+  }
+}
