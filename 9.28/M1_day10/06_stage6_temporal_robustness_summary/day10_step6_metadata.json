@@ -1,0 +1,40 @@
+{
+  "research_day": 10,
+  "step": "Step6_Temporal_Robustness_Summary",
+  "capacity_inputs": {
+    "time_adjusted": "D:\\M1_StockNetwork\\output\\M1_day10\\02_stage2_time_adjusted_capacity\\time_adjusted_capacity_results.csv",
+    "within_year": "D:\\M1_StockNetwork\\output\\M1_day10\\03_stage3_within_year_capacity\\within_year_capacity_summary.csv"
+  },
+  "risk_inputs": {
+    "delta_degree": "D:\\M1_StockNetwork\\output\\M1_day10\\04_stage4_ivol_temporal_stability\\delta_degree_ivol_temporal_summary.csv",
+    "frozen_9factor_matrix": "D:\\M1_StockNetwork\\output\\M1_day10\\05_stage5_factor_temporal_stability\\frozen_9factor_temporal_matrix.csv"
+  },
+  "capacity_primary_comparison": "M0_REGIME_ONLY vs M3_ADV_PLUS_YEAR_FE",
+  "risk_primary_metrics": [
+    "delta_degree_positive_year_share",
+    "factor-level same-sign annual consistency"
+  ],
+  "new_statistical_estimation": false,
+  "interpretation": "Integrates the temporal-confounding evidence for implementation capacity with the temporal persistence evidence for future-IVOL information.",
+  "formal_qa": {
+    "step2_qa_pass": true,
+    "step3_qa_pass": true,
+    "step4_qa_pass": true,
+    "step5_qa_pass": true,
+    "capacity_summary_row_count": 6,
+    "risk_summary_row_count": 6,
+    "integrated_summary_row_count": 6,
+    "expected_summary_row_count": 6,
+    "all_windows_present": true,
+    "all_scopes_present": true,
+    "all_broad_summaries_use_9_factors": true,
+    "native_delta_step4_step5_match": true,
+    "new_capacity_estimation": false,
+    "new_risk_estimation": false,
+    "new_significance_test": false,
+    "factor_selected_from_summary": false,
+    "window_selected_from_summary": false,
+    "future_information_used": false,
+    "all_formal_qa_pass": true
+  }
+}
