@@ -1,0 +1,35 @@
+{
+  "research_day": 10,
+  "step": "Step3_Within_Year_Capacity_Validation",
+  "input": "D:\\M1_StockNetwork\\output\\M1_day10\\01_stage1_secular_liquidity_panel\\calendar_liquidity_network_panel.csv",
+  "dependent_variable": "median_pair_capacity_yi",
+  "regime": "network_stress_regime",
+  "contrast": "HIGH_MINUS_LOW_WITHIN_YEAR",
+  "sample_scopes": [
+    "NATIVE",
+    "COMMON_DATE"
+  ],
+  "statistical_role": "descriptive within-year support diagnostic",
+  "new_regression": false,
+  "formal_significance_test": false,
+  "interpretation": "Directly evaluates whether HIGH-vs-LOW capacity differences exist within the same calendar year, rather than between different calendar periods.",
+  "formal_qa": {
+    "step1_formal_qa_pass": true,
+    "step2_formal_qa_pass": true,
+    "effective_row_count": 294,
+    "common_date_count": 93,
+    "effective_duplicate_date_window_count": 0,
+    "all_effective_rows_use_9_factors": true,
+    "annual_row_count": 50,
+    "overlap_row_count": 13,
+    "summary_row_count": 6,
+    "expected_summary_row_count": 6,
+    "capacity_reestimated": false,
+    "regime_reestimated": false,
+    "factor_selected_from_results": false,
+    "window_selected_from_results": false,
+    "year_selected_from_results": false,
+    "future_information_used": false,
+    "all_formal_qa_pass": true
+  }
+}
