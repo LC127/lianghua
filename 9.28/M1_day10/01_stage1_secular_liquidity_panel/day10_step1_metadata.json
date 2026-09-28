@@ -1,0 +1,28 @@
+{
+  "research_day": 10,
+  "step": "Step1_Calendar_Time_Market_Liquidity_Diagnostic",
+  "liquidity_source": "D:\\M1_StockNetwork\\output\\M1_day8\\01_stage1_liquidity_panel\\stock_liquidity_panel.parquet",
+  "adv_source_column": "adv20",
+  "market_value_source_column": null,
+  "capacity_source": "D:\\M1_StockNetwork\\output\\M1_day8\\04_stage4_capacity_limits\\capacity_limit_rebalance_pair.csv",
+  "capacity_source_column": "capacity_cny",
+  "regime_source": "D:\\M1_StockNetwork\\output\\M1_day9\\02_stage2_pit_regime_classification\\pit_regime_panel.parquet",
+  "capacity_cross_factor_aggregation": "median and mean within date-window",
+  "interpretation": "Diagnostic only. No causal inference and no re-estimation of ADV, regime, or strategy capacity.",
+  "formal_qa": {
+    "liquidity_source_exists": true,
+    "regime_source_exists": true,
+    "capacity_source_exists": true,
+    "analysis_date_count": 138,
+    "panel_row_count": 402,
+    "panel_duplicate_date_window_count": 0,
+    "market_liquidity_missing_date_count": 0,
+    "capacity_missing_panel_row_count": 6,
+    "negative_market_adv20_count": 0,
+    "adv_reestimated": false,
+    "capacity_reestimated": false,
+    "regime_reestimated": false,
+    "future_information_used": false,
+    "all_formal_qa_pass": true
+  }
+}
