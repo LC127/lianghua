@@ -1,0 +1,15 @@
+﻿qa_name,qa_value
+liquidity_source_exists,True
+regime_source_exists,True
+capacity_source_exists,True
+analysis_date_count,138
+panel_row_count,402
+panel_duplicate_date_window_count,0
+market_liquidity_missing_date_count,0
+capacity_missing_panel_row_count,6
+negative_market_adv20_count,0
+adv_reestimated,False
+capacity_reestimated,False
+regime_reestimated,False
+future_information_used,False
+all_formal_qa_pass,True
