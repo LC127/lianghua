@@ -1,0 +1,60 @@
+{
+  "research_day": 11,
+  "step": "Step4_Incremental_OOS_Risk_Metrics",
+  "input_predictions": "D:\\M1_StockNetwork\\output\\M1_day11\\03_stage3_strict_oos_forecasting\\oos_predictions.parquet",
+  "target": "future_idio_vol_annualized",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "sample_scopes": {
+    "PRIMARY": "All Step-3 OOS forecasts with realized future-IVOL target.",
+    "FULL_RANK": "Robustness subset requiring both baseline and network design matrices to be full rank at the forecast date."
+  },
+  "primary_metric": "delta_ic = network Spearman OOS IC - baseline Spearman OOS IC",
+  "secondary_metrics": [
+    "rank-scale MSE",
+    "rank-scale MAE",
+    "relative rank OOS R2",
+    "predicted top-vs-bottom realized-risk spread"
+  ],
+  "delta_metric_direction": {
+    "delta_ic": "positive is better",
+    "delta_rank_mse": "negative is better",
+    "delta_rank_mae": "negative is better",
+    "delta_top_bottom_spread": "positive is better",
+    "relative_oos_r2_rank": "positive is better"
+  },
+  "hac_inference": {
+    "metric": "monthly delta_ic",
+    "newey_west_lag": 3,
+    "role": "supporting inference only; not used for model selection"
+  },
+  "important_note": "Step 4 does not refit either model. All scores are frozen Step-3 OOS scores.",
+  "formal_qa": {
+    "step3_formal_qa_pass": true,
+    "prediction_row_count": 1286838,
+    "primary_evaluation_date_window_count": 319,
+    "full_rank_evaluation_date_window_count": 237,
+    "primary_window_count": 3,
+    "full_rank_window_count": 3,
+    "primary_duplicate_date_window_count": 0,
+    "full_rank_duplicate_date_window_count": 0,
+    "full_rank_is_subset_of_primary": true,
+    "summary_row_count": 6,
+    "expected_summary_row_count": 6,
+    "nonfinite_core_metric_count": 0,
+    "model_refitted": false,
+    "factor_reestimated": false,
+    "factor_selected_from_results": false,
+    "factor_removed_from_results": false,
+    "window_selected_from_results": false,
+    "hyperparameter_tuned": false,
+    "future_target_used_for_model_selection": false,
+    "target_availability_used_only_for_evaluation": true,
+    "baseline_and_network_same_stock_sample": true,
+    "full_rank_scope_defined_without_outcome": true,
+    "all_formal_qa_pass": true
+  }
+}
