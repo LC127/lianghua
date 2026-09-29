@@ -1,0 +1,80 @@
+{
+  "research_day": 11,
+  "step": "Step3_Strict_Expanding_Window_OOS_Risk_Forecasting",
+  "target": "future_idio_vol_annualized",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "baseline_model": "Industry FE + five frozen traditional characteristics.",
+  "network_model": "Same baseline + all nine frozen network characteristics.",
+  "traditional_controls": [
+    "industry_id1",
+    "log_market_value",
+    "momentum_120_20",
+    "reversal_20",
+    "volatility_60",
+    "log_turnover_20"
+  ],
+  "network_factors": [
+    "residual_degree_percentile",
+    "delta_degree_percentile",
+    "cross_industry_degree_percentile",
+    "cross_industry_degree_ratio",
+    "delta_residual_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "neighbor_jaccard_1m",
+    "neighbor_retention_1m",
+    "outside_community_degree_percentile"
+  ],
+  "cross_sectional_transform": "Within-date percentile rank followed by z-standardization.",
+  "target_transform_for_training": "Within-date percentile rank followed by z-standardization.",
+  "training_scheme": "Expanding history; a historical block enters training only when analysis_date < forecast_date and label_end_date <= forecast_date.",
+  "minimum_training_periods": 24,
+  "minimum_cross_section_n": 100,
+  "date_balanced_weighting": true,
+  "estimator": "OLS using expanding sufficient statistics and Moore-Penrose pseudoinverse.",
+  "pinv_rcond": 1e-10,
+  "industry_vocabulary": {
+    "60": {
+      "reference_level": "1032101",
+      "industry_level_n": 60
+    },
+    "120": {
+      "reference_level": "1032101",
+      "industry_level_n": 60
+    },
+    "252": {
+      "reference_level": "1032101",
+      "industry_level_n": 60
+    }
+  },
+  "performance_evaluation": "Deferred to Step 4. Step 3 generates strict OOS predictions only.",
+  "formal_qa": {
+    "step1_formal_qa_pass": true,
+    "step1_control_set_confirmed": true,
+    "step2_formal_qa_pass": true,
+    "prediction_row_count": 1286838,
+    "forecast_date_window_count": 325,
+    "prediction_window_count": 3,
+    "duplicate_prediction_key_count": 0,
+    "prediction_score_missing_count": 0,
+    "training_leakage_count": 0,
+    "forecast_before_24_usable_periods_count": 0,
+    "forecast_when_step1_24m_not_met_count": 0,
+    "network_factor_count": 9,
+    "numeric_control_count": 5,
+    "industry_fixed_effect_used": true,
+    "date_balanced_training_weight": true,
+    "current_target_used_to_define_forecast_sample": false,
+    "same_date_target_used_in_model_fit": false,
+    "future_target_used_for_model_selection": false,
+    "factor_selected_from_results": false,
+    "factor_removed_after_step2": false,
+    "window_selected_from_results": false,
+    "hyperparameter_tuned_on_oos": false,
+    "oos_performance_evaluated_in_step3": false,
+    "all_formal_qa_pass": true
+  }
+}
