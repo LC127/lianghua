@@ -1,0 +1,4 @@
+﻿source_type,path
+factor,D:\M1_StockNetwork\output\M1_day5\05_step5_community_features\community_bridge_feature_panel.parquet
+label,D:\M1_StockNetwork\output\M1_day6\02_step2_forward_labels\forward_label_panel.parquet
+control,D:\M1_StockNetwork\output\M1_day7\02_stage2_traditional_characteristic_controls\traditional_characteristic_panel.parquet
