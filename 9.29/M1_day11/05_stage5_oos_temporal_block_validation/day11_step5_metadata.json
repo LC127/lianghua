@@ -1,0 +1,71 @@
+{
+  "research_day": 11,
+  "step": "Step5_OOS_Temporal_and_Block_Incremental_Validation",
+  "frozen_factors": [
+    "residual_degree_percentile",
+    "delta_degree_percentile",
+    "cross_industry_degree_percentile",
+    "cross_industry_degree_ratio",
+    "delta_residual_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "neighbor_jaccard_1m",
+    "neighbor_retention_1m",
+    "outside_community_degree_percentile"
+  ],
+  "blocks": {
+    "LEVEL_POSITION": [
+      "residual_degree_percentile",
+      "cross_industry_degree_percentile",
+      "outside_community_degree_percentile"
+    ],
+    "CROSS_INDUSTRY_COMPOSITION": [
+      "cross_industry_degree_ratio"
+    ],
+    "RECONFIGURATION": [
+      "delta_degree_percentile",
+      "delta_residual_degree_percentile_1m",
+      "delta_cross_industry_degree_percentile_1m"
+    ],
+    "NEIGHBOR_STABILITY": [
+      "neighbor_jaccard_1m",
+      "neighbor_retention_1m"
+    ]
+  },
+  "block_definition_rule": "Blocks are defined from feature construction and interpretation, not from Step-2 correlations, VIF values, or Step-4 OOS performance.",
+  "block_metric": "block_marginal_ic = IC(all nine network factors) - IC(network model without that block)",
+  "block_metric_interpretation": "Positive values indicate that removing the block reduces OOS rank IC conditional on all other network blocks.",
+  "important_caution": "LOBO block contributions are conditional and need not sum to the total All-Network minus Baseline OOS improvement.",
+  "training_scheme": "Exactly the frozen Step-3 expanding-window PIT scheme with date-balanced weighting and the same complete-nine-factor stock sample.",
+  "sample_scopes": [
+    "PRIMARY",
+    "FULL_RANK"
+  ],
+  "newey_west_lag": 3,
+  "formal_qa": {
+    "step3_formal_qa_pass": true,
+    "step4_formal_qa_pass": true,
+    "frozen_factor_count": 9,
+    "block_count": 4,
+    "blocks_cover_all_9_factors": true,
+    "factor_appears_in_exactly_one_block": true,
+    "window_count": 3,
+    "sample_scope_count": 2,
+    "block_summary_row_count": 24,
+    "expected_block_summary_row_count": 24,
+    "forecast_sample_mismatch_count": 0,
+    "training_period_mismatch_count": 0,
+    "training_row_mismatch_count": 0,
+    "step4_metric_reproduction_max_abs_error": 9.952975943416931e-17,
+    "step4_metric_reproduction_pass": true,
+    "nonfinite_core_metric_count": 0,
+    "primary_scores_refitted": false,
+    "leave_one_block_out_models_fitted": true,
+    "block_definition_data_driven": false,
+    "factor_selected_from_results": false,
+    "factor_removed_from_primary_model": false,
+    "window_selected_from_results": false,
+    "future_target_used_for_model_selection": false,
+    "future_information_used_in_training": false,
+    "all_formal_qa_pass": true
+  }
+}
