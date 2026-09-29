@@ -1,0 +1,58 @@
+{
+  "research_day": 11,
+  "step": "Step2_Frozen_Network_Factor_Redundancy_Diagnostic",
+  "input": "D:\\M1_StockNetwork\\output\\M1_day11\\01_stage1_frozen_prediction_panel\\frozen_prediction_panel.parquet",
+  "frozen_factors": [
+    "residual_degree_percentile",
+    "delta_degree_percentile",
+    "cross_industry_degree_percentile",
+    "cross_industry_degree_ratio",
+    "delta_residual_degree_percentile_1m",
+    "delta_cross_industry_degree_percentile_1m",
+    "neighbor_jaccard_1m",
+    "neighbor_retention_1m",
+    "outside_community_degree_percentile"
+  ],
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "minimum_cross_section_n": 100,
+  "correlation_metric": "Within-date cross-sectional Spearman correlation.",
+  "vif_metric": "VIF calculated by regressing each rank-standardized network factor on the other eight network factors.",
+  "multivariate_metrics": [
+    "correlation-matrix condition number",
+    "PC1 variance share",
+    "PC3 cumulative share",
+    "number of PCs explaining 80%",
+    "number of PCs explaining 90%",
+    "participation-ratio effective rank"
+  ],
+  "sample_scopes": [
+    "NATIVE",
+    "COMMON_DATE"
+  ],
+  "important_note": "Redundancy diagnostics are descriptive. No factor is removed, combined, sign-flipped, or selected using these results.",
+  "formal_qa": {
+    "step1_formal_qa_pass": true,
+    "panel_row_count": 1549521,
+    "duplicate_stock_date_window_count": 0,
+    "frozen_factor_count": 9,
+    "window_count": 3,
+    "date_window_count": 402,
+    "valid_date_window_count": 399,
+    "common_valid_date_count": 128,
+    "unexpected_failure_count": 0,
+    "expected_factor_pair_count_per_window": 36,
+    "all_native_windows_have_36_pairs": true,
+    "network_features_reestimated": false,
+    "network_factor_deleted": false,
+    "network_factor_combined": false,
+    "factor_selected_from_results": false,
+    "window_selected_from_results": false,
+    "future_target_read": false,
+    "future_information_used": false,
+    "all_formal_qa_pass": true
+  }
+}
