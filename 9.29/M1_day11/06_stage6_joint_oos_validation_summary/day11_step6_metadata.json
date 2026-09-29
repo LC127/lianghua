@@ -1,0 +1,74 @@
+{
+  "research_day": 11,
+  "step": "Step6_Day11_Joint_OOS_Validation_Summary",
+  "purpose": "Summary-only integration of frozen Day-11 redundancy, strict OOS, temporal, and block-incremental validation results.",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "sample_scopes": [
+    "PRIMARY",
+    "FULL_RANK"
+  ],
+  "frozen_factor_count": 9,
+  "network_blocks": [
+    "LEVEL_POSITION",
+    "CROSS_INDUSTRY_COMPOSITION",
+    "RECONFIGURATION",
+    "NEIGHBOR_STABILITY"
+  ],
+  "inputs": {
+    "step2_redundancy": "D:\\M1_StockNetwork\\output\\M1_day11\\02_stage2_factor_redundancy\\multivariate_redundancy_summary.csv",
+    "step4_oos": "D:\\M1_StockNetwork\\output\\M1_day11\\04_stage4_incremental_oos_metrics\\oos_incremental_risk_summary.csv",
+    "step5_temporal": "D:\\M1_StockNetwork\\output\\M1_day11\\05_stage5_oos_temporal_block_validation\\temporal_oos_summary.csv",
+    "step5_block": "D:\\M1_StockNetwork\\output\\M1_day11\\05_stage5_oos_temporal_block_validation\\block_oos_summary.csv"
+  },
+  "integration_rule": {
+    "redundancy": "Step-2 NATIVE and COMMON_DATE descriptive redundancy metrics are joined by network window.",
+    "oos": "Step-4 PRIMARY and FULL_RANK OOS metrics are preserved unchanged.",
+    "temporal": "Step-5 annual temporal summaries are preserved unchanged.",
+    "blocks": "All four pre-frozen LOBO blocks are retained; no block is selected or ranked into the primary model."
+  },
+  "result_descriptors": {
+    "primary_delta_ic_positive_all_windows": true,
+    "full_rank_delta_ic_positive_all_windows": true,
+    "primary_relative_oos_r2_positive_all_windows": true,
+    "full_rank_relative_oos_r2_positive_all_windows": true,
+    "primary_positive_year_share_gt_half_all_windows": true,
+    "full_rank_positive_year_share_gt_half_all_windows": true
+  },
+  "important_interpretation_rule": "Block marginal contributions are conditional leave-one-block-out diagnostics. They are not an additive decomposition and are not used to redefine the frozen nine-factor primary model.",
+  "step6_new_estimation": false,
+  "formal_qa": {
+    "step1_formal_qa_pass": true,
+    "step2_formal_qa_pass": true,
+    "step3_formal_qa_pass": true,
+    "step4_formal_qa_pass": true,
+    "step5_formal_qa_pass": true,
+    "joint_summary_row_count": 6,
+    "expected_joint_summary_row_count": 6,
+    "joint_duplicate_scope_window_count": 0,
+    "block_summary_row_count": 24,
+    "expected_block_summary_row_count": 24,
+    "block_duplicate_scope_window_block_count": 0,
+    "all_four_blocks_present_each_scope_window": true,
+    "redundancy_window_count": 3,
+    "redundancy_complete": true,
+    "step4_step5_positive_year_share_max_abs_error": 0.0,
+    "step4_step5_year_n_match": true,
+    "step4_step5_total_delta_ic_max_abs_error": 0.0,
+    "step4_step5_temporal_consistency_pass": true,
+    "step4_step5_block_total_consistency_pass": true,
+    "new_model_fitted": false,
+    "new_factor_constructed": false,
+    "factor_selected_from_results": false,
+    "factor_removed_from_primary_model": false,
+    "window_selected_from_results": false,
+    "hyperparameter_tuned": false,
+    "future_target_used_for_model_selection": false,
+    "new_statistical_test_added": false,
+    "step6_is_summary_only": true,
+    "all_formal_qa_pass": true
+  }
+}
