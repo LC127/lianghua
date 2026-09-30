@@ -1,0 +1,5 @@
+﻿source_role,path,join_level,source_column,canonical_column
+frozen_network_factors,D:\M1_StockNetwork\output\M1_day5\05_step5_community_features\community_bridge_feature_panel.parquet,stock-date-window,,
+frozen_forward_total_return,D:\M1_StockNetwork\output\M1_day6\02_step2_forward_labels\forward_label_panel.parquet,security_id+analysis_date+window,future_total_return,future_holding_return
+frozen_traditional_controls,D:\M1_StockNetwork\output\M1_day7\02_stage2_traditional_characteristic_controls\traditional_characteristic_panel.parquet,security_id+analysis_date,,
+frozen_stock_liquidity,D:\M1_StockNetwork\output\M1_day8\01_stage1_liquidity_panel\stock_liquidity_panel.parquet,security_id+analysis_date,adv20,adv20
