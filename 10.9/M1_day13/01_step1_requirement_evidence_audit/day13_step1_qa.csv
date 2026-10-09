@@ -1,0 +1,11 @@
+﻿qa_name,qa_value
+requirement_row_count,12
+core_requirement_count,11
+core_complete_count,11
+core_incomplete_count,0
+m4_linkage_pending,True
+day12_step6_confirmed_complete,True
+no_result_based_factor_selection,True
+no_result_based_window_selection,True
+no_reestimation_performed,True
+all_formal_qa_pass,True
