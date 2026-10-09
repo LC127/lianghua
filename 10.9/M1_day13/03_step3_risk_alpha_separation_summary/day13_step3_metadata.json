@@ -1,0 +1,20 @@
+{
+  "research_day": 13,
+  "step": "Step3_Risk_Alpha_Separation_Final_Summary",
+  "principle": "Summarize frozen Step-2 evidence only. No factor/window/direction/cost selection, no new risk or alpha estimation.",
+  "source": "D:\\M1_StockNetwork\\output\\M1_day13\\02_step2_frozen_9factor_evidence\\m1_frozen_9factor_final_evidence_matrix_compact.csv",
+  "outputs": {
+    "factor_summary": "D:\\M1_StockNetwork\\output\\M1_day13\\03_step3_risk_alpha_separation_summary\\risk_alpha_separation_final_summary.csv",
+    "system_oos_context": "D:\\M1_StockNetwork\\output\\M1_day13\\03_step3_risk_alpha_separation_summary\\risk_system_oos_context.csv"
+  },
+  "aggregation": {
+    "factor_summary": "Mean across frozen W60/W120/W252 for each factor.",
+    "absolute_ic": "Mean absolute IC across the three frozen windows.",
+    "neutral_minus_raw_abs_ic": "Neutral absolute alpha IC minus Raw absolute alpha IC.",
+    "neutral_over_raw_abs_ic_ratio": "Neutral absolute alpha IC divided by Raw absolute alpha IC.",
+    "system_oos": "Kept at window level because all-network OOS is not factor-specific.",
+    "block_oos": "Conditional block-level LOBO evidence; not factor-specific."
+  },
+  "reporting_cost_bps": 20,
+  "all_formal_qa_pass": true
+}
