@@ -1,0 +1,16 @@
+﻿qa_name,qa_value
+step2_compact_qa_pass,True
+factor_summary_row_count,9
+expected_factor_summary_row_count,9
+system_oos_row_count,3
+expected_system_oos_row_count,3
+all_factors_have_3_windows,True
+factor_summary_missing_count,0
+system_oos_missing_count,0
+all_network_oos_is_window_level,True
+factor_selected_from_results,False
+window_selected_from_results,False
+direction_selected_from_results,False
+cost_level_selected_from_results,False
+risk_or_alpha_reestimated,False
+all_formal_qa_pass,True
