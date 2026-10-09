@@ -1,0 +1,24 @@
+{
+  "research_day": 13,
+  "step": "Step1_M1_Requirement_to_Evidence_Final_Audit",
+  "principle": "Audit frozen evidence only; do not re-estimate networks, factors, labels, risk models, alpha, costs, or capacity.",
+  "status_rule": {
+    "COMPLETE": "Required frozen evidence exists and QA passes when a formal QA file is expected.",
+    "MISSING_EVIDENCE": "Expected frozen evidence was not found.",
+    "QA_NOT_CONFIRMED": "Evidence exists but formal QA was not confirmed.",
+    "PENDING": "Explicitly unfinished cross-module work.",
+    "PACKAGING_PENDING": "Research evidence exists but final report/document packaging is still required."
+  },
+  "formal_qa": {
+    "requirement_row_count": 12,
+    "core_requirement_count": 11,
+    "core_complete_count": 11,
+    "core_incomplete_count": 0,
+    "m4_linkage_pending": true,
+    "day12_step6_confirmed_complete": true,
+    "no_result_based_factor_selection": true,
+    "no_result_based_window_selection": true,
+    "no_reestimation_performed": true,
+    "all_formal_qa_pass": true
+  }
+}
