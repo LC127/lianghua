@@ -1,0 +1,32 @@
+{
+  "research_day": 13,
+  "step": "Step5_M1_to_M4_Frozen_Interface_Panel",
+  "interface_version": 1,
+  "source": "D:\\M1_StockNetwork\\output\\M1_day13\\04_step4_frozen_network_risk_state\\frozen_network_risk_state.csv",
+  "purpose": "Expose the frozen M1 network-enhanced strict-OOS future-risk-score state to M4 without joining M4 outcomes or re-estimating M1.",
+  "canonical_key": "analysis_date",
+  "asof_interval": "[m1_state_valid_from, m1_state_valid_to_exclusive)",
+  "same_frequency_join_rule": "For M4 data on the M1 analysis-date calendar, join exactly on analysis_date.",
+  "daily_event_join_rule": "For M4 daily/event data, use the most recent M1 state only inside a closed interface interval. The final open-ended state must not be automatically carried beyond the frozen M1 sample.",
+  "interpretation_boundary": "The M1 state is a network-enhanced risk-score state, not raw IVOL, not a pure network-only state, and not causal evidence of tail-risk transmission.",
+  "m4_data_joined": false,
+  "m4_outcome_used": false,
+  "formal_qa": {
+    "step4_qa_pass": true,
+    "interface_row_count": 104,
+    "step4_row_count": 104,
+    "duplicate_analysis_date_count": 0,
+    "missing_core_count": 0,
+    "valid_state_label_set": true,
+    "state_score_in_unit_interval": true,
+    "closed_interval_invalid_count": 0,
+    "open_ended_interval_count": 1,
+    "step4_reproduction_max_abs_diff": 0.0,
+    "state_label_mismatch_count": 0,
+    "m4_data_joined": false,
+    "m4_outcome_used": false,
+    "risk_state_reestimated": false,
+    "factor_or_window_selected_from_results": false,
+    "all_formal_qa_pass": true
+  }
+}
