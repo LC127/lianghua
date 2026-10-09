@@ -1,0 +1,57 @@
+{
+  "research_day": 13,
+  "step": "Step4_Frozen_Network_Risk_State_Construction",
+  "source": "D:\\M1_StockNetwork\\output\\M1_day11\\03_stage3_strict_oos_forecasting\\oos_predictions.parquet",
+  "prediction_columns": {
+    "baseline": "baseline_score",
+    "network": "network_score"
+  },
+  "prediction_score_semantics": "baseline_score and network_score are frozen strict-OOS future-IVOL risk-model scores. They are used ordinally and are not interpreted as future idiosyncratic volatility in raw volatility units.",
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "date_window_risk_measure": "Cross-sectional median of the frozen strict-OOS network-enhanced future-IVOL risk score.",
+  "normalization": "Expanding historical midrank percentile within each window. At date t, only score observations dated at or before t enter the normalization; no future date is used.",
+  "composite": "Equal-weight mean of W60/W120/W252 PIT risk-score percentiles on common dates.",
+  "states": {
+    "LOW_NETWORK_RISK": "score <= 1/3",
+    "MID_NETWORK_RISK": "1/3 < score <= 2/3",
+    "HIGH_NETWORK_RISK": "score > 2/3"
+  },
+  "sample_scope_note": "Risk-state construction uses all frozen strict-OOS prediction dates with available baseline_score and network_score. Realized future-IVOL availability is not required. Therefore the number of state date-window observations may exceed the Day-11 realized-target OOS evaluation count.",
+  "diagnostic_variables": {
+    "network_minus_baseline_score_median": "Median difference between network_score and baseline_score. Diagnostic only; not used to define the Risk-State.",
+    "window_dispersion": "Cross-window dispersion of the three PIT risk-score percentiles. Diagnostic only; not used to define the Risk-State."
+  },
+  "interpretation_boundary": "The resulting state is a network-enhanced strict-OOS future-risk-score state. It is not a direct estimate of market IVOL in raw units, and it is not a pure network-only state because the Day-11 network model augments the frozen traditional baseline with the nine network factors.",
+  "future_target_used_in_state": false,
+  "realized_target_required_for_state": false,
+  "model_refitted": false,
+  "factor_or_window_selected_from_results": false,
+  "formal_qa": {
+    "step3_qa_pass": true,
+    "prediction_row_count": 1286838,
+    "prediction_incomplete_row_count": 0,
+    "duplicate_stock_date_window_count": 0,
+    "prediction_columns_are_scores": true,
+    "raw_future_ivol_interpreted_as_state_input": false,
+    "realized_target_required_for_state": false,
+    "window_count": 3,
+    "date_window_row_count": 325,
+    "duplicate_date_window_count": 0,
+    "common_state_date_count": 104,
+    "state_missing_count": 0,
+    "state_score_in_unit_interval": true,
+    "future_target_used_in_state": false,
+    "network_minus_baseline_used_in_state": false,
+    "window_dispersion_used_in_state": false,
+    "model_refitted": false,
+    "factor_reestimated": false,
+    "factor_selected_from_results": false,
+    "window_selected_from_results": false,
+    "state_threshold_selected_from_results": false,
+    "all_formal_qa_pass": true
+  }
+}
