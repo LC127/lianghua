@@ -1,0 +1,91 @@
+{
+  "research_day": 13,
+  "step": "Step2_Frozen_9Factor_Final_Evidence_Matrix",
+  "factor_count": 9,
+  "windows": [
+    60,
+    120,
+    252
+  ],
+  "risk_blocks": {
+    "LEVEL_POSITION": [
+      "residual_degree_percentile",
+      "cross_industry_degree_percentile",
+      "outside_community_degree_percentile"
+    ],
+    "CROSS_INDUSTRY_COMPOSITION": [
+      "cross_industry_degree_ratio"
+    ],
+    "RECONFIGURATION": [
+      "delta_degree_percentile",
+      "delta_residual_degree_percentile_1m",
+      "delta_cross_industry_degree_percentile_1m"
+    ],
+    "NEIGHBOR_STABILITY": [
+      "neighbor_jaccard_1m",
+      "neighbor_retention_1m"
+    ]
+  },
+  "reporting_cost_bps": 20,
+  "principle": "Join frozen risk, strict-OOS, alpha, turnover/cost and capacity evidence only. No factor, window, direction or cost level is selected from outcomes, and no model is re-estimated.",
+  "oos_interpretation": "All-network OOS delta IC is window-level evidence shared by all nine factors. LOBO marginal IC is conditional block-level evidence; it is attached to each factor only through its pre-frozen block membership and must not be interpreted as factor-specific OOS IC.",
+  "sources": {
+    "risk_ic": "D:\\M1_StockNetwork\\output\\M1_day7\\02_stage2_traditional_characteristic_controls\\controlled_risk_rank_ic_summary.csv",
+    "risk_temporal": "D:\\M1_StockNetwork\\output\\M1_day10\\05_stage5_factor_temporal_stability\\frozen_9factor_temporal_summary.csv",
+    "oos_all": "D:\\M1_StockNetwork\\output\\M1_day11\\06_stage6_joint_oos_validation_summary\\day11_joint_oos_validation_summary.csv",
+    "oos_block": "D:\\M1_StockNetwork\\output\\M1_day11\\05_stage5_oos_temporal_block_validation\\block_oos_summary.csv",
+    "alpha_joint": "D:\\M1_StockNetwork\\output\\M1_day12\\06_stage6_alpha_joint_summary\\alpha_information_implementation_joint_summary.csv",
+    "alpha_stress": "D:\\M1_StockNetwork\\output\\M1_day12\\06_stage6_alpha_joint_summary\\alpha_cost_capacity_stress_matrix.csv"
+  },
+  "formal_qa": {
+    "day13_step1_qa_pass": true,
+    "day11_final_oos_qa_pass": true,
+    "day12_step6_qa_pass": true,
+    "factor_count": 9,
+    "window_count": 3,
+    "evidence_row_count": 27,
+    "expected_evidence_row_count": 27,
+    "duplicate_factor_window_count": 0,
+    "core_missing_count": 0,
+    "risk_temporal_reproduction_max_abs_diff": 1.1102230246251565e-16,
+    "block_count": 4,
+    "all_factors_have_one_block": true,
+    "reporting_cost_bps": 20,
+    "oos_block_evidence_is_factor_specific": false,
+    "factor_selected_from_results": false,
+    "window_selected_from_results": false,
+    "direction_selected_from_results": false,
+    "cost_level_selected_from_results": false,
+    "risk_or_alpha_reestimated": false,
+    "all_formal_qa_pass": true
+  },
+  "compact_display_schema": {
+    "version": 2,
+    "purpose": "Reporting-only compact view of the frozen full evidence matrix. No research result is re-estimated or selected.",
+    "canonical_source": "D:\\M1_StockNetwork\\output\\M1_day13\\02_step2_frozen_9factor_evidence\\m1_frozen_9factor_final_evidence_matrix.csv",
+    "output": "D:\\M1_StockNetwork\\output\\M1_day13\\02_step2_frozen_9factor_evidence\\m1_frozen_9factor_final_evidence_matrix_compact.csv",
+    "oos_all_network_interpretation": "Window-level evidence shared by all nine factors. It is not factor-specific OOS evidence.",
+    "oos_all_network_evidence_level": "WINDOW_LEVEL_SHARED_ACROSS_ALL_9_FACTORS",
+    "oos_block_interpretation": "Conditional leave-one-block-out evidence shared by factors belonging to the same pre-frozen risk block. It is not factor-specific OOS IC and block contributions are not additive.",
+    "oos_block_evidence_level": "BLOCK_CONDITIONAL_SHARED_WITHIN_BLOCK",
+    "risk_block_factor_n_included": true,
+    "portfolio_direction_policy": "BOTH_DIRECTIONS_REPORTED_NO_SELECTION",
+    "direction_selected_from_results": false,
+    "gross_return_display": [
+      "HIGH_MINUS_LOW",
+      "LOW_MINUS_HIGH"
+    ],
+    "break_even_cost_display": [
+      "HIGH_MINUS_LOW",
+      "LOW_MINUS_HIGH"
+    ],
+    "post_cost_return_display": [
+      "HIGH_MINUS_LOW",
+      "LOW_MINUS_HIGH"
+    ],
+    "low_minus_high_gross_return_rule": "LOW_MINUS_HIGH is defined mechanically as negative HIGH_MINUS_LOW.",
+    "reporting_cost_bps": 20,
+    "cost_level_selected_from_results": false,
+    "research_result_reestimated": false
+  }
+}
