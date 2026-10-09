@@ -1,0 +1,17 @@
+﻿qa_name,qa_value
+step4_qa_pass,True
+interface_row_count,104
+step4_row_count,104
+duplicate_analysis_date_count,0
+missing_core_count,0
+valid_state_label_set,True
+state_score_in_unit_interval,True
+closed_interval_invalid_count,0
+open_ended_interval_count,1
+step4_reproduction_max_abs_diff,0.0
+state_label_mismatch_count,0
+m4_data_joined,False
+m4_outcome_used,False
+risk_state_reestimated,False
+factor_or_window_selected_from_results,False
+all_formal_qa_pass,True
