@@ -1,0 +1,16 @@
+﻿qa_name,qa_value
+freeze_version,M1_v1.0
+step1_to_step5_qa_pass,True
+step1_to_step5_metadata_qa_pass,True
+expected_artifact_count,18
+artifact_count,18
+missing_artifact_count,0
+duplicate_relative_path_count,0
+sha256_missing_count,0
+step1_core_m1_complete,True
+step4_future_target_used_in_state,False
+step5_m4_data_joined,False
+step5_m4_outcome_used,False
+m4_linkage_status,INTERFACE_FROZEN_ANALYSIS_PENDING
+research_result_reestimated,False
+all_formal_qa_pass,True
