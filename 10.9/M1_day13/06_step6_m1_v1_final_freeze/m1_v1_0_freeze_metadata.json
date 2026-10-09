@@ -1,0 +1,31 @@
+{
+  "research_day": 13,
+  "step": "Step6_M1_v1_0_Final_Freeze_Manifest",
+  "freeze_version": "M1_v1.0",
+  "freeze_created_utc": "2026-09-30T06:52:13+00:00",
+  "status": "FROZEN",
+  "hash_algorithm": "SHA256",
+  "artifact_count": 18,
+  "canonical_manifest": "D:\\M1_StockNetwork\\output\\M1_day13\\06_step6_m1_v1_final_freeze\\m1_v1_0_final_freeze_manifest.csv",
+  "canonical_m1_to_m4_interface": "D:\\M1_StockNetwork\\output\\M1_day13\\05_step5_m1_m4_frozen_interface\\m1_to_m4_frozen_interface_panel.csv",
+  "m4_linkage_status": "INTERFACE_FROZEN_ANALYSIS_PENDING",
+  "freeze_principle": "Freeze existing canonical M1 evidence only. No network, factor, risk, alpha, cost, capacity, Risk-State, or M4 outcome is re-estimated or selected.",
+  "versioning_rule": "Any post-freeze modification to a canonical artifact requires a new M1 version. M1_v1.0 must not be silently overwritten.",
+  "formal_qa": {
+    "freeze_version": "M1_v1.0",
+    "step1_to_step5_qa_pass": true,
+    "step1_to_step5_metadata_qa_pass": true,
+    "expected_artifact_count": 18,
+    "artifact_count": 18,
+    "missing_artifact_count": 0,
+    "duplicate_relative_path_count": 0,
+    "sha256_missing_count": 0,
+    "step1_core_m1_complete": true,
+    "step4_future_target_used_in_state": false,
+    "step5_m4_data_joined": false,
+    "step5_m4_outcome_used": false,
+    "m4_linkage_status": "INTERFACE_FROZEN_ANALYSIS_PENDING",
+    "research_result_reestimated": false,
+    "all_formal_qa_pass": true
+  }
+}
