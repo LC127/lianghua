@@ -1,0 +1,7 @@
+﻿deliverable,status,evidence
+Network code/data pipeline,COMPLETE,Days 5-8 frozen network/features/labels/controls/liquidity-capacity outputs
+Risk-factor research evidence,COMPLETE,Day 11 strict PIT expanding-window OOS risk validation
+Alpha factor research evidence,COMPLETE,Day 12 IC -> portfolio -> cost -> capacity -> joint summary
+Literature-review report,PACKAGING_PENDING,"Method research exists, but this audit does not assume a final review document unless separately packaged."
+M1 final factor research report,PACKAGING_PENDING,Underlying frozen evidence exists; final report/README should be assembled after Day 13 closure.
+M1-to-M4 interface,PENDING,Cross-module handoff remains to be constructed.
