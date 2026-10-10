@@ -1,0 +1,58 @@
+{
+  "research_day": 14,
+  "step": "Step2_M4_Forward_Tail_Risk_Labels_PIT_Audit",
+  "status": "FROZEN",
+  "m1_version": "M1_v1.0",
+  "market_proxies": [
+    "CSI300",
+    "CSI500",
+    "SSE_COMPOSITE"
+  ],
+  "min_calibration_n": 252,
+  "definition_conventions": {
+    "price": "positive index closing level; no missing/forward-fill",
+    "return": "simple close-to-close daily returns",
+    "horizon": "exactly 5/20/60 next observed trading sessions; includes P_t for MDD",
+    "rv": "annualized population std (ddof=0) x sqrt(252)",
+    "downside": "sqrt(252 x mean(min(simple_return,0)^2))",
+    "event": "MDD20 > pre-M1 P90/P95 (per proxy, numpy quantile linear)",
+    "calibration": "only windows with label_end < first M1 state date",
+    "missing": "insufficient forward history -> NA; never filled with zero"
+  },
+  "input_sources": {
+    "CSI300": "D:\\M1_StockNetwork\\data\\m4_market_indexes\\CSI300.csv",
+    "CSI500": "D:\\M1_StockNetwork\\data\\m4_market_indexes\\CSI500.csv",
+    "SSE_COMPOSITE": "D:\\M1_StockNetwork\\data\\m4_market_indexes\\SSE_COMPOSITE.csv"
+  },
+  "input_sha256": {
+    "D:\\M1_StockNetwork\\output\\M1_day13\\05_step5_m1_m4_frozen_interface\\m1_to_m4_frozen_interface_panel.csv": "e02aa1cdc4bb3a6b50325056db88d5314667be890a87520b104e8c6ff736b483",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\01_step1_m4_tail_risk_target_specification_freeze\\m4_tail_risk_target_specification.csv": "71f816a11c18a416f938f4ec734a3689bf89375d15c1b8123c5698e82291086d",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\01_step1_m4_tail_risk_target_specification_freeze\\day14_step1_metadata.json": "390d96908e30b61a4a2cddaf8a50ed7c27596fe737d2720ada50eb016582d8fc",
+    "D:\\M1_StockNetwork\\data\\m4_market_indexes\\CSI300.csv": "b9cf0c4cc7ab923a332fc5323cce38bfffd8ce053a0afd64755e2b292e255bff",
+    "D:\\M1_StockNetwork\\data\\m4_market_indexes\\CSI500.csv": "6052663713b70b5ad27d53cc2b1c0fbe7d0c2cc3607d668e1ae08482bac1857a",
+    "D:\\M1_StockNetwork\\data\\m4_market_indexes\\SSE_COMPOSITE.csv": "1a129363cc80ec2fc52ff618f97cea24eb31e8bc90a68b655220a0ff9ad07a0e"
+  },
+  "output_sha256": {
+    "m4_forward_tail_risk_labels.csv": "c7673f5b8db2b26883f750e6ff262b610215ebcf2f70419a2c4f1a9d462f7cf2",
+    "m4_tail_event_calibration.csv": "c28496540967d74405792db67fdaffd86be0613b181df71a5e9aadd20b25d877",
+    "day14_step2_qa.csv": "4f9a6d87105b7994e90bcd3b590fc687bb05cc6855acd940dcc8e650cee5818d"
+  },
+  "formal_qa": {
+    "m1_v1_0_verified": true,
+    "step1_spec_verified": true,
+    "market_count": 3,
+    "m1_date_count": 104,
+    "label_row_count": 312,
+    "duplicate_market_date_count": 0,
+    "min_calibration_n": 748,
+    "all_forward_end_dates_strictly_later": true,
+    "event_p95_subset_p90": true,
+    "max_drawdown_horizon_monotonic": true,
+    "m1_state_score_joined": false,
+    "target_or_threshold_selected_from_results": false,
+    "available_5d_rows": 312,
+    "available_20d_rows": 309,
+    "available_60d_rows": 303,
+    "all_formal_qa_pass": true
+  }
+}
