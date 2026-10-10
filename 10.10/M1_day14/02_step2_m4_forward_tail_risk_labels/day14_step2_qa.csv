@@ -1,0 +1,17 @@
+﻿qa_name,qa_value
+m1_v1_0_verified,True
+step1_spec_verified,True
+market_count,3
+m1_date_count,104
+label_row_count,312
+duplicate_market_date_count,0
+min_calibration_n,748
+all_forward_end_dates_strictly_later,True
+event_p95_subset_p90,True
+max_drawdown_horizon_monotonic,True
+m1_state_score_joined,False
+target_or_threshold_selected_from_results,False
+available_5d_rows,312
+available_20d_rows,309
+available_60d_rows,303
+all_formal_qa_pass,True
