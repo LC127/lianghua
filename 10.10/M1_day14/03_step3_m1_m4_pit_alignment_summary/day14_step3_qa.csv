@@ -1,0 +1,15 @@
+﻿qa_name,qa_value
+m1_v1_verified,True
+step1_step2_frozen_verified,True
+market_count,3
+m1_date_count,104
+aligned_rows,312
+duplicate_market_date_count,0
+summary_rows,72
+contrast_rows,24
+available_20d_rows,309
+exact_date_join_only,True
+future_end_strictly_after_formation,True
+result_based_selection,False
+inference_performed,False
+all_formal_qa_pass,True
