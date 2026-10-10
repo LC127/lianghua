@@ -1,0 +1,2 @@
+﻿n_oos,min_train,mse_baseline,mse_augmented,oos_mse_improvement,mean_squared_loss_gain,loss_gain_hac_t,loss_gain_hac_p_two_sided
+66,36,0.0006228290764613478,0.0006768784453116995,-0.08678042001095632,-5.404936885035166e-05,-1.179116430764355,0.23835181679372253
