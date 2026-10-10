@@ -1,0 +1,9 @@
+﻿target_id,tier,target_name,horizon_td,definition,direction,threshold_rule
+T1,PRIMARY,fwd_20d_max_drawdown_loss,20,"Maximum peak-to-trough drawdown over P_t,...,P_t+20; expressed as positive loss.",HIGHER_IS_WORSE,
+T2,ROBUSTNESS,fwd_5d_max_drawdown_loss,5,5-trading-day forward maximum drawdown loss.,HIGHER_IS_WORSE,
+T3,ROBUSTNESS,fwd_60d_max_drawdown_loss,60,60-trading-day forward maximum drawdown loss.,HIGHER_IS_WORSE,
+T4,SECONDARY,fwd_20d_realized_vol_annualized,20,"Annualized realized volatility from daily returns t+1,...,t+20.",HIGHER_IS_WORSE,
+T5,SECONDARY,fwd_20d_worst_daily_loss,20,"Negative of the minimum daily return over t+1,...,t+20.",HIGHER_IS_WORSE,
+T6,SECONDARY,fwd_20d_downside_semideviation_annualized,20,"Annualized square-root mean squared negative daily returns over t+1,...,t+20.",HIGHER_IS_WORSE,
+T7,DERIVED_EVENT,fwd_20d_tail_event_p90,20,Indicator that T1 exceeds its frozen pre-M1 calibration 90th percentile.,1_IS_TAIL_EVENT,PRE_M1_FULLY_REALIZED_CALIBRATION_P90
+T8,DERIVED_EVENT,fwd_20d_tail_event_p95,20,Indicator that T1 exceeds its frozen pre-M1 calibration 95th percentile.,1_IS_TAIL_EVENT,PRE_M1_FULLY_REALIZED_CALIBRATION_P95
