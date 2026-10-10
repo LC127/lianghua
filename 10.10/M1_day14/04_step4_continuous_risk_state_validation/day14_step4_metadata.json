@@ -1,0 +1,68 @@
+{
+  "research_day": 14,
+  "step": "Step4_Continuous_Risk_State_Predictive_Validation",
+  "status": "FROZEN",
+  "m1_version": "M1_v1.0",
+  "primary_market": "CSI300",
+  "primary_target": "T1",
+  "continuous_targets": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6"
+  ],
+  "controls": [
+    "past20_vol",
+    "past20_mdd"
+  ],
+  "historical_lookback_sessions": 20,
+  "control_availability": "P[t-20]..P[t], usable after close t; no future prices",
+  "hac_lags": {
+    "5": 1,
+    "20": 2,
+    "60": 4
+  },
+  "expanding_min_train": 36,
+  "expanding_training_rule": "label_end_20d < current forecast_date",
+  "interpretation": "Exploratory after Step3 descriptive results; HAC is in-sample association, expanding pseudo-real-time OOS is primary only; no causality or independent prospective replication",
+  "input_sha256": {
+    "D:\\M1_StockNetwork\\output\\M1_day14\\03_step3_m1_m4_pit_alignment_summary\\m1_m4_pit_aligned_panel.csv": "c5beeb1a08054e2d73c3bd3b4158a78188769dd7e4d5d5a7a332504807d53e78",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\03_step3_m1_m4_pit_alignment_summary\\day14_step3_metadata.json": "1c9f086b74f1c8528080aa5a6caadfa792a7269f6467c4f0a06a842d6d9acea5",
+    "D:\\M1_StockNetwork\\output\\M1_day13\\05_step5_m1_m4_frozen_interface\\m1_to_m4_frozen_interface_panel.csv": "e02aa1cdc4bb3a6b50325056db88d5314667be890a87520b104e8c6ff736b483",
+    "D:\\M1_StockNetwork\\output\\M1_day13\\06_step6_m1_v1_final_freeze\\m1_v1_0_final_freeze_manifest.csv": "e46de16bae1965ce4f868a6549abb43c7a53405f6500d4bf60bbd79d9292e66a",
+    "D:\\M1_StockNetwork\\output\\M1_day13\\06_step6_m1_v1_final_freeze\\m1_v1_0_freeze_metadata.json": "6e37f2f227e2e5a4b29b4e19fefadd6bc77bfc433094e0cba5d3d9fd978f3b14",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\01_step1_m4_tail_risk_target_specification_freeze\\m4_tail_risk_target_specification.csv": "71f816a11c18a416f938f4ec734a3689bf89375d15c1b8123c5698e82291086d",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\01_step1_m4_tail_risk_target_specification_freeze\\day14_step1_metadata.json": "390d96908e30b61a4a2cddaf8a50ed7c27596fe737d2720ada50eb016582d8fc",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\02_step2_m4_forward_tail_risk_labels\\m4_forward_tail_risk_labels.csv": "c7673f5b8db2b26883f750e6ff262b610215ebcf2f70419a2c4f1a9d462f7cf2",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\02_step2_m4_forward_tail_risk_labels\\m4_tail_event_calibration.csv": "c28496540967d74405792db67fdaffd86be0613b181df71a5e9aadd20b25d877",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\02_step2_m4_forward_tail_risk_labels\\day14_step2_qa.csv": "4f9a6d87105b7994e90bcd3b590fc687bb05cc6855acd940dcc8e650cee5818d",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\02_step2_m4_forward_tail_risk_labels\\day14_step2_metadata.json": "c49f22a9eb98f1c30f7b9285a2d20c281f61e706d24d964ccf03d534fd1cfbf7",
+    "D:\\M1_StockNetwork\\data\\m4_market_indexes\\CSI300.csv": "b9cf0c4cc7ab923a332fc5323cce38bfffd8ce053a0afd64755e2b292e255bff",
+    "D:\\M1_StockNetwork\\data\\m4_market_indexes\\CSI500.csv": "6052663713b70b5ad27d53cc2b1c0fbe7d0c2cc3607d668e1ae08482bac1857a",
+    "D:\\M1_StockNetwork\\data\\m4_market_indexes\\SSE_COMPOSITE.csv": "1a129363cc80ec2fc52ff618f97cea24eb31e8bc90a68b655220a0ff9ad07a0e"
+  },
+  "script_sha256": "2363cc13a13e655dd3fa8a877bae973d466a4b27cb7b06e33b3650f1a02f5ea7",
+  "output_sha256": {
+    "m1_m4_continuous_regression.csv": "750d30597a5db97ca4a58a800d9c41fefeed5be209d4b39b88c684acc58dd908",
+    "m1_m4_primary_expanding_oos.csv": "766bdafdfd0c268565ecf29d601ab5f1f16c2c8243b4751d87ce6a60aa81a7f4",
+    "m1_m4_primary_oos_summary.csv": "19e23bfafae497dfb68bc6da245a3498eb6d2d0033551719eff42e7da1406f6f",
+    "day14_step4_qa.csv": "2ede186725c172145ea87e3c5d4ce6abb2e915a07891fb29ba33e5c8cd90ec02"
+  },
+  "formal_qa": {
+    "m1_v1_0_and_step1_step3_verified": true,
+    "original_market_sha256_verified": true,
+    "market_count": 3,
+    "continuous_targets": 6,
+    "regression_rows": 18,
+    "primary_target": "CSI300_T1",
+    "oos_forecasts": 66,
+    "oos_min_train": 36,
+    "no_oos_label_lookahead": true,
+    "historical_controls_only": true,
+    "target_or_market_selected_from_results": false,
+    "original_m1_state_reestimated": false,
+    "all_formal_qa_pass": true
+  }
+}
