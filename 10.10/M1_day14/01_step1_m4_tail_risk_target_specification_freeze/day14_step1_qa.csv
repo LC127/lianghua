@@ -1,0 +1,16 @@
+﻿qa_name,qa_value
+m1_v1_0_frozen,True
+m1_v1_0_qa_pass,True
+interface_row_count,104
+interface_duplicate_date_count,0
+first_m1_state_date,2018-02-28
+target_count,8
+primary_target_count,1
+derived_event_count,2
+all_horizons_positive,True
+target_definition_missing_count,0
+m1_state_used_to_define_target,False
+m4_outcome_computed,False
+target_selected_from_results,False
+threshold_selected_from_results,False
+all_formal_qa_pass,True
