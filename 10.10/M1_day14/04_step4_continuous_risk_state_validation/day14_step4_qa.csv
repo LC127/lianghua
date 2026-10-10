@@ -1,0 +1,14 @@
+﻿qa_name,qa_value
+m1_v1_0_and_step1_step3_verified,True
+original_market_sha256_verified,True
+market_count,3
+continuous_targets,6
+regression_rows,18
+primary_target,CSI300_T1
+oos_forecasts,66
+oos_min_train,36
+no_oos_label_lookahead,True
+historical_controls_only,True
+target_or_market_selected_from_results,False
+original_m1_state_reestimated,False
+all_formal_qa_pass,True
