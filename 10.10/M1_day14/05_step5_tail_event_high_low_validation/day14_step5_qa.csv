@@ -1,0 +1,15 @@
+﻿qa_name,qa_value
+m1_v1_0_and_step1_step4_verified,True
+step4_code_audit_pass,True
+aligned_rows,312
+market_count,3
+continuous_contrasts,18
+event_state_rows,18
+event_hit_rows,6
+exact_20d_event_calibration_reproduced,True
+step3_high_low_reproduced,True
+p95_subset_p90,True
+observed_p95_event_count,0
+no_target_or_threshold_selection,True
+no_m1_reestimation,True
+all_formal_qa_pass,True
