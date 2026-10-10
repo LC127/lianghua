@@ -1,0 +1,13 @@
+﻿qa_name,qa_value
+m1_v1_frozen,True
+day14_steps_1_to_5_pass,True
+step4_code_audit_pass,True
+step5_script_exact_match,True
+primary_preserved,True
+primary_result_unique,True
+high_low_reproduced,True
+no_reestimation,True
+no_result_based_selection,True
+p95_event_count,0
+primary_oos_points,66
+all_formal_qa_pass,True
