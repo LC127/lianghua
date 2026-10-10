@@ -1,0 +1,53 @@
+{
+  "research_day": 14,
+  "step": "Step5_Tail_Event_Hit_Rate_High_Low_Validation",
+  "status": "FROZEN",
+  "m1_version": "M1_v1.0",
+  "primary_market": "CSI300",
+  "primary_target": "T1",
+  "hac_lags": {
+    "5": 1,
+    "20": 2,
+    "60": 4
+  },
+  "high_low_method": "OLS with LOW reference, MID/HIGH indicators; Newey-West HAC",
+  "event_method": "HIGH alert; descriptive precision/recall, no rare-event p-values",
+  "interpretation": "Exploratory; sparse events; overlapping forward horizons; not causality",
+  "input_sha256": {
+    "D:\\M1_StockNetwork\\output\\M1_day14\\01_step1_m4_tail_risk_target_specification_freeze\\m4_tail_risk_target_specification.csv": "71f816a11c18a416f938f4ec734a3689bf89375d15c1b8123c5698e82291086d",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\03_step3_m1_m4_pit_alignment_summary\\m1_m4_pit_aligned_panel.csv": "c5beeb1a08054e2d73c3bd3b4158a78188769dd7e4d5d5a7a332504807d53e78",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\03_step3_m1_m4_pit_alignment_summary\\m1_m4_high_low_contrast.csv": "dde15e06cddf37b9533906472e44dc642a67c35bb8da572b63d71a39b56be81d",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\02_step2_m4_forward_tail_risk_labels\\m4_tail_event_calibration.csv": "c28496540967d74405792db67fdaffd86be0613b181df71a5e9aadd20b25d877",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\02_step2_m4_forward_tail_risk_labels\\day14_step2_metadata.json": "c49f22a9eb98f1c30f7b9285a2d20c281f61e706d24d964ccf03d534fd1cfbf7",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\03_step3_m1_m4_pit_alignment_summary\\day14_step3_metadata.json": "1c9f086b74f1c8528080aa5a6caadfa792a7269f6467c4f0a06a842d6d9acea5",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\04_step4_continuous_risk_state_validation\\day14_step4_metadata.json": "39f0ea4e9acf421e68f0109870fe425fb24ddf1e12b0900fc5e1c58347765d84",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\04a_step4_code_version_audit\\step4_code_version_audit.json": "0494aaa2b0885accd99cd1ba9b4c34f786999ba7abef356966846f2e1d0903fc",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\04_step4_continuous_risk_state_validation\\m1_m4_continuous_regression.csv": "750d30597a5db97ca4a58a800d9c41fefeed5be209d4b39b88c684acc58dd908",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\04_step4_continuous_risk_state_validation\\m1_m4_primary_expanding_oos.csv": "766bdafdfd0c268565ecf29d601ab5f1f16c2c8243b4751d87ce6a60aa81a7f4",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\04_step4_continuous_risk_state_validation\\m1_m4_primary_oos_summary.csv": "19e23bfafae497dfb68bc6da245a3498eb6d2d0033551719eff42e7da1406f6f",
+    "D:\\M1_StockNetwork\\output\\M1_day14\\04_step4_continuous_risk_state_validation\\day14_step4_qa.csv": "2ede186725c172145ea87e3c5d4ce6abb2e915a07891fb29ba33e5c8cd90ec02"
+  },
+  "script_sha256": "031b2b8c8d36894bd05bf4e04ee2dd42ea12d3c4813ebe9c4a69c478ca7ef2aa",
+  "output_sha256": {
+    "m1_m4_high_low_hac_validation.csv": "d219075b2f97312070d60f3c536726ff57ddef367bad2dd3f5a848bd9d36ef98",
+    "m1_m4_tail_event_by_state.csv": "05efd34d9cca0c0ad2ccadf976989211c2058ae39032d9dd7988433ff1d9bdbc",
+    "m1_m4_tail_event_hit_rate.csv": "0b1f35236864667fdd57a0c4583c97dea204164bb9884e17f8472fc5fbe5148c",
+    "day14_step5_qa.csv": "4c4f917b658fb8193eab0f3a6c60c2774de961450b6043f71dcd60199df2890c"
+  },
+  "formal_qa": {
+    "m1_v1_0_and_step1_step4_verified": true,
+    "step4_code_audit_pass": true,
+    "aligned_rows": 312,
+    "market_count": 3,
+    "continuous_contrasts": 18,
+    "event_state_rows": 18,
+    "event_hit_rows": 6,
+    "exact_20d_event_calibration_reproduced": true,
+    "step3_high_low_reproduced": true,
+    "p95_subset_p90": true,
+    "observed_p95_event_count": 0,
+    "no_target_or_threshold_selection": true,
+    "no_m1_reestimation": true,
+    "all_formal_qa_pass": true
+  }
+}
