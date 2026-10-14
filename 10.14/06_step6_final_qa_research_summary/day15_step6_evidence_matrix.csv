@@ -1,0 +1,10 @@
+stage,metric,estimate,bh_q,interpretation,source
+S3,Residual W120 co-distress edge-null,0.000335994087224,7.05821037138e-13,Observed co-distress association; not contagion,network_edge_codistress_hac_summary.csv
+S4,cross-sector minus within-sector,3.23766379575e-05,0.377387791227,Subgroup contrast not statistically robust,network_pathway_hac_summary.csv
+S4,cross-community minus within-community,-2.51056581072e-05,0.13629622876,Subgroup contrast not statistically robust,network_pathway_hac_summary.csv
+S5A,post-source shock edge-null probability,0.0173794907007,1.51825817713e-13,Temporal ordering association only,temporal_order_hac_summary.csv
+S5B,post-sector-adjusted edge-null probability,0.00570863984309,0.00177268390657,Conditional association survives stronger controls,temporal_common_shock_placebo_hac.csv
+S5B,pre-sector placebo edge-null probability,0.00127139362471,0.55056937014,Non-significance does not establish equality,temporal_common_shock_placebo_hac.csv
+S5B,Residual minus Raw post-sector,0.00238320163814,0.39868396023,Residual superiority not confirmed,temporal_common_shock_placebo_hac.csv
+S5C,"rolling OOS Brier gain (expanding, sector)",2.3517020847e-06,0.710369115876,No robust retrospective OOS predictive gain,rolling_oos_score_summary.csv
+Day14,CSI300 forward MDD high-low,0.014844120726826,0.2403549387214,Market-level tail warning not validated,m1_m4_final_linkage_evidence.csv
