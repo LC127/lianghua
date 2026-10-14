@@ -1,0 +1,16 @@
+qa_name,qa_value
+step2_3_4_frozen_pass,True
+edge_sha256_checked,624
+node_sha256_checked,312
+unique_dates,104
+network_date_cells,624
+tests,9
+estimable_tests,9
+missing_future_horizon_cells,12
+no_future_matching,True
+source_and_target_temporal_order_strict,True
+no_network_reestimation,True
+no_significance_gate,True
+no_causal_claim,True
+min_matched_n,89.0
+all_formal_qa_pass,True
