@@ -1,0 +1,17 @@
+qa_name,qa_value
+required_source_missing_count,0
+m1_v1_frozen,True
+interface_manifest_sha256_match,True
+interface_dates_valid_unique,True
+m1_date_count,104
+missing_required_snapshot_dates,0
+invalid_edge_filename_dates,0
+snapshot_schema_or_identity_errors,0
+sampled_edge_network_window_cells,6
+day4_master_mapping_consistent,True
+day6_label_schema_valid,True
+day6_label_dates_cover_m1,True
+day6_label_duplicate_key_count,0
+hash_all_snapshots,False
+hashed_file_count,10
+all_formal_qa_pass,True
