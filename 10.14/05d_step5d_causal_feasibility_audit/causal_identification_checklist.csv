@@ -1,0 +1,14 @@
+criterion,assessment,reason
+time_order,PARTIAL,Source event precedes target event; undirected edges do not imply causation
+formation_PIT,SUPPORTED_BY_UPSTREAM_QA,Frozen edge and matching strata use formation-time information
+industry_common_shock,PARTIAL,Contemporaneous formation-industry leave-one-out mean; no market-beta or shock-specific controls
+size_vol_matching,PARTIAL,Sector + historical volatility quintile + size tercile; residual confounding possible
+overlap_positivity,LIMITED,"Only matched sample, report coverage and sampled-edge proportion"
+pre_event_negative_control,PARTIAL,PRE_SECTOR placebo exists but has a different risk set from POST_SECTOR
+no_pretrend_equivalence,NOT_ESTABLISHED,Zero-effect nonsignificance does not establish pre-event equivalence
+shock_exogeneity,NOT_IDENTIFIED,The -5% source-stock shock is endogenous; no external shock or instrument
+no_unobserved_confounding,NOT_IDENTIFIED,Unmeasured market-news and delayed common reactions remain
+interference_exclusion,NOT_IDENTIFIED,Same network contains multiple shared nodes and simultaneous shocks
+out_of_sample_gain,NOT_ESTABLISHED,16 historical walk-forward scoring tests; none pass BH q<0.05
+fresh_independent_holdout,NOT_AVAILABLE,All 104 formation dates were previously inspected
+causal_effect_identified,NO,Observational data do not meet a credible causal identification design
