@@ -1,0 +1,40 @@
+{
+  "audit_limit": "All snapshot dates inventoried; representative snapshot per network/window fully inspected. Full edge file SHA256 requires --hash-all-edges.",
+  "formal_qa": {
+    "all_formal_qa_pass": true,
+    "day4_master_mapping_consistent": true,
+    "day6_label_dates_cover_m1": true,
+    "day6_label_duplicate_key_count": 0,
+    "day6_label_schema_valid": true,
+    "hash_all_snapshots": false,
+    "hashed_file_count": 10,
+    "interface_dates_valid_unique": true,
+    "interface_manifest_sha256_match": true,
+    "invalid_edge_filename_dates": 0,
+    "m1_date_count": 104,
+    "m1_v1_frozen": true,
+    "missing_required_snapshot_dates": 0,
+    "required_source_missing_count": 0,
+    "sampled_edge_network_window_cells": 6,
+    "snapshot_schema_or_identity_errors": 0
+  },
+  "label_boundary": "Day6 next-analysis-date label is NOT automatically an exact 20-trading-day loss.",
+  "m1_version": "M1_v1.0",
+  "no_reestimation": true,
+  "research_day": 15,
+  "schema_errors": [],
+  "source_sha256": {
+    "output\\M1_day1\\01_stage1_final\\stock_master.parquet": "dff914d4d445704ffec63842375c896243e226b80949684577e40009c61652d2",
+    "output\\M1_day1\\03_stage3_return_validation\\daily_return_panel.parquet": "2d8a07e55c09236a8f2c86dc1cdad4902f372b4120a45afddab07cfb6e8fcc08",
+    "output\\M1_day4\\02_step2_matched_networks\\edge_master\\B0_RAW_POSITIVE\\W120\\2018-02-28.parquet": "a21b644474333141a72e315c80d33cc54cbe66fc4761c5df2ccc7c423805829a",
+    "output\\M1_day4\\02_step2_matched_networks\\edge_master\\B0_RAW_POSITIVE\\W252\\2018-02-28.parquet": "a490b8692463cc07e001c0cffa92bb06f4944bf43c0170ac16e3964f0e88184a",
+    "output\\M1_day4\\02_step2_matched_networks\\edge_master\\B0_RAW_POSITIVE\\W60\\2018-02-28.parquet": "edf162e253ab14efab982e40852601814cb4d1311819899b6fa196e20ed5eab0",
+    "output\\M1_day4\\02_step2_matched_networks\\edge_master\\M1_RESIDUAL_POSITIVE\\W120\\2018-02-28.parquet": "92cd4d10f308a787434cd677aafdb5a62f57f2e1be3fd8d47c2ac4c8f3757a30",
+    "output\\M1_day4\\02_step2_matched_networks\\edge_master\\M1_RESIDUAL_POSITIVE\\W252\\2018-02-28.parquet": "6c679d30567fe5a72de1b6a2d94f928214afa54eac9bb3205cb26b2d1d12d31c",
+    "output\\M1_day4\\02_step2_matched_networks\\edge_master\\M1_RESIDUAL_POSITIVE\\W60\\2018-02-28.parquet": "0d3c870808276d1464e94bde69d4f85b07c1dfc7db7d44e642fba78d34ae6139",
+    "output\\M1_day4\\02_step2_matched_networks\\stock_master_mapping.parquet": "c5062ceae0efbc368e629ad53abf4f87b3294b428e29ff224cce54ea97cbb637",
+    "output\\M1_day6\\02_step2_forward_labels\\forward_label_panel.parquet": "744e335051e81e0d98f3787a142250a8b3cc445e8ff6fa75a2b39677a0f82129"
+  },
+  "status": "SOURCE_AUDIT_PASS",
+  "step": "Step1_Frozen_Network_Risk_Source_Audit"
+}
