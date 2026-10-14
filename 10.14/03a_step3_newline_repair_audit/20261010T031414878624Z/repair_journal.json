@@ -1,0 +1,23 @@
+{
+  "reason": "CRCRLF-to-CRLF byte repair only",
+  "backup": "D:\\M1_StockNetwork\\output\\M1_day15\\03a_step3_newline_repair_audit\\20261010T031414878624Z",
+  "metadata_script_sha256_unchanged": "8284629e0783e121df2f7a04ff4e9d85880c99578a83138372924e09fbf3a17c",
+  "original_to_expected": {
+    "day15_step3_edge_manifest.csv": {
+      "original": "202de0c12cf1f80122b7da613d4f385e8544559e52a64e71552f7b5f6b504989",
+      "expected": "b39bb8d19597ecd4a671747a9c1673bdb350767ccffb816a4785aad85c4ef10a"
+    },
+    "day15_step3_qa.csv": {
+      "original": "e20422e8be639356923fe0bbb008e2c406ae9083cd9897c3911167475294843f",
+      "expected": "60b8c8ef13f6e8b66f2b0be3fa2a555861a5a641e4e59b8a8d892ed23f36afcd"
+    },
+    "network_edge_codistress_daily.csv": {
+      "original": "a3e14d505c62f2cfc5109a7dc43a98e53d2d1686b6a198509e4dce4d8c72310c",
+      "expected": "a3645db1378469c718f70987928ca1e7a410c3322cfe200651530493ccb364b5"
+    },
+    "network_edge_codistress_hac_summary.csv": {
+      "original": "d6bd2b24aa80d10b4b15e4cead70b849b05c4ee5b18119848a61afc1a62fd234",
+      "expected": "c1c2f0f09e12e3cac5b18fe2a89c0bb355dbd106180785c23675fc9aaa22ca0f"
+    }
+  }
+}
