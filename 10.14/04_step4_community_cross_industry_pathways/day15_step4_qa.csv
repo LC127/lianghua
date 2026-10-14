@@ -1,0 +1,17 @@
+qa_name,qa_value
+step2_step3_frozen_pass,True
+edge_sha256_checked,624
+node_sha256_checked,312
+graph_date_cells,624
+date_count,104
+sector_cells,1248
+primary_community_cells,208
+subgroup_tests,14
+group_contrasts,7
+estimable_tests,21
+density,0.01
+fixed_seed,20261010
+no_network_reestimation,True
+derived_community_not_day5_frozen,True
+no_causal_interpretation,True
+all_formal_qa_pass,True
