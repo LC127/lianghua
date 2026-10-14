@@ -1,0 +1,51 @@
+{
+  "community_method": "Day15-derived Louvain on PIT frozen 1% weighted network, seed=20261010, resolution=1",
+  "community_scope": "Residual W120 only; other 5 network settings are industry robustness",
+  "density": 0.01,
+  "formal_qa": {
+    "all_formal_qa_pass": true,
+    "date_count": 104,
+    "density": 0.01,
+    "derived_community_not_day5_frozen": true,
+    "edge_sha256_checked": 624,
+    "estimable_tests": 21,
+    "fixed_seed": 20261010,
+    "graph_date_cells": 624,
+    "group_contrasts": 7,
+    "no_causal_interpretation": true,
+    "no_network_reestimation": true,
+    "node_sha256_checked": 312,
+    "primary_community_cells": 208,
+    "sector_cells": 1248,
+    "step2_step3_frozen_pass": true,
+    "subgroup_tests": 14
+  },
+  "hac_lags": 2,
+  "input_sha256": {
+    "day15_step2_metadata.json": "9c359c86409d944a38e050b88d0f88c3f880099fcaa753071c39cb3ee9fe78fb",
+    "day15_step2_node_snapshot_manifest.csv": "3c3b6c37c5d9419353fd5ba6013aa528577a6f2a6ddd28c5b965594bbec7bbc4",
+    "day15_step2_qa.csv": "7f0dbbdbb179c594aa40438639066380370c26900016d85a8567848312b7afaf",
+    "day15_step3_edge_manifest.csv": "b39bb8d19597ecd4a671747a9c1673bdb350767ccffb816a4785aad85c4ef10a",
+    "day15_step3_metadata.json": "eaa04a5cdac59f9b94b30016ccd376b3ae54ab3a703d99b526f7a1e466c89396",
+    "day15_step3_qa.csv": "60b8c8ef13f6e8b66f2b0be3fa2a555861a5a641e4e59b8a8d892ed23f36afcd",
+    "network_edge_codistress_daily.csv": "a3645db1378469c718f70987928ca1e7a410c3322cfe200651530493ccb364b5",
+    "network_edge_codistress_hac_summary.csv": "c1c2f0f09e12e3cac5b18fe2a89c0bb355dbd106180785c23675fc9aaa22ca0f",
+    "stock_forward_downside_20d_panel.csv": "cc4648c75995fa991f9d96a383e39b866554392b2517a158327487dd3fc7a960"
+  },
+  "interpretation": "Exploratory co-distress; ex-post bridge examples; not causal transmission or OOS",
+  "matched_null": "fixed source; destination same industry; community test additionally same destination community; exclude self/real edges",
+  "networkx_version": "3.6.1",
+  "output_sha256": {
+    "candidate_cross_industry_community_bridges.csv": "4de08a595c3f30b7fe7f00aa33bfdfd1c7b8b0e9ee7bc48104b99cbe56d36141",
+    "day15_step4_qa.csv": "7862401a403183ed401f99c7ce047367920ba7ff70b0b1634815bb8bbc96ee01",
+    "network_pathway_group_daily.csv": "d9dde54559cd6451fe8e68ea94709dee85c93218761a2c7ac6ea1fef404e8047",
+    "network_pathway_hac_summary.csv": "d16bc43d5f6e721eb2f763e355e22e58c2be5b3efdcdad8497e8c9cfd3b4b187"
+  },
+  "primary": "M1_RESIDUAL_POSITIVE_W120",
+  "repeats": 3,
+  "research_day": 15,
+  "script_sha256": "71eec11fb5f713222e2b83cbf2775719e1be0e8967a15f51cb8c68a0bc36d891",
+  "status": "FROZEN",
+  "step": "Step4_Community_Cross_Industry_Risk_Pathways",
+  "tests": 21
+}
