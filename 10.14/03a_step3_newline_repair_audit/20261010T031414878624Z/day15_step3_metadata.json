@@ -1,0 +1,44 @@
+{
+  "analysis": "Exploratory observational co-distress; no causal contagion",
+  "formal_qa": {
+    "all_formal_qa_pass": true,
+    "bad_edge_count_cells": 0,
+    "edge_hashes_recorded": 624,
+    "graph_cells": 624,
+    "matched_dates_primary": 102,
+    "matched_density_budgets_equal": true,
+    "missing_edge_files": 0,
+    "network_count": 2,
+    "no_causal_interpretation": true,
+    "no_future_universe_filtering": true,
+    "no_network_reestimation": true,
+    "no_significance_gate": true,
+    "node_hashes_checked": 312,
+    "selected_density": 0.01,
+    "step2_frozen_pass": true,
+    "unique_frozen_dates": 104,
+    "windows_count": 3
+  },
+  "hac_lags": 2,
+  "input_sha256": {
+    "day15_step2_metadata.json": "9c359c86409d944a38e050b88d0f88c3f880099fcaa753071c39cb3ee9fe78fb",
+    "day15_step2_node_snapshot_manifest.csv": "3c3b6c37c5d9419353fd5ba6013aa528577a6f2a6ddd28c5b965594bbec7bbc4",
+    "day15_step2_qa.csv": "7f0dbbdbb179c594aa40438639066380370c26900016d85a8567848312b7afaf",
+    "stock_forward_downside_20d_panel.csv": "cc4648c75995fa991f9d96a383e39b866554392b2517a158327487dd3fc7a960"
+  },
+  "missing": "Complete-case edges; per-date coverage and matched share always reported",
+  "network_density": 0.01,
+  "null": "Fixed source, permuted target within target industry among valid edge endpoints; reject real edges and self-loops; degree-weighted target exposure",
+  "output_sha256": {
+    "day15_step3_edge_manifest.csv": "b39bb8d19597ecd4a671747a9c1673bdb350767ccffb816a4785aad85c4ef10a",
+    "day15_step3_qa.csv": "60b8c8ef13f6e8b66f2b0be3fa2a555861a5a641e4e59b8a8d892ed23f36afcd",
+    "network_edge_codistress_daily.csv": "a3645db1378469c718f70987928ca1e7a410c3322cfe200651530493ccb364b5",
+    "network_edge_codistress_hac_summary.csv": "c1c2f0f09e12e3cac5b18fe2a89c0bb355dbd106180785c23675fc9aaa22ca0f"
+  },
+  "primary": "M1_RESIDUAL_POSITIVE_W120",
+  "repeats": 3,
+  "research_day": 15,
+  "script_sha256": "8284629e0783e121df2f7a04ff4e9d85880c99578a83138372924e09fbf3a17c",
+  "status": "FROZEN",
+  "step": "Step3_Network_Edge_Codistress_Clustering"
+}
