@@ -1,0 +1,54 @@
+{
+  "dependent_variables": [
+    "post_sector",
+    "post_raw"
+  ],
+  "formal_qa": {
+    "all_formal_qa_pass": true,
+    "all_prediction_training_purged": true,
+    "calendar_sha256_checked": true,
+    "distinct_formation_dates": 104,
+    "embargo_market_sessions": 20,
+    "estimable_tests": 16,
+    "graph_date_cells": 208,
+    "independent_new_unseen_holdout": false,
+    "no_future_feature_or_label_used_in_training": true,
+    "oos_prediction_rows": 520,
+    "predefined_tests": 16,
+    "predicted_dates_min": 65,
+    "score_exact_from_group_sufficient_statistics": true,
+    "step5b_frozen_pass": true,
+    "stock_level_model": false,
+    "train_min_dates": 36,
+    "walk_forward": true
+  },
+  "hac_lags": 2,
+  "input_sha256": {
+    "day15_step2_metadata.json": "9c359c86409d944a38e050b88d0f88c3f880099fcaa753071c39cb3ee9fe78fb",
+    "day15_step5b_metadata.json": "f890c4a68fa73eb71a1c7b6fc8db3fc66c632a775a2e65d2e8c519b69d72e38f",
+    "day15_step5b_qa.csv": "34b51fdb1e6dfb48f6431ff7dca174f8dc17d76e4819d3f50cf2d9c93eee0859",
+    "temporal_common_shock_placebo_daily.csv": "1bf109d5287520cb7b771262ac300032c1178f978f0ae3d1ba4be2c2429e1517",
+    "temporal_common_shock_placebo_hac.csv": "b26e2c0fbc137b0bd544a8e04d1a45c306285c36950e178d7623727858236f52",
+    "trade_calendar_used.csv": "26c7f29fa6b0c8da9c2839a66c9927105bec5fb21413d8217bbd116ea69d21d3"
+  },
+  "interpretation": "retrospective walk-forward only; no per-stock conditional forecasts, no fresh independent holdout, no causal proof",
+  "min_train_dates": 36,
+  "model": "constant historical conditional probability; baseline pooled edge/nonedge, network separate edge/nonedge",
+  "modes": [
+    "expanding",
+    "rolling36"
+  ],
+  "number_of_bh_tests": 16,
+  "output_sha256": {
+    "day15_step5c_qa.csv": "853b57f5d7045847ba8ba219d928ca412321fdf89aa1bf419cdcb5387b5eeabb",
+    "rolling_oos_daily.csv": "91839501ff4fb56c798eab0a0de99ccef921fdb161b6d30a64e0ee1b9b5fb729",
+    "rolling_oos_score_summary.csv": "70350e9dec338c942f2243663e1f605239084e2bc005629dd05cfd374acdbcbb"
+  },
+  "prior_strength": 50.0,
+  "purge_market_sessions": 20,
+  "research_day": 15,
+  "scoring": "exact binary Brier and log loss from fractional 3-replicate group event counts",
+  "script_sha256": "63ba258c4547a0f72a46fceffe9397ececf2b91a37455ff0fd4291690539d3fc",
+  "status": "FROZEN",
+  "step": "Step5C_Retrospective_Rolling_OOS"
+}
