@@ -1,0 +1,84 @@
+{
+  "analyzed_windows": [
+    120
+  ],
+  "caution": "Exploratory conditional associations, not independent OOS or causal contagion; post-vs-pre differ in risk set",
+  "common_shock_control": "target return minus same-day formation-sector leave-one-out equal-weight peer return; market component absorbed by sector; no factor-beta control",
+  "density": 0.01,
+  "event_threshold": -0.05,
+  "formal_qa": {
+    "all_formal_qa_pass": true,
+    "analyzed_windows": [
+      120
+    ],
+    "calendar_right_censored_cells": 4,
+    "contemporaneous_leave_one_out_sector_adjustment": true,
+    "edge_hashes_checked": 624,
+    "estimable_tests": 9,
+    "independent_pre_placebo_risk_set": true,
+    "network_date_cells": 208,
+    "no_causal_or_oos_claim": true,
+    "no_future_matching": true,
+    "no_network_reestimation": true,
+    "no_significance_gate": true,
+    "node_hashes_checked": 312,
+    "pit_size_and_vol_strata": true,
+    "predeclared_tests": 9,
+    "primary_post_sector_dates": 102,
+    "primary_pre_sector_dates": 102,
+    "step2_3_4_5a_frozen_pass": true,
+    "unique_dates": 104,
+    "zero_post_matched_cells": 4
+  },
+  "hac_lags": 2,
+  "historical_vol_sessions": 60,
+  "input_sha256": {
+    "candidate_cross_industry_community_bridges.csv": "4de08a595c3f30b7fe7f00aa33bfdfd1c7b8b0e9ee7bc48104b99cbe56d36141",
+    "day15_step2_metadata.json": "9c359c86409d944a38e050b88d0f88c3f880099fcaa753071c39cb3ee9fe78fb",
+    "day15_step2_node_snapshot_manifest.csv": "3c3b6c37c5d9419353fd5ba6013aa528577a6f2a6ddd28c5b965594bbec7bbc4",
+    "day15_step2_qa.csv": "7f0dbbdbb179c594aa40438639066380370c26900016d85a8567848312b7afaf",
+    "day15_step3_edge_manifest.csv": "b39bb8d19597ecd4a671747a9c1673bdb350767ccffb816a4785aad85c4ef10a",
+    "day15_step3_metadata.json": "eaa04a5cdac59f9b94b30016ccd376b3ae54ab3a703d99b526f7a1e466c89396",
+    "day15_step3_qa.csv": "60b8c8ef13f6e8b66f2b0be3fa2a555861a5a641e4e59b8a8d892ed23f36afcd",
+    "day15_step4_metadata.json": "5c8b982fb8872fae2c747ee73ed3fa53e133f204f59cf95b7b32b43cecddb68e",
+    "day15_step4_qa.csv": "7862401a403183ed401f99c7ce047367920ba7ff70b0b1634815bb8bbc96ee01",
+    "day15_step5_metadata.json": "4a31c949f312c68035b240805075c86d80e704e8c15a50b564c4c992175306ad",
+    "day15_step5_qa.csv": "66c2ab1c2fe8caedf01d478252135f86b5bd4d160a6702ead5f1be0a742b080a",
+    "network_edge_codistress_daily.csv": "a3645db1378469c718f70987928ca1e7a410c3322cfe200651530493ccb364b5",
+    "network_edge_codistress_hac_summary.csv": "c1c2f0f09e12e3cac5b18fe2a89c0bb355dbd106180785c23675fc9aaa22ca0f",
+    "network_pathway_group_daily.csv": "d9dde54559cd6451fe8e68ea94709dee85c93218761a2c7ac6ea1fef404e8047",
+    "network_pathway_hac_summary.csv": "d16bc43d5f6e721eb2f763e355e22e58c2be5b3efdcdad8497e8c9cfd3b4b187",
+    "stock_forward_downside_20d_panel.csv": "cc4648c75995fa991f9d96a383e39b866554392b2517a158327487dd3fc7a960",
+    "temporal_order_daily.csv": "f20548ad904c29daed2223025a994dc13590393b57f18517d919a09f285bc3ae",
+    "temporal_order_hac_summary.csv": "104eee14d6c009d45214eec1813e22246cc8f597fcaf5f0c4338237dd369fd78"
+  },
+  "main": "M1_RESIDUAL_POSITIVE_W120",
+  "matched_null": "same source/date; target formation sector, historical volatility quintile and market-cap tercile; non-edge endpoint pool",
+  "min_hist": 40,
+  "min_sector_other_peers": 10,
+  "output_sha256": {
+    "day15_step5b_qa.csv": "34b51fdb1e6dfb48f6431ff7dca174f8dc17d76e4819d3f50cf2d9c93eee0859",
+    "temporal_common_shock_placebo_daily.csv": "1bf109d5287520cb7b771262ac300032c1178f978f0ae3d1ba4be2c2429e1517",
+    "temporal_common_shock_placebo_hac.csv": "b26e2c0fbc137b0bd544a8e04d1a45c306285c36950e178d7623727858236f52"
+  },
+  "placebo": "five market sessions before source shock, source shock in days 6..10; separate sample, no pre-source event exclusion",
+  "pre_placebo_days": 5,
+  "pre_placebo_source_day_min": 6,
+  "repeats": 3,
+  "research_day": 15,
+  "sampling_max_edges": 4000,
+  "script_sha256": "bafc618dab9dafdebb90a23f4a59adf884a73e682c806a21fd9dc88840094a66",
+  "seed": 20261010,
+  "size_strata": 3,
+  "source_days": [
+    1,
+    10
+  ],
+  "status": "FROZEN",
+  "step": "Step5B_Common_Shock_Controls_Placebo",
+  "target_followup": [
+    1,
+    5
+  ],
+  "vol_strata": 5
+}
