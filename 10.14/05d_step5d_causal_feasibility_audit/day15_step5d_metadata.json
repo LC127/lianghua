@@ -1,0 +1,58 @@
+{
+  "conclusion": "CAUSAL_IDENTIFICATION_NOT_ESTABLISHED",
+  "formal_qa": {
+    "all_formal_qa_pass": true,
+    "causal_claim_prohibited": true,
+    "causal_identification_status": "NOT_IDENTIFIED",
+    "date_split_descriptive_only": true,
+    "diagnostics_rows": 24,
+    "full_sample_post_sector_delta": 0.00570863984309,
+    "full_sample_pre_sector_delta": 0.00127139362471,
+    "identification_criteria": 13,
+    "oos_post_sector_any_bh_significant": false,
+    "placebo_equivalence_rows": 4,
+    "placebo_pre_equivalent_at_margin": true,
+    "pre_post_risk_sets_differ": true,
+    "residual_raw_post_sector_q": 0.39868396023,
+    "step5b_graph_cells": 208,
+    "step5b_tests_checked": 8,
+    "step5c_oos_rows": 520,
+    "step5c_tests": 16,
+    "upstream_a_b_c_frozen_sha256_pass": true
+  },
+  "hac_lags": 2,
+  "input_sha256": {
+    "day15_step5_metadata.json": "4a31c949f312c68035b240805075c86d80e704e8c15a50b564c4c992175306ad",
+    "day15_step5_qa.csv": "66c2ab1c2fe8caedf01d478252135f86b5bd4d160a6702ead5f1be0a742b080a",
+    "day15_step5b_metadata.json": "f890c4a68fa73eb71a1c7b6fc8db3fc66c632a775a2e65d2e8c519b69d72e38f",
+    "day15_step5b_qa.csv": "34b51fdb1e6dfb48f6431ff7dca174f8dc17d76e4819d3f50cf2d9c93eee0859",
+    "day15_step5c_metadata.json": "02b1a9f826bb418d3b478e6e8dedda807c56e9e79c18bbfc28308eee93fa880a",
+    "day15_step5c_qa.csv": "853b57f5d7045847ba8ba219d928ca412321fdf89aa1bf419cdcb5387b5eeabb",
+    "rolling_oos_daily.csv": "91839501ff4fb56c798eab0a0de99ccef921fdb161b6d30a64e0ee1b9b5fb729",
+    "rolling_oos_score_summary.csv": "70350e9dec338c942f2243663e1f605239084e2bc005629dd05cfd374acdbcbb",
+    "temporal_common_shock_placebo_daily.csv": "1bf109d5287520cb7b771262ac300032c1178f978f0ae3d1ba4be2c2429e1517",
+    "temporal_common_shock_placebo_hac.csv": "b26e2c0fbc137b0bd544a8e04d1a45c306285c36950e178d7623727858236f52",
+    "temporal_order_daily.csv": "f20548ad904c29daed2223025a994dc13590393b57f18517d919a09f285bc3ae",
+    "temporal_order_hac_summary.csv": "104eee14d6c009d45214eec1813e22246cc8f597fcaf5f0c4338237dd369fd78"
+  },
+  "networks": [
+    "B0_RAW_POSITIVE",
+    "M1_RESIDUAL_POSITIVE"
+  ],
+  "no_causal_effect_estimate": true,
+  "output_sha256": {
+    "causal_identification_checklist.csv": "6164426afa01946c0b93b3afbf196e54948e0b89484d0e579e2f7b0f33dec212",
+    "causal_robustness_periods.csv": "19c6dd645877c4163726210d84c8dfe41b3c0867e0131f4f5e7f4b3eaff11191",
+    "day15_step5d_conclusion.md": "abe57eefeabc47c1f10c55995deba80fa9cbb6b3cac7e9a917f801ccc7bd6648",
+    "day15_step5d_qa.csv": "b788083d918c11dd19331e27bf49cd996697143d0580382ed6253cd9e7ceb6d6",
+    "pre_event_placebo_equivalence.csv": "6f06f0f862d991d4d3def05465f947fbe15aaa681a7019f7de7b32c1984cee8d"
+  },
+  "placebo_equivalence_margin_exploratory": 0.005,
+  "research_day": 15,
+  "script_sha256": "9289fff1ce1bdb6ecfd90edbc5e82b8cbbb9f0ad17532ddb74e32822ec0bf076",
+  "source": "previously frozen Step5-A/B/C aggregated outputs",
+  "split": "first 51 vs last 51 valid dates; descriptive only",
+  "status": "FROZEN",
+  "step": "Step5D_Causal_Feasibility_Robustness_Audit",
+  "window": 120
+}
