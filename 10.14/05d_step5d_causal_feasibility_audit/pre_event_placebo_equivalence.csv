@@ -1,0 +1,5 @@
+network,measure,n_dates,mean_delta,hac_se,tolerance,p_tost,equivalent_at_5pct,interpretation
+B0_RAW_POSITIVE,PRE_SECTOR,102,0.00434467212932,0.00682323260076,0.005,0.461742969604,False,exploratory only; different post/pre risk sets
+B0_RAW_POSITIVE,PRE_RAW,102,-0.00497578870045,0.00211854041922,0.005,0.495440870178,False,exploratory only; different post/pre risk sets
+M1_RESIDUAL_POSITIVE,PRE_SECTOR,102,0.00127139362471,0.00212996881425,0.005,0.0400121533941,True,exploratory only; different post/pre risk sets
+M1_RESIDUAL_POSITIVE,PRE_RAW,102,0.00471058738448,0.00197829537655,0.005,0.441844676701,False,exploratory only; different post/pre risk sets
