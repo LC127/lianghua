@@ -1,0 +1,53 @@
+{
+  "day4_network_return_column": "return_network",
+  "delist_policy": "mark NA if delisting occurs inside horizon; no invented delisting return",
+  "formal_qa": {
+    "all_formal_qa_pass": true,
+    "available_labels": 444726,
+    "bad_forward_label_dates": 0,
+    "bad_loss_values": 0,
+    "calendar_right_censored_n": 10386,
+    "delist_censored_n": 101,
+    "duplicate_formation_stock": 0,
+    "frozen_formation_dates": 104,
+    "frozen_node_snapshots": 312,
+    "missing_or_invalid_return_n": 5631,
+    "network_return_column_from_day4_design": "return_network",
+    "no_forward_universe_filtering": true,
+    "no_network_reestimation": true,
+    "nontrade_or_reopen_returns_masked": 0,
+    "simple_return_column": "return_network_simple",
+    "step1_source_audit_pass": true,
+    "unavailable_labels": 16118,
+    "universe_rows": 460844,
+    "w120_nodes_preserved": true,
+    "w252_nodes_preserved": true,
+    "w60_nodes_preserved": true
+  },
+  "horizon_market_sessions": 20,
+  "input_sha256": {
+    "output\\M1_day13\\05_step5_m1_m4_frozen_interface\\m1_to_m4_frozen_interface_panel.csv": "e02aa1cdc4bb3a6b50325056db88d5314667be890a87520b104e8c6ff736b483",
+    "output\\M1_day15\\01_step1_frozen_network_risk_source_audit\\day15_step1_metadata.json": "85054c423519bcb5d01ba7cdcc0bebde87599190e84e0bffe46b1217561635a7",
+    "output\\M1_day1\\01_stage1_final\\stock_master.parquet": "dff914d4d445704ffec63842375c896243e226b80949684577e40009c61652d2",
+    "output\\M1_day1\\01_stage1_final\\trade_calendar_used.csv": "26c7f29fa6b0c8da9c2839a66c9927105bec5fb21413d8217bbd116ea69d21d3",
+    "output\\M1_day1\\03_stage3_return_validation\\daily_return_panel.parquet": "2d8a07e55c09236a8f2c86dc1cdad4902f372b4120a45afddab07cfb6e8fcc08",
+    "output\\M1_day4\\01_step1_network_design\\day4_network_design_config.json": "aed52555967505205523dfb003203e3a9d9da494f95093e9c9ba514315dcc42a",
+    "output\\M1_day4\\02_step2_matched_networks\\stock_master_mapping.parquet": "c5062ceae0efbc368e629ad53abf4f87b3294b428e29ff224cce54ea97cbb637"
+  },
+  "label_definition": "max(0,-prod(1+daily_return[t+1:t+20])+1)",
+  "limitation": "One-sided end-to-end holding loss, not intrahorizon MDD; missing sessions remain censored.",
+  "missing_policy": "all 20 exchange sessions required; no forward-fill/zero-fill",
+  "no_reestimation": true,
+  "output_sha256": {
+    "day15_step2_node_snapshot_manifest.csv": "3c3b6c37c5d9419353fd5ba6013aa528577a6f2a6ddd28c5b965594bbec7bbc4",
+    "day15_step2_qa.csv": "7f0dbbdbb179c594aa40438639066380370c26900016d85a8567848312b7afaf",
+    "stock_forward_downside_20d_panel.csv": "cc4648c75995fa991f9d96a383e39b866554392b2517a158327487dd3fc7a960"
+  },
+  "primary_label": "downside_loss_20d",
+  "research_day": 15,
+  "return_column": "return_network_simple",
+  "script_sha256": "f784b11b4d580034cad117f5a6f2f8adbb8e9cbef0194744bec6beb20dd51ade",
+  "status": "FROZEN",
+  "step": "Step2_Stock_Forward_Downside_Target_Freeze",
+  "universe_policy": "union of PIT frozen Day4 node universes; window membership retained"
+}
