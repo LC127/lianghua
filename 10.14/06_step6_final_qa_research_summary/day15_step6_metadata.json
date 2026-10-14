@@ -1,0 +1,31 @@
+{
+  "research_day": 15,
+  "step": "Step6_Final_QA_Research_Summary",
+  "status": "FROZEN",
+  "formal_qa": {
+    "all_formal_qa_pass": true,
+    "checks_passed": 217,
+    "day15_step_count": 8,
+    "external_inputs_not_rehashed": 7,
+    "day14_context_verified": true,
+    "causal_identification": "NOT_ESTABLISHED"
+  },
+  "input_metadata_sha256": {
+    "S1": "85054c423519bcb5d01ba7cdcc0bebde87599190e84e0bffe46b1217561635a7",
+    "S2": "9c359c86409d944a38e050b88d0f88c3f880099fcaa753071c39cb3ee9fe78fb",
+    "S3": "eaa04a5cdac59f9b94b30016ccd376b3ae54ab3a703d99b526f7a1e466c89396",
+    "S4": "5c8b982fb8872fae2c747ee73ed3fa53e133f204f59cf95b7b32b43cecddb68e",
+    "S5A": "4a31c949f312c68035b240805075c86d80e704e8c15a50b564c4c992175306ad",
+    "S5B": "f890c4a68fa73eb71a1c7b6fc8db3fc66c632a775a2e65d2e8c519b69d72e38f",
+    "S5C": "02b1a9f826bb418d3b478e6e8dedda807c56e9e79c18bbfc28308eee93fa880a",
+    "S5D": "212affda5a14e876fffb10091dbab966cc162254f382c9691a50affa52c2c2d6"
+  },
+  "day14_metadata_sha256": "12e114b21f39b1212f23d55cce7e6a77a235800e731e85773e7a6811e6e80f3e",
+  "script_sha256": "dcb23b1bf00ece51af72d8d975ac53c79455f3dca12325452149a166afa2238b",
+  "output_sha256": {
+    "day15_step6_evidence_matrix.csv": "408c322100b968f9490bd31c744373917fa429e0cb1aa3ebee2c6e9a1f0d6bac",
+    "day15_step6_hash_chain.csv": "a543f5747ad72360a7537fff3e507e6b2ff779c5db2259e0b77d86080c0006c2",
+    "day15_step6_qa.csv": "ef743446ff472a61a72be6136eba5a22c92ea209ff759e1ea58fc7cbd9894a66",
+    "day15_step6_final_summary.md": "8856cc863af6c87e55160378058d0b1f9172cd278fdef3ddf08e33edf9640b6d"
+  }
+}
