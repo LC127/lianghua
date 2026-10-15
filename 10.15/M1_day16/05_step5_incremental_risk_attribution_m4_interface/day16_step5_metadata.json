@@ -1,0 +1,41 @@
+{
+  "comparator": "Same 30 stocks and matching sector/holding HHI; structural differences only",
+  "formal_qa": {
+    "actual_holdings": false,
+    "all_formal_qa_pass": true,
+    "causal_identification": false,
+    "downstream_qa_chain_pass": true,
+    "formation_dates": 104,
+    "gamma_zero_equal": true,
+    "input_step4_stress_unchanged": true,
+    "m4_scenario_interface_rows": 4992,
+    "m4_stock_interface_rows": 12480,
+    "paired_attribution_rows": 2496,
+    "partial_coverage_groups": 71,
+    "predictions_tested": false,
+    "risk_group_rows": 416,
+    "same_stocks_and_traditional_hhi_across_networks": true,
+    "stock_factors_formation_close_only": true,
+    "synthetic_portfolio_groups": 208,
+    "traditional_hhi_constant_by_design": true
+  },
+  "input_sha256": {
+    "day16_step2_metadata.json": "9321bdc0fc875045bc795b1f815a2b7da00ea186bd95b35fd8b309c065da5518",
+    "day16_step3_metadata.json": "2bf4e82119325d0bd0bac8277c945d5f83b46ede22e14c74d065bc9131f2b2a6",
+    "day16_step4_metadata.json": "d994c025552e4faf0b5c308371c7b7ead16849fa824bc950ec8624ac3f76b645"
+  },
+  "interpretation": "SIMULATED portfolio, no verified risk prediction or causal propagation",
+  "m4_ready_policy": "neighbor / own weighted coverage >= 0.8",
+  "method": "Frozen PIT 60d risk plus hypothetical W120 gamma stress; no refit",
+  "output_sha256": {
+    "day16_step5_qa.csv": "9758671b0a379cec483b31ce3ce336a642729ca6ad6a3f7620e75205bdb5c8b2",
+    "incremental_structural_attribution.csv": "8d7c56b13c1f227793f93d04f4a45c68379cd7c8ff18249052f75512f95e238f",
+    "m1_m4_hypothetical_stress_interface.csv": "cae6d5717b6d9d9398e8b78a5425724a448f5c510e0a836d7a9aff82b6b43e6d",
+    "m1_m4_portfolio_risk_profile.csv": "906e2b8acbc960ea725e553d1b836b577e1a214804e2a4c10b51eb544d2dbcd7",
+    "m1_m4_stock_risk_exposure.csv": "56299186da2e7e5975f5a7770f1cb17c167f9766333612608750a77224251f8b"
+  },
+  "research_day": 16,
+  "script_sha256": "40c6251efd5c27c4f2a2e41343d74745e448c206901cfe37eb7080607ca2dd80",
+  "status": "FROZEN",
+  "step": "Step5_Incremental_Structural_Risk_Attribution_M4_Interface"
+}
