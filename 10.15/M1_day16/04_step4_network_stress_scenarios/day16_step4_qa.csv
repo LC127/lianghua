@@ -1,0 +1,15 @@
+metric,value
+all_formal_qa_pass,True
+formation_dates,104
+frozen_w120_edges_rehashed,208
+stress_rows,4992
+paired_network_comparisons,2496
+fixed_portfolio_holding_rows,6240
+summary_rows,48
+reconstructed_step3_portfolio_verified,True
+identical_network_shock_vectors,True
+gamma_zero_network_invariance,True
+nonnegative_amplification,True
+no_future_labels,True
+actual_portfolios,False
+causal_identification,False
