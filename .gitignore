@@ -6,3 +6,6 @@
 
 # Generated participation data: retain locally, exclude from Git.
 /9.21/M1_day8/03_stage3_participation_capacity/stock_participation_base_panel.parquet
+
+# Generated network risk exposure data: retain locally, exclude from Git.
+/10.15/M1_day16/02_step2_network_risk_exposure_factors/network_risk_exposure_panel.parquet
