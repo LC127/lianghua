@@ -1,0 +1,14 @@
+metric,value
+frozen_chain_pass,True
+node_snapshots_hashed,312
+edge_snapshots_present,624
+representative_edges_hashed,6
+matched_density_pass,True
+formation_dates,104
+formation_stock_rows,469707
+valid_market_cap_share,1.0
+valid_industry_share,1.0
+valid_turnover_share,1.0
+portfolio_provided,False
+portfolio_status,PORTFOLIO_PENDING
+all_source_audit_pass,True
