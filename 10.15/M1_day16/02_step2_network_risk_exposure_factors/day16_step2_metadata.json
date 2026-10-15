@@ -1,0 +1,36 @@
+{
+  "formal_qa": {
+    "formal_qa_pass": true,
+    "formation_dates": 104,
+    "frozen_graph_hashes_verified": 624,
+    "frozen_node_hashes_verified": 312,
+    "future_labels_used": false,
+    "historical_sessions": 60,
+    "masked_nontrade_returns": 0,
+    "min_neighbor_weight_coverage": 0.8,
+    "min_valid_sessions": 40,
+    "network_date_cells": 624,
+    "network_node_rows": 2693618,
+    "portfolio_status": "PORTFOLIO_PENDING",
+    "risk_valid_node_rows": 2693360,
+    "valid_cross_exposure_rows": 2248114,
+    "valid_neighbor_exposure_rows": 2248114
+  },
+  "input_sha256": {
+    "day15_step2_node_snapshot_manifest.csv": "3c3b6c37c5d9419353fd5ba6013aa528577a6f2a6ddd28c5b965594bbec7bbc4",
+    "day15_step3_edge_manifest.csv": "b39bb8d19597ecd4a671747a9c1673bdb350767ccffb816a4785aad85c4ef10a",
+    "day16_step1_metadata.json": "5efcdc8fb16df1ce238dac971ad6e6219b430a958dec67b85827a1fc4effa88b"
+  },
+  "network_policy": "undirected positive 1pct frozen edge_weight; full node/edge SHA256 verified",
+  "output_sha256": {
+    "day16_step2_qa.csv": "28e04b804b25a8f676f86954e468d3ed5a51749f2d29ce999a92e91a2ab40b2f",
+    "network_risk_exposure_daily_summary.csv": "2887f9506d2e15910e8799ddf3ffa159fc2e2723b9ef9caab3cdb202ebfac0a3",
+    "network_risk_exposure_panel.parquet": "e112c651579806fd919803cb74cd7f34393c73c60aad53119ec3d42ee62e6fd7"
+  },
+  "research_day": 16,
+  "risk_definition": "sqrt(mean(min(simple_return,0)^2 over valid last 60 market sessions))",
+  "script_sha256": "d4838be8800b6cef0ae940147963cc12b1849de2aaec01157110eee9d0e6ece2",
+  "status": "FROZEN",
+  "step": "Step2_Network_Risk_Exposure_Factor_Construction",
+  "time_policy": "formation-close PIT; 40/60 min; suspended/nonconsecutive masked; no future labels"
+}
