@@ -1,0 +1,29 @@
+{
+  "code_sha256": "ab1c758b256cd74837b072c51d6c88946575b4802866152987ef102d0cb1928c",
+  "formal_qa": {
+    "all_source_audit_pass": true,
+    "edge_snapshots_present": 624,
+    "formation_dates": 104,
+    "formation_stock_rows": 469707,
+    "frozen_chain_pass": true,
+    "matched_density_pass": true,
+    "node_snapshots_hashed": 312,
+    "portfolio_provided": false,
+    "portfolio_status": "PORTFOLIO_PENDING",
+    "representative_edges_hashed": 6,
+    "valid_industry_share": 1.0,
+    "valid_market_cap_share": 1.0,
+    "valid_turnover_share": 1.0
+  },
+  "hash_limit": "312 nodes fully hashed; 624 edges path-checked, six edges hash-sampled; inherited Day15 full manifest",
+  "output_sha256": {
+    "day16_step1_portfolio_coverage.csv": "e01c81206a88ea023be0b52b3a97b71bc482b7574d6f9112109ebe56d5f4b902",
+    "day16_step1_qa.csv": "fd87a790b65d04a384bb1e9c617daa0cd55415a7af53788565d10200af344a62",
+    "day16_step1_source_inventory.csv": "29ea61658b044a0f8f624bdf6a582ae79acd3e1caf694ec9a386069a794f3fb5"
+  },
+  "portfolio_policy": "Optional long-only holdings, weights sum 1; no synthetic portfolio generated",
+  "research_day": 16,
+  "source_policy": "Day15 M1 frozen; return/size/turnover observed by formation-day close",
+  "status": "NETWORK_SOURCE_PASS__PORTFOLIO_PENDING",
+  "step": "Step1_Frozen_Network_Portfolio_Source_Audit"
+}
