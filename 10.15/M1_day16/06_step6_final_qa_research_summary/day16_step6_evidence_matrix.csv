@@ -1,0 +1,24 @@
+stage,metric,setting,value,unit,interpretation
+Step1,formation_rows,PIT daily source,469707.0,stock-date rows,"input universe, not network-node count"
+Step2,risk_valid_share,all networks,0.999904218044281,fraction,historical stock downside risk coverage
+Step2,neighbor_valid_share,all networks,0.8346075798424275,fraction,"neighbor exposure coverage, includes isolated nodes"
+Step3,isolated_share,B0_RAW_POSITIVE/W120,0.2997919468094144,fraction,date-equal structural diagnostic
+Step3,degree_gini,B0_RAW_POSITIVE/W120,0.7849695938540577,fraction,date-equal structural diagnostic
+Step3,hhi_connected_mean,B0_RAW_POSITIVE/W120,0.2081477705843846,fraction,date-equal structural diagnostic
+Step3,neighbor_risk_valid_share,B0_RAW_POSITIVE/W120,0.7002080531905865,fraction,date-equal structural diagnostic
+Step3,selected_minus_sector_null,B0_RAW_POSITIVE/W120 synthetic 30-stock,-0.0014155614500446347,fraction,sector-matched null; exploratory selection
+Step3,isolated_share,M1_RESIDUAL_POSITIVE/W120,0.03546112644505505,fraction,date-equal structural diagnostic
+Step3,degree_gini,M1_RESIDUAL_POSITIVE/W120,0.5695260319522212,fraction,date-equal structural diagnostic
+Step3,hhi_connected_mean,M1_RESIDUAL_POSITIVE/W120,0.11261588595961923,fraction,date-equal structural diagnostic
+Step3,neighbor_risk_valid_share,M1_RESIDUAL_POSITIVE/W120,0.9645388735549519,fraction,date-equal structural diagnostic
+Step3,selected_minus_sector_null,M1_RESIDUAL_POSITIVE/W120 synthetic 30-stock,0.03766312997346968,fraction,sector-matched null; exploratory selection
+Step3,paired_hhi_res_minus_raw,W120 common stocks,-0.13676990566395578,difference,identical-date/stock comparison
+Step5,neighbor_risk_weight_coverage,SYNTHETIC_HIGH_RESIDUAL_NEIGHBOR_RISK/B0_RAW_POSITIVE,0.999999999999,fraction,coverage before M4 use
+Step4,sector_shock_incremental,SYNTHETIC_HIGH_RESIDUAL_NEIGHBOR_RISK/B0_RAW_POSITIVE/gamma=.3,0.002449528901731009,portfolio loss fraction,"hypothetical model, not observed contagion"
+Step5,neighbor_risk_weight_coverage,SYNTHETIC_HIGH_RESIDUAL_NEIGHBOR_RISK/M1_RESIDUAL_POSITIVE,0.999999999999,fraction,coverage before M4 use
+Step4,sector_shock_incremental,SYNTHETIC_HIGH_RESIDUAL_NEIGHBOR_RISK/M1_RESIDUAL_POSITIVE/gamma=.3,0.002165005246945346,portfolio loss fraction,"hypothetical model, not observed contagion"
+Step5,neighbor_risk_weight_coverage,SECTOR_BALANCED_ID_CONTROL/B0_RAW_POSITIVE,0.7435897435890481,fraction,coverage before M4 use
+Step4,sector_shock_incremental,SECTOR_BALANCED_ID_CONTROL/B0_RAW_POSITIVE/gamma=.3,0.0011053619090874713,portfolio loss fraction,"hypothetical model, not observed contagion"
+Step5,neighbor_risk_weight_coverage,SECTOR_BALANCED_ID_CONTROL/M1_RESIDUAL_POSITIVE,0.9794871794862211,fraction,coverage before M4 use
+Step4,sector_shock_incremental,SECTOR_BALANCED_ID_CONTROL/M1_RESIDUAL_POSITIVE/gamma=.3,0.0012889668110550767,portfolio loss fraction,"hypothetical model, not observed contagion"
+Step5,partial_coverage_groups,M4 profile,71.0,groups,cannot treat these as full historical network exposure
