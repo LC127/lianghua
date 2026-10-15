@@ -1,0 +1,14 @@
+metric,value
+all_formal_qa_pass,True
+network_date_cells,624
+paired_cells,312
+synthetic_diagnostic_cells,208
+formation_dates,104
+common_stock_comparison,True
+formation_close_pit,True
+future_labels_used,False
+actual_portfolio_holdings,False
+real_institutional_crowding_measured,False
+causal_or_predictive_claim,False
+synthetic_sector_matched_reps,50
+frozen_w120_edge_snapshots_rehashed,208
