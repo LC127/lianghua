@@ -1,0 +1,51 @@
+{
+  "control_portfolio": "lowest master_index 2 in 15 largest full node-universe sectors",
+  "ego_definition": "anchor + top 14 Residual W120 neighbors by weight; NOT Louvain community",
+  "formal_qa": {
+    "actual_portfolios": false,
+    "all_formal_qa_pass": true,
+    "causal_identification": false,
+    "fixed_portfolio_holding_rows": 6240,
+    "formation_dates": 104,
+    "frozen_w120_edges_rehashed": 208,
+    "gamma_zero_network_invariance": true,
+    "identical_network_shock_vectors": true,
+    "no_future_labels": true,
+    "nonnegative_amplification": true,
+    "paired_network_comparisons": 2496,
+    "reconstructed_step3_portfolio_verified": true,
+    "stress_rows": 4992,
+    "summary_rows": 48
+  },
+  "gammas": [
+    0.0,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "initial_per_shocked_stock": 0.05,
+  "input_sha256": {
+    "day15_step3_edge_manifest.csv": "b39bb8d19597ecd4a671747a9c1673bdb350767ccffb816a4785aad85c4ef10a",
+    "day16_step2_metadata.json": "9321bdc0fc875045bc795b1f815a2b7da00ea186bd95b35fd8b309c065da5518",
+    "day16_step3_metadata.json": "2bf4e82119325d0bd0bac8277c945d5f83b46ede22e14c74d065bc9131f2b2a6"
+  },
+  "interpretation": "descriptive hypothetical stress, no institutional crowding, prediction or causality",
+  "main": "M1_RESIDUAL_POSITIVE_W120",
+  "output_sha256": {
+    "day16_step4_qa.csv": "7a4226107b3af08ac6d441a1ebcdc5230a355d2845e90ba49ab81140232984b9",
+    "network_stress_contrast.csv": "de32bd6b208951fa556b530f963e7c8f68216918c011a45b932cff312c5ddce9",
+    "network_stress_daily.csv": "82d1c2364d283003668637b68a374083ca3bafe92714564eaaf0ac6b2346302a",
+    "network_stress_summary.csv": "6df86b86c10401a3e72f46996325f3642bff124383e60f80e9dcf104b3501597",
+    "stress_portfolio_holdings.csv": "2ba15b694fe8e9034e532f0feb6b6765ae66e96e36c009d7df695a0deaf7219d"
+  },
+  "research_day": 16,
+  "scenarios": [
+    "STOCK",
+    "SECTOR",
+    "RESIDUAL_EGO15"
+  ],
+  "script_sha256": "7ab702bab1d349965e4f82ee89a8591e0788eb25f122cc45906d33623c19a131",
+  "status": "FROZEN",
+  "step": "Step4_Network_Based_Hypothetical_Stress",
+  "transition": "positive undirected weight row-normalized; (I-gamma P)^-1"
+}
