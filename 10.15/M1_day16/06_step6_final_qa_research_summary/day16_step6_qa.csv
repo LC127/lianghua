@@ -1,0 +1,68 @@
+check,status
+one Step1 frozen source variant,PASS
+Step1 formal QA,PASS
+Step1 frozen source status,PASS
+Step1 QA/metadata agreement,PASS
+Step1 frozen bytes: day16_step1_portfolio_coverage.csv,PASS
+Step1 frozen bytes: day16_step1_qa.csv,PASS
+Step1 frozen bytes: day16_step1_source_inventory.csv,PASS
+Step2 formal QA,PASS
+Step2 frozen source status,PASS
+Step2 QA/metadata agreement,PASS
+Step2 frozen bytes: day16_step2_qa.csv,PASS
+Step2 frozen bytes: network_risk_exposure_daily_summary.csv,PASS
+Step2 frozen bytes: network_risk_exposure_panel.parquet,PASS
+Step3 formal QA,PASS
+Step3 frozen source status,PASS
+Step3 QA/metadata agreement,PASS
+Step3 frozen bytes: day16_step3_qa.csv,PASS
+Step3 frozen bytes: network_concentration_daily.csv,PASS
+Step3 frozen bytes: raw_residual_common_sample.csv,PASS
+Step3 frozen bytes: synthetic_portfolio_crowding.csv,PASS
+Step4 formal QA,PASS
+Step4 frozen source status,PASS
+Step4 QA/metadata agreement,PASS
+Step4 frozen bytes: day16_step4_qa.csv,PASS
+Step4 frozen bytes: network_stress_contrast.csv,PASS
+Step4 frozen bytes: network_stress_daily.csv,PASS
+Step4 frozen bytes: network_stress_summary.csv,PASS
+Step4 frozen bytes: stress_portfolio_holdings.csv,PASS
+Step5 formal QA,PASS
+Step5 frozen source status,PASS
+Step5 QA/metadata agreement,PASS
+Step5 frozen bytes: day16_step5_qa.csv,PASS
+Step5 frozen bytes: incremental_structural_attribution.csv,PASS
+Step5 frozen bytes: m1_m4_hypothetical_stress_interface.csv,PASS
+Step5 frozen bytes: m1_m4_portfolio_risk_profile.csv,PASS
+Step5 frozen bytes: m1_m4_stock_risk_exposure.csv,PASS
+Step2 parent link: day16_step1_metadata.json,PASS
+Step3 parent link: day16_step2_metadata.json,PASS
+Step4 parent link: day16_step2_metadata.json,PASS
+Step4 parent link: day16_step3_metadata.json,PASS
+Step5 parent link: day16_step2_metadata.json,PASS
+Step5 parent link: day16_step3_metadata.json,PASS
+Step5 parent link: day16_step4_metadata.json,PASS
+synthetic portfolios only,PASS
+PIT descriptive / not predictive,PASS
+Step1 inherited source inventory internally consistent,PASS
+Step2: 624 unique rows,PASS
+Step3 structure: 624 unique rows,PASS
+Step3 matched stocks: 312 unique rows,PASS
+Step3 portfolios: 208 unique rows,PASS
+Step4 stress: 4992 unique rows,PASS
+Step4 contrasts: 2496 unique rows,PASS
+Step4 holdings: 6240 unique rows,PASS
+Step5 profile: 416 unique rows,PASS
+Step5 M4: 4992 unique rows,PASS
+Step5 attribution: 2496 unique rows,PASS
+Step5 stocks: 12480 unique rows,PASS
+104 dates and six network settings,PASS
+Step2 row/coverage arithmetic,PASS
+fixed stress scenarios and gamma,PASS
+Step4 pressure-loss identity,PASS
+gamma zero baseline,PASS
+M4 stress exact carry-through,PASS
+M4 paired contrasts unchanged,PASS
+partial coverage explicitly flagged,PASS
+"no predictive, causal or real holdings claim",PASS
+traditional HHI constant by construction,PASS
