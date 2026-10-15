@@ -1,0 +1,29 @@
+{
+  "formal_qa": {
+    "all_final_qa_pass": true,
+    "checks_passed": 67,
+    "m4_partial_coverage_groups": 71,
+    "no_new_prediction_or_causal_test": true,
+    "portfolio_status": "SYNTHETIC_ONLY",
+    "stages": 5
+  },
+  "input_metadata_sha256": {
+    "day16_step1_metadata.json": "5efcdc8fb16df1ce238dac971ad6e6219b430a958dec67b85827a1fc4effa88b",
+    "day16_step2_metadata.json": "9321bdc0fc875045bc795b1f815a2b7da00ea186bd95b35fd8b309c065da5518",
+    "day16_step3_metadata.json": "2bf4e82119325d0bd0bac8277c945d5f83b46ede22e14c74d065bc9131f2b2a6",
+    "day16_step4_metadata.json": "d994c025552e4faf0b5c308371c7b7ead16849fa824bc950ec8624ac3f76b645",
+    "day16_step5_metadata.json": "88e2db3f551769c226e8fc1946c9772972ddecd691bb521339000c9eb26c7058"
+  },
+  "output_sha256": {
+    "day16_step6_evidence_matrix.csv": "5ef9394378c40c48eb2ea1a50867d1a531ac69fd0f0c902aaadefe3c2ff892e2",
+    "day16_step6_final_summary.md": "ad5ec12b90846b0cd82b03f5375255a46cbdd4c23d395ea5b861fff8bfb1631e",
+    "day16_step6_hash_chain.csv": "545e17cacc0099a8fe8eac69735b8d369fcc2098c257608fca6b56dd101ec182",
+    "day16_step6_m4_contract.csv": "0f47cc5cbbed703f2cdec6bb225fc418157620a20328bfc1b65f204dbe3acd5d",
+    "day16_step6_qa.csv": "1e2e698fa73f494c4c141f28f97c1a21f9394534f4208e1be2f768f4e6cfd600"
+  },
+  "research_day": 16,
+  "script_sha256": "bb1d91757c62686a5b535e844d338298762a8acc8c45f76107f8c72a1ec2405f",
+  "source_limit": "Step6 verifies frozen bytes/summaries; upstream raw graph QA inherited",
+  "status": "FROZEN",
+  "step": "Step6_Final_QA_Research_Summary"
+}
