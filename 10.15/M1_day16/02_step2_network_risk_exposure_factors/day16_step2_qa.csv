@@ -1,0 +1,16 @@
+metric,value
+formal_qa_pass,True
+formation_dates,104
+network_date_cells,624
+network_node_rows,2693618
+risk_valid_node_rows,2693360
+valid_neighbor_exposure_rows,2248114
+valid_cross_exposure_rows,2248114
+masked_nontrade_returns,0
+historical_sessions,60
+min_valid_sessions,40
+min_neighbor_weight_coverage,0.8
+future_labels_used,False
+frozen_graph_hashes_verified,624
+frozen_node_hashes_verified,312
+portfolio_status,PORTFOLIO_PENDING
