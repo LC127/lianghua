@@ -1,0 +1,5 @@
+source_file,grain,rows,usage_constraint
+m1_m4_stock_risk_exposure.csv,stock PIT,12480,formation-close only; synthetic holdings
+m1_m4_portfolio_risk_profile.csv,portfolio PIT,416,m4_exposure_status=PIT_EXPOSURE_READY required for full profile
+m1_m4_hypothetical_stress_interface.csv,hypothetical scenario,4992,window_x=window_y=120; normalize downstream
+incremental_structural_attribution.csv,network contrast,2496,not a causal or predictive contribution
