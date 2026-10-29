@@ -1,0 +1,19 @@
+{
+  "manifest_rows": 5436,
+  "duplicate_manifest_paths": 0,
+  "data_files_audited": 5328,
+  "schema_families": 98,
+  "schema_families_with_variation": 26,
+  "status_counts": {
+    "REVIEW": 866,
+    "PASS": 4458,
+    "INFO": 4
+  },
+  "files_with_inferred_key": 4468,
+  "files_with_duplicate_keys": 10,
+  "files_with_invalid_dates": 1,
+  "time_range_rows": 6536,
+  "issue_rows": 893,
+  "note": "主键为按列名推断的候选主键；需结合各表数据契约解释 REVIEW。",
+  "output_dir": "D:\\M1_StockNetwork\\output\\M1_day18\\04_step4_structure_key_time_audit\\run_20261029_152018"
+}
