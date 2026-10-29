@@ -1,0 +1,356 @@
+﻿path,line_number,line
+D:\M1_StockNetwork\m1_data_network_method_audit.py,20,"""stock_master"": ""output/M1_day1/01_stage1_final/stock_master.parquet"","
+D:\M1_StockNetwork\m1_data_network_method_audit.py,21,"""daily_returns"": ""output/M1_day1/03_stage3_return_validation/daily_return_panel.parquet"","
+D:\M1_StockNetwork\m1_data_network_method_audit.py,22,"""stock_mapping"": ""output/M1_day4/02_step2_matched_networks/stock_master_mapping.parquet"","
+D:\M1_StockNetwork\m1_data_network_method_audit.py,127,"required = set(RETURN_COLUMNS) if role == ""daily_returns"" else {""security_id""} if role == ""stock_master"" else set()"
+D:\M1_StockNetwork\m1_data_network_method_audit.py,134,"""stock_master/daily_returns/stock_mapping"")"
+D:\M1_StockNetwork\scope_protection.py,9,"""Day1"": [""stock_master.parquet"", ""daily_return_panel.parquet"","
+D:\M1_StockNetwork\scope_protection.py,14,"""stock_master_mapping.parquet""],"
+D:\M1_StockNetwork\source_inventory.py,9,"""stock_master.parquet"", ""raw_universe_by_date.parquet"","
+D:\M1_StockNetwork\source_inventory.py,10,"""stock_code_history.parquet"", ""stock_master_issues.csv"","
+D:\M1_StockNetwork\source_inventory.py,11,"""stock_master_quality_summary.csv"", ""core_data_anomalies.parquet"","
+D:\M1_StockNetwork\source_inventory.py,17,"""daily_return_panel.parquet"", ""stock_master_mapping.parquet"","
+D:\M1_StockNetwork\source_inventory.py,21,"KEYS = (""stock_master"", ""daily_return_panel"", ""mapping"", ""return_validation"","
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,23,"OUTPUT_DIR = Path(r""D:\M1_StockNetwork\output\M1_day1\01_stage1"")"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,738,def build_stock_master(records):
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,875,def quality_check_stock_master(master):
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1113,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1134,for row in stock_master.itertuples(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1296,"stock_master, code_history = ("
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1297,build_stock_master(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1307,quality_check_stock_master(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1308,stock_master
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1326,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1345,stock_master.to_parquet(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1347,"/ ""stock_master.parquet"","
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1359,"/ ""stock_master_quality_summary.csv"","
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1366,"/ ""stock_master_issues.csv"","
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1409,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1453,"f""{stock_master['security_id'].nunique():,}"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1458,"f""{stock_master['delist_date'].notna().sum():,}"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1478,"""1. stock_master.parquet"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1484,"""3. stock_master_quality_summary.csv"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe.py.py,1487,"""4. stock_master_issues.csv"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,37,"OUTPUT_DIR = Path(r""D:\M1_StockNetwork\output\M1_day1\01_stage1_final"")"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1140,def build_stock_master(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1170,stock_master = (
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1232,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1296,"stock_master: pd.DataFrame,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1302,stock_master
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1475,"stock_master: pd.DataFrame,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1487,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1492,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1496,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1503,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1550,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1558,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1952,"stock_master: pd.DataFrame,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,1959,stock_master.itertuples(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,2826,"stock_master: pd.DataFrame,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,2931,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,2935,stock_master.loc[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,2936,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,2942,stock_master.loc[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,2943,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,2949,stock_master.loc[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,2950,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,2956,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,2961,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3072,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3075,build_stock_master(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3087,stock_master
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3093,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3101,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3122,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3154,stock_master.to_parquet(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3156,"/ ""stock_master.parquet"","
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3172,"/ ""stock_master_quality_summary.csv"","
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3179,"/ ""stock_master_issues.csv"","
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3330,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3337,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3429,"f""{stock_master['security_id'].nunique():,}"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_final.py,3434,"f""{stock_master['delist_date'].notna().sum():,}"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,22,"OUTPUT_DIR = Path(r""D:\M1_StockNetwork\output\M1_day1\01_stage1_fixed"")"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1050,def build_stock_master(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1080,stock_master = (
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1142,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1151,def quality_check_stock_master(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1152,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1170,tmp = stock_master.loc[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1201,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1206,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1210,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1228,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1462,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1466,stock_master.loc[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1467,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1473,stock_master.loc[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1474,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1480,stock_master.loc[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1481,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1487,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1492,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1785,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,1791,for row in stock_master.itertuples(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2032,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2035,build_stock_master(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2048,quality_check_stock_master(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2049,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2069,"stock_master,"
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2116,stock_master.to_parquet(
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2118,"/ ""stock_master.parquet"","
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2130,"/ ""stock_master_quality_summary.csv"","
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2137,"/ ""stock_master_issues.csv"","
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2223,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2230,stock_master[
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2354,"f""{stock_master['security_id'].nunique():,}"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2359,"f""{stock_master['delist_date'].notna().sum():,}"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2412,"""1. stock_master.parquet"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2420,"""3. stock_master_quality_summary.csv"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2424,"""4. stock_master_issues.csv"""
+D:\M1_StockNetwork\M1_day1\build_stock_master_and_pit_universe_fixed.py,2469,"""请检查 stock_master_issues.csv。"""
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,23,"r""D:\M1_StockNetwork\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,26,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,28,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,661,def load_stock_master():
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,663,if not STOCK_MASTER_PATH.exists():
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,666,"f""找不到：{STOCK_MASTER_PATH}"""
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,670,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,689,"f""stock_master 缺字段：{missing}"""
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,797,# 直接利用 5553 行 stock_master 即可。
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,801,"stock_master: pd.DataFrame,"
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,807,stock_master[
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,814,stock_master[
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,819,stock_master[
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,828,stock_master.loc[
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,2250,stock_master = (
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,2251,load_stock_master()
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,2256,"f""{stock_master['security_id'].nunique():,} """
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,2364,"stock_master,"
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,2684,"""stock_master_path"":"
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,2686,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa.py,2714,"""由 Step 1 stock_master """
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,22,"r""D:\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,25,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,27,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,1011,def load_stock_master():
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,1014,STOCK_MASTER_PATH.exists()
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,1018,"f""找不到：{STOCK_MASTER_PATH}"""
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,1022,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,1202,"stock_master: pd.DataFrame,"
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,1209,stock_master[
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,1218,stock_master[
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,1225,stock_master[
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,1234,stock_master.loc[
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,3873,stock_master = (
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,3874,load_stock_master()
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,3900,"f""{stock_master['security_id'].nunique():,}"""
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,4018,"stock_master,"
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,4433,"""stock_master_path"":"
+D:\M1_StockNetwork\M1_day1\daily_market_coverage_and_core_qa_final.py,4435,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,23,"r""D:\M1_StockNetwork\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,26,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,28,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,47,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,196,def load_stock_master() -> pd.DataFrame:
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,198,if not STOCK_MASTER_PATH.exists():
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,201,"f""找不到：{STOCK_MASTER_PATH}"""
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,205,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,248,"stock_master: pd.DataFrame,"
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,258,stock_master[
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,586,"stock_master,"
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,984,stock_master[
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,1930,stock_master = (
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,1931,load_stock_master()
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,1945,"stock_master,"
+D:\M1_StockNetwork\M1_day1\full_market_network_feasibility.py,1962,"stock_master,"
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,31,"r""D:\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,34,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,36,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,785,def load_stock_master():
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,788,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,904,"stock_master,"
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,911,stock_master[
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,920,stock_master[
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,927,stock_master[
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,936,stock_master.loc[
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,1207,"stock_master,"
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,1249,"stock_master,"
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,1550,"stock_master,"
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,1632,"stock_master,"
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,2761,"stock_master,"
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,2774,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,2846,"stock_master,"
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,4056,stock_master = (
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,4057,load_stock_master()
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,4076,"f""{stock_master['security_id'].nunique():,}"""
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,4098,"stock_master,"
+D:\M1_StockNetwork\M1_day1\return_validation_and_panel.py,4112,"stock_master,"
+D:\M1_StockNetwork\M1_day10\build_calendar_liquidity_diagnostic.py,27,"/ ""01_stage1_liquidity_panel"""
+D:\M1_StockNetwork\M1_day10\build_calendar_liquidity_diagnostic.py,54,"/ ""01_stage1_secular_liquidity_panel"""
+D:\M1_StockNetwork\M1_day10\time_adjusted_capacity_validation.py,21,"OUT / ""M1_day10"" / ""01_stage1_secular_liquidity_panel"","
+D:\M1_StockNetwork\M1_day10\time_adjusted_capacity_validation.py,22,"OUT / ""M1_day9"" / ""01_stage1_secular_liquidity_panel"","
+D:\M1_StockNetwork\M1_day10\within_year_capacity_validation.py,16,"STEP1 = DAY10 / ""01_stage1_secular_liquidity_panel"""
+D:\M1_StockNetwork\M1_day11\build_frozen_prediction_panel.py,28,"/ ""01_stage1_frozen_prediction_panel"""
+D:\M1_StockNetwork\M1_day11\frozen_network_factor_redundancy.py,18,"/ ""01_stage1_frozen_prediction_panel"""
+D:\M1_StockNetwork\M1_day11\joint_oos_validation_summary.py,18,"/ ""01_stage1_frozen_prediction_panel"""
+D:\M1_StockNetwork\M1_day11\oos_temporal_block_validation.py,20,"/ ""01_stage1_frozen_prediction_panel"""
+D:\M1_StockNetwork\M1_day11\strict_expanding_oos_risk_forecast.py,18,"/ ""01_stage1_frozen_prediction_panel"""
+D:\M1_StockNetwork\M1_day12\build_frozen_alpha_evaluation_panel.py,25,"/ ""01_stage1_frozen_alpha_evaluation_panel"""
+D:\M1_StockNetwork\M1_day12\build_frozen_alpha_evaluation_panel.py,54,"/ ""01_stage1_liquidity_panel"""
+D:\M1_StockNetwork\M1_day12\frozen_alpha_ic_netural_validation.py,17,"STEP1 = DAY12 / ""01_stage1_frozen_alpha_evaluation_panel"""
+D:\M1_StockNetwork\M1_day12\monotonic_portfolio_long_short_validation.py,19,"/ ""01_stage1_frozen_alpha_evaluation_panel"""
+D:\M1_StockNetwork\M1_day12\turnover_transaction_cost.py,13,"STEP1 = DAY12 / ""01_stage1_frozen_alpha_evaluation_panel"""
+D:\M1_StockNetwork\M1_day15\common_shock_placebo.py,211,"rfile = day1/""03_stage3_return_validation/daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day15\common_shock_placebo.py,212,"cfile = day1/""01_stage1_final/trade_calendar_used.csv"""
+D:\M1_StockNetwork\M1_day15\common_shock_placebo.py,213,"mapfile = root/""output/M1_day4/02_step2_matched_networks/stock_master_mapping.parquet"""
+D:\M1_StockNetwork\M1_day15\frozen_network_risk_source_audit.py,53,"mapping = base / ""stock_master_mapping.parquet""  # Day4-generated index map"
+D:\M1_StockNetwork\M1_day15\frozen_network_risk_source_audit.py,55,"master = root / ""output/M1_day1/01_stage1_final/stock_master.parquet"""
+D:\M1_StockNetwork\M1_day15\frozen_network_risk_source_audit.py,56,"returns = root / ""output/M1_day1/03_stage3_return_validation/daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day15\frozen_network_risk_source_audit.py,152,"(""stock_master"", master, {""security_id"", ""stock_code"", ""stock_name"","
+D:\M1_StockNetwork\M1_day15\frozen_network_risk_source_audit.py,186,"schema_errors.append(""Day4 stock_master_mapping differs from Day1 sorted security_id"")"
+D:\M1_StockNetwork\M1_day15\rolling_oos_validation.py,133,"calendar_file = root / ""output/M1_day1/01_stage1_final/trade_calendar_used.csv"""
+D:\M1_StockNetwork\M1_day15\rolling_oos_validation.py,134,"cal_key = ""output\\M1_day1\\01_stage1_final\\trade_calendar_used.csv"""
+D:\M1_StockNetwork\M1_day15\stock_downside_target_freeze.py,41,"""master"": day1 / ""01_stage1_final/stock_master.parquet"","
+D:\M1_StockNetwork\M1_day15\stock_downside_target_freeze.py,42,"""mapping"": day4 / ""stock_master_mapping.parquet"","
+D:\M1_StockNetwork\M1_day15\stock_downside_target_freeze.py,43,"""returns"": day1 / ""03_stage3_return_validation/daily_return_panel.parquet"","
+D:\M1_StockNetwork\M1_day15\stock_downside_target_freeze.py,44,"""calendar"": day1 / ""01_stage1_final/trade_calendar_used.csv"","
+D:\M1_StockNetwork\M1_day15\temporal_order_matched_null.py,175,"rfile = root / ""output/M1_day1/03_stage3_return_validation/daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day15\temporal_order_matched_null.py,176,"cfile = root / ""output/M1_day1/01_stage1_final/trade_calendar_used.csv"""
+D:\M1_StockNetwork\M1_day15\temporal_order_matched_null.py,177,"mapfile = root / ""output/M1_day4/02_step2_matched_networks/stock_master_mapping.parquet"""
+D:\M1_StockNetwork\M1_day16\frozen_network_portfolio_risk_source_audit.py,141,"""stock_master"": ""output/M1_day1/01_stage1_final/stock_master.parquet"","
+D:\M1_StockNetwork\M1_day16\frozen_network_portfolio_risk_source_audit.py,142,"""trade_calendar"": ""output/M1_day1/01_stage1_final/trade_calendar_used.csv"","
+D:\M1_StockNetwork\M1_day16\frozen_network_portfolio_risk_source_audit.py,143,"""daily_returns"": ""output/M1_day1/03_stage3_return_validation/daily_return_panel.parquet"","
+D:\M1_StockNetwork\M1_day16\frozen_network_portfolio_risk_source_audit.py,144,"""day4_mapping"": ""output/M1_day4/02_step2_matched_networks/stock_master_mapping.parquet"","
+D:\M1_StockNetwork\M1_day16\network_risk_exposure_factor_construction.py,65,"""calendar"": ""output/M1_day1/01_stage1_final/trade_calendar_used.csv"","
+D:\M1_StockNetwork\M1_day16\network_risk_exposure_factor_construction.py,66,"""returns"": ""output/M1_day1/03_stage3_return_validation/daily_return_panel.parquet"","
+D:\M1_StockNetwork\M1_day16\network_risk_exposure_factor_construction.py,67,"""mapping"": ""output/M1_day4/02_step2_matched_networks/stock_master_mapping.parquet"","
+D:\M1_StockNetwork\M1_day2\common_factor_diagnostics.py,47,"r""D:\M1_StockNetwork\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day2\common_factor_diagnostics.py,50,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day2\common_factor_diagnostics.py,52,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day2\common_factor_diagnostics.py,67,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day2\common_factor_diagnostics.py,274,def load_stock_master():
+D:\M1_StockNetwork\M1_day2\common_factor_diagnostics.py,277,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day2\common_factor_diagnostics.py,301,"f""stock_master 缺字段：{missing}"""
+D:\M1_StockNetwork\M1_day2\common_factor_diagnostics.py,348,"""stock_master 中 security_id 重复。"""
+D:\M1_StockNetwork\M1_day2\common_factor_diagnostics.py,3600,load_stock_master()
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,22,"r""D:\M1_StockNetwork\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,25,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,27,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,46,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,212,"""stock_master"":"
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,213,"STOCK_MASTER_PATH,"
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,351,def inspect_stock_master():
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,354,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,375,"f""stock_master 缺少字段：{missing}"""
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,418,"""stock_master_rows"":"
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,449,"""stock_master 中 security_id """
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,489,"""daily_return_panel.parquet """
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1178,"stock_master_summary,"
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1242,"""constructed from stock_master; """
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1247,stock_master_summary[
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1357,"""stock_master"":"
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1359,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1367,"""daily_return_panel"":"
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1515,"stock_master,"
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1516,"stock_master_summary,"
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1518,inspect_stock_master()
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1523,"f""{stock_master_summary['unique_security_count']:,}"""
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1528,"f""{stock_master_summary['historically_delisted_count']:,}"""
+D:\M1_StockNetwork\M1_day2\freeze_baseline_design.py,1669,"stock_master_summary,"
+D:\M1_StockNetwork\M1_day2\historical_industry_validation.py,39,"r""D:\M1_StockNetwork\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day2\historical_industry_validation.py,42,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day2\historical_industry_validation.py,44,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day2\historical_industry_validation.py,59,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day2\historical_industry_validation.py,320,def load_stock_master():
+D:\M1_StockNetwork\M1_day2\historical_industry_validation.py,323,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day2\historical_industry_validation.py,347,"f""stock_master 缺字段：{missing}"""
+D:\M1_StockNetwork\M1_day2\historical_industry_validation.py,396,"print(""读取 daily_return_panel 历史行业标签"")"
+D:\M1_StockNetwork\M1_day2\historical_industry_validation.py,429,"f""daily_return_panel 缺字段：{missing}"""
+D:\M1_StockNetwork\M1_day2\historical_industry_validation.py,2494,load_stock_master()
+D:\M1_StockNetwork\M1_day2\raw_correlation_structure.py,43,"r""D:\M1_StockNetwork\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day2\raw_correlation_structure.py,46,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day2\raw_correlation_structure.py,48,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day2\raw_correlation_structure.py,63,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day2\raw_correlation_structure.py,287,def load_stock_master():
+D:\M1_StockNetwork\M1_day2\raw_correlation_structure.py,290,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day2\raw_correlation_structure.py,314,"f""stock_master 缺字段："""
+D:\M1_StockNetwork\M1_day2\raw_correlation_structure.py,384,"""stock_master 中 """
+D:\M1_StockNetwork\M1_day2\raw_correlation_structure.py,2896,load_stock_master()
+D:\M1_StockNetwork\M1_day3\market_residual_correlation.py,38,"r""D:\M1_StockNetwork\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day3\market_residual_correlation.py,41,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day3\market_residual_correlation.py,43,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day3\market_residual_correlation.py,58,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day3\market_residual_correlation.py,234,def load_stock_master():
+D:\M1_StockNetwork\M1_day3\market_residual_correlation.py,237,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day3\market_residual_correlation.py,258,"f""stock_master 缺少字段：{missing}"""
+D:\M1_StockNetwork\M1_day3\market_residual_correlation.py,301,"""stock_master 中 security_id 重复。"""
+D:\M1_StockNetwork\M1_day3\market_residual_correlation.py,3879,master = load_stock_master()
+D:\M1_StockNetwork\M1_day3\robustness_market_industry.py,38,"r""D:\M1_StockNetwork\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day3\robustness_market_industry.py,41,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day3\robustness_market_industry.py,43,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day3\robustness_market_industry.py,58,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day3\robustness_market_industry.py,295,def load_stock_master():
+D:\M1_StockNetwork\M1_day3\robustness_market_industry.py,298,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day3\robustness_market_industry.py,319,"f""stock_master 缺字段：{missing}"""
+D:\M1_StockNetwork\M1_day3\robustness_market_industry.py,361,"""stock_master 中 security_id 重复。"""
+D:\M1_StockNetwork\M1_day3\robustness_market_industry.py,555,"f""daily_return_panel 缺字段：{missing}"""
+D:\M1_StockNetwork\M1_day3\robustness_market_industry.py,3756,load_stock_master()
+D:\M1_StockNetwork\M1_day3\same_cross_industry.py,39,"r""D:\M1_StockNetwork\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day3\same_cross_industry.py,42,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day3\same_cross_industry.py,44,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day3\same_cross_industry.py,59,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day3\same_cross_industry.py,339,def load_stock_master():
+D:\M1_StockNetwork\M1_day3\same_cross_industry.py,342,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day3\same_cross_industry.py,366,"f""stock_master 缺字段：{missing}"""
+D:\M1_StockNetwork\M1_day3\same_cross_industry.py,409,"""stock_master 中 security_id 重复。"""
+D:\M1_StockNetwork\M1_day3\same_cross_industry.py,3944,load_stock_master()
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,45,"r""D:\M1_StockNetwork\output\M1_day1\01_stage1_final"""
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,48,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,50,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,65,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,283,def load_stock_master():
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,286,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,307,"f""stock_master 缺字段：{missing}"""
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,376,"""stock_master 中 security_id 重复。"""
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,489,# Read daily_return_panel only once.
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,591,"f""daily_return_panel 缺字段：{missing}"""
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,3211,"""raw_edge_master_path"":"
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,3216,"""residual_edge_master_path"":"
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,3426,"/ ""stock_master_mapping.parquet"","
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,3530,"""in stock_master_mapping.parquet."""
+D:\M1_StockNetwork\M1_day4\construct_matched_networks.py,3623,load_stock_master()
+D:\M1_StockNetwork\M1_day4\structural_diagnostics.py,59,"/ ""stock_master_mapping.parquet"""
+D:\M1_StockNetwork\M1_day6\construct_forward_return_risk_labels.py,36,"r""\daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day6\construct_forward_return_risk_labels_final.py,77,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day6\diagnose_forward_coverage_suspension.py,36,"r""\daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day6\neutralization_and_factor_classification.py,55,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day7\fama_macbeth_regression.py,87,"/ ""01_stage1_subsample_regime_robustness"""
+D:\M1_StockNetwork\M1_day7\final_factor_robustness_matrix.py,61,"/ ""01_stage1_subsample_regime_robustness"""
+D:\M1_StockNetwork\M1_day7\integrated_research_summary.py,67,"/ ""01_stage1_subsample_regime_robustness"""
+D:\M1_StockNetwork\M1_day7\subsample_regime_robustness.py,38,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day7\subsample_regime_robustness.py,92,"/ ""01_stage1_subsample_regime_robustness"""
+D:\M1_StockNetwork\M1_day7\traditional_characteristic_controls.py,36,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day7\traditional_characteristic_controls.py,99,"/ ""01_stage1_subsample_regime_robustness"""
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,46,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,84,# STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,106,STOCK_MASTER_PATH = (
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,109,"/ ""01_stage1_final"""
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,110,"/ ""stock_master.parquet"""
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,758,def discover_stock_master():
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,760,if STOCK_MASTER_PATH is not None:
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,763,STOCK_MASTER_PATH
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,769,"f""Configured STOCK_MASTER_PATH """
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,867,"""Please set STOCK_MASTER_PATH explicitly near """
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,918,def load_stock_master(
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,922,path = discover_stock_master()
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,2868,"master_path,"
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,2869,) = load_stock_master(
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,3036,"""stock_master_source"":"
+D:\M1_StockNetwork\M1_day8\audit_delisting_missing_records.py,3038,master_path
+D:\M1_StockNetwork\M1_day8\build_pit_liquidity_panel.py,77,"/ ""01_stage1_liquidity_panel"""
+D:\M1_StockNetwork\M1_day8\construct_dedicated_drift_returns.py,37,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day8\participation_rate_capacity.py,51,"/ ""01_stage1_liquidity_panel"""
+D:\M1_StockNetwork\M1_day9\build_market_network_state_panel.py,62,"/ ""daily_return_panel.parquet"""
+D:\M1_StockNetwork\M1_day9\build_market_network_state_panel.py,73,"/ ""01_stage1_market_network_state"""
+D:\M1_StockNetwork\M1_day9\classify_pit_market_network_regimes.py,20,"/ ""01_stage1_market_network_state"""
