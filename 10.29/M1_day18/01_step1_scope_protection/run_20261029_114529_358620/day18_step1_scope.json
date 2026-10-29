@@ -1,0 +1,12 @@
+{
+  "step": "Day18 Step1",
+  "status": "SCOPE_READY",
+  "created_at": "2026-10-29T11:45:29",
+  "project_root": "D:\\M1_StockNetwork",
+  "legacy_root": "D:\\M1_StockNetwork\\output",
+  "legacy_root_exists": true,
+  "allowed_write_directory": "D:\\M1_StockNetwork\\output\\M1_day18\\01_step1_scope_protection\\run_20261029_114529_358620",
+  "required_files_missing": [],
+  "protection": "仅读取源文件路径和元数据；不修改、移动、重命名或删除源文件。",
+  "scope_note": "本步骤仅登记审计范围；SHA256和数据内容核验属于后续步骤。"
+}
