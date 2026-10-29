@@ -1,0 +1,25 @@
+﻿file,candidate,key,null_key_rows,duplicate_rows,detail,status
+day16_risk,K1,analysis_date|network|window|master_index,0,0,,PASS
+day16_risk,K2,analysis_date|network|window|security_id,0,0,,PASS
+stock_code_history,K1,security_id|stock_code,2,3,,REVIEW
+stock_code_history,K2,security_id|stock_code|exchange,2,3,,REVIEW
+stock_code_history,K3,security_id|stock_code|list_date,1357,0,,REVIEW
+stock_code_history,K4,security_id|stock_code|list_date|delist_date,6572,0,,REVIEW
+stock_master_issues,K1,security_id|issue_type|severity|note,,,"Missing columns: ['security_id', 'issue_type', 'severity', 'note']",REVIEW
+stock_master_issues,K2,security_id|stock_code|issue_type|severity|note,,,"Missing columns: ['security_id', 'stock_code', 'issue_type', 'severity', 'note']",REVIEW
+core_data_anomalies,K1,trade_date|security_id|issue_type|severity|note,0,0,,PASS
+core_data_anomalies,K2,trade_date|security_id|issue_type|severity,0,0,,PASS
+stock_feasibility,K1,window|security_id|min_valid_ratio,0,0,,PASS
+target_weights,K1,analysis_date|window|factor_name|method|portfolio_leg|security_id,0,0,,PASS
+target_weights,K2,analysis_date|window|factor_name|method|security_id,0,0,,PASS
+trade_weights,K1,analysis_date|previous_analysis_date|window|factor_name|method|portfolio_leg|security_id,0,0,,PASS
+trade_weights,K2,analysis_date|window|factor_name|method|portfolio_leg|security_id,0,0,,PASS
+trade_weights,K3,analysis_date|window|factor_name|method|security_id,0,491644,,REVIEW
+dedicated_drift,K1,analysis_date|previous_analysis_date|window|factor_name|method|portfolio_leg|security_id,0,0,,PASS
+dedicated_drift,K2,analysis_date|window|factor_name|method|portfolio_leg|security_id,0,0,,PASS
+dedicated_drift,K3,analysis_date|window|factor_name|method|security_id,0,468140,,REVIEW
+canonical_trade,K1,analysis_date|previous_analysis_date|window|factor_name|method|portfolio_leg|security_id,0,0,,PASS
+canonical_trade,K2,analysis_date|window|factor_name|method|portfolio_leg|security_id,0,0,,PASS
+canonical_trade,K3,analysis_date|window|factor_name|method|security_id,0,536124,,REVIEW
+participation_base,K1,analysis_date|window|factor_name|method|portfolio_leg|security_id,0,0,,PASS
+participation_base,K2,analysis_date|window|factor_name|method|security_id,0,536124,,REVIEW
