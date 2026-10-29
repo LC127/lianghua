@@ -1,0 +1,8 @@
+﻿area,status,metric,detail,path
+source_exception,REVIEW,stock_code_history,duplicate_group_rows=6; missing_identity_rows=2; candidate_rows_removed=3. Candidate only; source unchanged.,D:\M1_StockNetwork\output\M1_day1\01_stage1\stock_code_history.parquet
+source_exception,REVIEW,stock_master_issues,original_rows=1034; exact_duplicate_excess=248; candidate_rows=786. Source unchanged.,D:\M1_StockNetwork\output\M1_day1\01_stage1_fixed\stock_master_issues.csv
+final_mapping,PASS,master_vs_mapping,master=5553; mapping=5553; master_duplicate_rows=0; mapping_duplicate_ids=0; mapping_duplicate_indices=0; final_only=0; mapping_only=0,D:\M1_StockNetwork\output\M1_day4\02_step2_matched_networks\stock_master_mapping.parquet
+return_coverage,REVIEW,master_vs_return_panel,final_ids=5553; return_ids=5469; final_without_return=84; return_outside_final=0. Differences require interpretation; no automatic deletion.,D:\M1_StockNetwork\output\M1_day1\03_stage3_return_validation\daily_return_panel.parquet
+day4_nodes,PASS,node_mapping,node_snapshots=402; snapshots_with_mapping_errors=0; mapping_error_rows=0,D:\M1_StockNetwork\output\M1_day4\02_step2_matched_networks\node_universe
+day4_schedule,PASS,schedule_vs_nodes,expected_pairs=402; observed_pairs=402; missing_pairs=0; extra_pairs=0,D:\M1_StockNetwork\output\M1_day4\01_step1_network_design\day4_analysis_dates.csv
+day4_edges,PASS,raw_residual_edge_audit,raw_files=402; residual_files=402; paired_results=402; review_pairs=0,D:\M1_StockNetwork\output\M1_day4\02_step2_matched_networks
