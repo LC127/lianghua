@@ -1,0 +1,4 @@
+﻿object,status,path,master_key,object_key,master_unique,object_unique,overlap,master_only,object_only,detail
+return_panel,CHECKED,D:\M1_StockNetwork\output\M1_day1\03_stage3_return_validation\daily_return_panel.parquet,security_id,security_id,5553,5469,5469,84,0,Interpret differences using universe/date rules.
+mapping,CHECKED,D:\M1_StockNetwork\output\M1_day4\02_step2_matched_networks\stock_master_mapping.parquet,security_id,security_id,5553,5553,5553,0,0,Interpret differences using universe/date rules.
+mapping_master_index,CHECKED,D:\M1_StockNetwork\output\M1_day4\02_step2_matched_networks\stock_master_mapping.parquet,security_id,master_index,5553,5553,,,,missing=0; duplicates=0
