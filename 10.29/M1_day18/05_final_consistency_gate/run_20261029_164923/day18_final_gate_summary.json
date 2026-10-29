@@ -1,0 +1,14 @@
+{
+  "gate": "REVIEW",
+  "checks": {
+    "REVIEW": 3,
+    "PASS": 4
+  },
+  "candidate_key_tests": 24,
+  "day4_node_snapshots": 402,
+  "day4_raw_edge_files": 402,
+  "day4_residual_edge_files": 402,
+  "day4_edge_pairs_checked": 402,
+  "output_dir": "D:\\M1_StockNetwork\\output\\M1_day18\\05_final_consistency_gate\\run_20261029_164923",
+  "source_files_modified": false
+}
