@@ -1,0 +1,30 @@
+{
+  "inventory": "D:\\M1_StockNetwork\\output\\M1_day18\\02_step2_source_inventory\\run_20261029_120201_266156\\day18_source_inventory.csv",
+  "inventory_rows": 5436,
+  "path_column": "path",
+  "unique_source_files": 5436,
+  "source_fingerprints": {
+    "files": 5436,
+    "status_counts": {
+      "BASELINE_CREATED": 5435,
+      "INVENTORY_SIZE_MISMATCH": 1
+    },
+    "baseline_created": false,
+    "baseline_exists": false,
+    "issues_found": true
+  },
+  "source_code_files": 114,
+  "source_code_version": {
+    "files": 114,
+    "status_counts": {
+      "BASELINE_CREATED": 114
+    },
+    "baseline_created": true,
+    "baseline_exists": true,
+    "issues_found": false
+  },
+  "python_version": "3.12.13",
+  "python_executable": "D:\\QuantLab\\python\\python.exe",
+  "audit_script_sha256": "3b12fee751e1a112c0692f40434e75a486d240abdec848d684fc83124e4b9c55",
+  "run_dir": "D:\\M1_StockNetwork\\output\\M1_day18\\03_step3_frozen_fingerprints\\run_20261029_144940_290846"
+}
