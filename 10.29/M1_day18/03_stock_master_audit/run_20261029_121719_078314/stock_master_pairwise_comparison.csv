@@ -1,0 +1,4 @@
+﻿version_a,version_b,path_a,path_b,sha256_equal,rows_a,rows_b,same_columns,key_overlap,a_only_keys,b_only_keys,shared_columns,rows_with_value_differences,note
+01_stage1,01_stage1_fixed,D:\M1_StockNetwork\output\M1_day1\01_stage1\stock_master.parquet,D:\M1_StockNetwork\output\M1_day1\01_stage1_fixed\stock_master.parquet,False,6905,5551,False,5551,1354,0,10,2,KEYED_COMPARE
+01_stage1,01_stage1_final,D:\M1_StockNetwork\output\M1_day1\01_stage1\stock_master.parquet,D:\M1_StockNetwork\output\M1_day1\01_stage1_final\stock_master.parquet,False,6905,5553,False,5553,1352,0,10,4,KEYED_COMPARE
+01_stage1_fixed,01_stage1_final,D:\M1_StockNetwork\output\M1_day1\01_stage1_fixed\stock_master.parquet,D:\M1_StockNetwork\output\M1_day1\01_stage1_final\stock_master.parquet,False,5551,5553,True,5551,0,2,10,0,KEYED_COMPARE
