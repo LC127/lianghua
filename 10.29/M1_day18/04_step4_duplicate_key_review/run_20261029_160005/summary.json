@@ -1,0 +1,10 @@
+{
+  "files_targeted": 10,
+  "files_read_successfully": 10,
+  "candidate_tests": 23,
+  "unique_candidates": 13,
+  "duplicate_or_null_candidates": 10,
+  "missing_column_candidates": 0,
+  "read_errors": 0,
+  "output_dir": "D:\\M1_StockNetwork\\output\\M1_day18\\04_step4_duplicate_key_review\\run_20261029_160005"
+}
